@@ -115,7 +115,7 @@ const Kebudayaan = () => {
       {/* Header */}
       <section className="kebudayaan-header">
         <div className="container">
-          <h1>Kebudayaan Kampung Pujokusuman</h1>
+          <h1>Kebudayaan & Sosial Kampung Pujokusuman</h1>
           <p>Warisan budaya yang hidup dan berkembang di tengah masyarakat</p>
         </div>
       </section>

@@ -5,6 +5,7 @@ const Galeri = () => {
   const [selectedCategory, setSelectedCategory] = useState("semua");
   const [selectedImage, setSelectedImage] = useState(null);
 
+  // Modified to ensure no duplicate items with the same title
   const galeriItems = [
     {
       id: 1,
@@ -56,6 +57,11 @@ const Galeri = () => {
     },
   ];
 
+  // Remove any duplicates from the array by title
+  const uniqueItems = [
+    ...new Map(galeriItems.map((item) => [item.title, item])).values(),
+  ];
+
   const categories = [
     { key: "semua", label: "Semua" },
     { key: "tari", label: "Tari" },
@@ -68,8 +74,8 @@ const Galeri = () => {
 
   const filteredItems =
     selectedCategory === "semua"
-      ? galeriItems
-      : galeriItems.filter((item) => item.category === selectedCategory);
+      ? uniqueItems
+      : uniqueItems.filter((item) => item.category === selectedCategory);
 
   const getPlaceholderImage = (title) => {
     const canvas = document.createElement("canvas");

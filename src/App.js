@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -14,10 +14,19 @@ import "./App.css";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
+  const navbarRef = useRef(null);
 
   useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
+    const handleScroll = () => {
+      if (navbarRef.current) {
+        if (window.scrollY > 50) {
+          navbarRef.current.classList.add("navbar-scrolled");
+        } else {
+          navbarRef.current.classList.remove("navbar-scrolled");
+        }
+      }
+    };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -44,8 +53,9 @@ function App() {
               Kampung Kebudayaan Pujokusuman
             </h1>
             <p className="hero-subtitle">
-              Melestarikan warisan budaya tradisional Indonesia dengan semangat
-              gotong royong dan kebersamaan
+              "Dari jejak laskar Hantu Maut hingga geliat seni tradisi,
+              Pujokusuman adalah ruang hidup budaya dan sejarah yang terus
+              bernapas bersama warganya."
             </p>
             <div className="hero-buttons">
               <button
@@ -202,6 +212,14 @@ function App() {
                 </div>
               </div>
             ))}
+          </div>
+          <div
+            className="gallery-cta"
+            style={{ textAlign: "center", marginTop: "2rem" }}
+          >
+            <Link to="/galeri" className="btn btn-primary">
+              Lihat Detail Galeri
+            </Link>
           </div>
         </div>
       </section>
@@ -365,7 +383,7 @@ function App() {
     };
 
     return (
-      <nav className={`navbar ${scrollY > 50 ? "navbar-scrolled" : ""}`}>
+      <nav className="navbar" ref={navbarRef}>
         <div className="container">
           <div className="nav-content">
             <div className="logo">
@@ -389,21 +407,6 @@ function App() {
               <Link to="/galeri" onClick={() => handleMenuClick("/galeri")}>
                 Galeri
               </Link>
-              {location.pathname === "/" ? (
-                <a
-                  href="#kontak"
-                  onClick={() => handleMenuClick("/", "kontak")}
-                >
-                  Kontak
-                </a>
-              ) : (
-                <Link
-                  to="/#kontak"
-                  onClick={() => handleMenuClick("/", "kontak")}
-                >
-                  Kontak
-                </Link>
-              )}
             </div>
             <div className="hamburger" onClick={toggleMenu}>
               <span></span>

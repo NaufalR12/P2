@@ -113,10 +113,6 @@ const MediaSlider = () => {
     return `https://www.youtube.com/embed/${videoId}?autoplay=0&rel=0&modestbranding=1&controls=1&showinfo=0&fs=1&enablejsapi=1`;
   };
 
-  const getYouTubeThumbnail = (videoId) => {
-    return `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
-  };
-
   return (
     <section id="media-slider" className="hero-media-slider">
       <div className="hero-slider-container">

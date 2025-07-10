@@ -88,6 +88,23 @@ const Kebudayaan = () => {
       ],
       jadwal: "Bulan Sura (sesuai kalender Jawa)",
     },
+    {
+      id: "pujokusuman-creative-lab",
+      title: "Pujokusuman Creative Lab",
+      image:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_500,c_fill/WhatsApp_Image_2025-07-10_at_19.13.54_0f817fc4_mwpwlp.jpg",
+      sejarah:
+        "Pujokusuman Creative Lab didirikan pada tahun 2022 sebagai ruang kolaborasi kreatif bagi generasi muda kampung. Komunitas ini menjadi wadah untuk mengembangkan ide-ide inovatif di bidang seni, teknologi, dan kewirausahaan.",
+      deskripsi:
+        "Anggota Creative Lab aktif dalam berbagai proyek seperti pembuatan konten digital, pelatihan desain grafis, pengembangan website, hingga produksi video dokumenter tentang budaya kampung. Komunitas ini terbuka untuk siapa saja yang ingin belajar dan berbagi kreativitas.",
+      kegiatan: [
+        "Pelatihan desain grafis dan multimedia",
+        "Workshop pembuatan website dan aplikasi sederhana",
+        "Produksi video dokumenter budaya",
+        "Kolaborasi dengan komunitas seni dan UMKM lokal",
+      ],
+      jadwal: "Setiap Sabtu: 15.00-17.00 WIB",
+    },
   ];
 
   const getPlaceholderImage = (title) => {

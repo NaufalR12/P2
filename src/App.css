@@ -565,6 +565,29 @@ body {
   display: none;
 }
 
+/* Maps Section */
+.maps-section {
+  background-color: #f9f7f2;
+}
+
+.maps-container {
+  margin-top: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.maps-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.maps-wrapper iframe {
+  display: block;
+  border-radius: 8px;
+}
+
 @media (max-width: 768px) {
   .hamburger {
     display: flex;

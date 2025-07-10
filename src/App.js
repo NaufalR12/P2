@@ -318,8 +318,32 @@ function App() {
         </div>
       </section>
 
+      {/* Maps Section */}
+      <section className="section gallery">
+        <div className="container">
+          <div className="section-header fade-in">
+            <h2>Lokasi Kami</h2>
+            <p>Temukan Kampung Kebudayaan Pujokusuman di Yogyakarta</p>
+          </div>
+          <div className="maps-container fade-in">
+            <div className="maps-wrapper">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3422.648765457053!2d110.36699412432293!3d-7.813804277586321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1spujokusuman!5e1!3m2!1sid!2sid!4v1752162142941!5m2!1sid!2sid"
+                width="100%"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Peta Lokasi Kampung Pujokusuman"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
-      <section id="kontak" className="section contact">
+      <section id="kontak" className="section social-media-section">
         <div className="container">
           <div className="section-header fade-in">
             <h2>Hubungi Kami</h2>

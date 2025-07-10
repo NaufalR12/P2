@@ -231,61 +231,31 @@
   transform: scale(1.1);
 }
 
-/* YouTube Video Styles */
+/* YouTube Video Styles - Fully clickable */
 .hero-youtube-wrapper {
   width: 100%;
   height: 100%;
   position: relative;
   background: #000;
+  overflow: hidden;
 }
 
 .hero-youtube-video {
   width: 100%;
   height: 100%;
   border: none;
-  object-fit: cover;
   background: #000;
+  pointer-events: auto;
+  cursor: pointer;
 }
 
+/* Remove YouTube overlay completely to make video clickable */
 .hero-youtube-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.hero-youtube-wrapper:hover .hero-youtube-overlay {
-  opacity: 1;
+  display: none !important;
 }
 
 .youtube-play-icon {
-  background: rgba(255, 0, 0, 0.9);
-  color: white;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  font-weight: bold;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  transition: all 0.3s ease;
-  border: 3px solid rgba(255, 255, 255, 0.8);
-}
-
-.youtube-play-icon:hover {
-  transform: scale(1.1);
-  background: rgba(255, 0, 0, 1);
+  display: none !important;
 }
 
 /* YouTube Error Styles */
@@ -311,75 +281,94 @@
   opacity: 0.9;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .hero-media-card {
-    height: 60vh;
-    min-height: 450px;
-  }
+/* Ensure iframe is fully interactive */
+.hero-youtube-wrapper iframe {
+  z-index: 2;
+  position: relative;
+}
 
-  .hero-media-title {
-    font-size: 2rem;
-  }
+/* Add subtle border for YouTube videos */
+.hero-youtube-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid rgba(255, 0, 0, 0.3);
+  pointer-events: none;
+  z-index: 1;
+}
 
-  .hero-media-description {
-    font-size: 1.1rem;
+/* Animation for slide transitions */
+.hero-carousel .slick-slide {
+  transition: transform 0.3s ease;
+}
+
+.hero-carousel .slick-active .hero-media-image {
+  animation: heroImageZoom 8s ease-in-out infinite;
+}
+
+@keyframes heroImageZoom {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
   }
 }
 
-@media (max-width: 768px) {
-  .hero-media-card {
-    height: 50vh;
-    min-height: 400px;
-  }
-
-  .hero-media-title {
-    font-size: 1.8rem;
-  }
-
-  .hero-media-description {
-    font-size: 1rem;
-  }
-
-  .hero-media-content {
-    padding: 40px 0 30px;
-  }
-
-  .hero-carousel .slick-prev,
-  .hero-carousel .slick-next {
-    display: none !important;
-  }
-
-  .hero-carousel .slick-dots {
-    bottom: 80px;
-  }
-
-  .custom-prev-arrow,
-  .custom-next-arrow {
-    width: 50px;
-    height: 50px;
-  }
-
-  .custom-prev-arrow {
-    left: 15px;
-  }
-
-  .custom-next-arrow {
-    right: 15px;
-  }
-
-  .custom-prev-arrow span,
-  .custom-next-arrow span {
-    font-size: 24px;
-  }
-
-  .youtube-play-icon {
-    width: 60px;
-    height: 60px;
-    font-size: 1.5rem;
-  }
+/* Video specific enhancements */
+.hero-video-wrapper video {
+  cursor: pointer;
 }
 
+.hero-video-wrapper:hover video {
+  filter: brightness(1.1);
+}
+
+/* Padding untuk bagian hero */
+.hero-carousel {
+  padding: 30px 0 25px;
+}
+
+/* Sembunyikan tombol prev/next pada carousel */
+.hero-carousel .slick-prev,
+.hero-carousel .slick-next {
+  display: none !important;
+}
+
+/* Posisi dot carousel */
+.hero-carousel .slick-dots {
+  bottom: 60px;
+}
+
+/* Styling untuk badge media */
+.hero-media-badge {
+  padding: 8px 16px;
+  font-size: 0.8rem;
+}
+
+/* Animasi untuk transisi slide */
+.hero-carousel .slick-slide {
+  transition: transform 0.3s ease;
+}
+
+/* Animasi zoom gambar aktif */
+.hero-carousel .slick-active .hero-media-image {
+  animation: heroImageZoom 8s ease-in-out infinite;
+}
+
+@keyframes heroImageZoom {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
 @media (max-width: 480px) {
   .hero-media-card {
     height: 45vh;
@@ -497,6 +486,17 @@
 .hero-carousel .slick-active .hero-media-image {
   animation: heroImageZoom 8s ease-in-out infinite;
 }
+
+@keyframes heroImageZoom {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
 
 @keyframes heroImageZoom {
   0%,

@@ -1,0 +1,377 @@
+.tentang-page {
+  padding-top: 80px;
+}
+
+/* Header */
+.tentang-header {
+  background: linear-gradient(135deg, #8b4513 0%, #daa520 100%);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.tentang-header h1 {
+  font-size: 3rem;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 20px;
+}
+
+.tentang-header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Sejarah Timeline */
+.sejarah-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.sejarah-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #8b4513;
+  margin-bottom: 60px;
+  font-family: "Playfair Display", serif;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #8b4513, #daa520);
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+  flex-direction: row;
+}
+
+.timeline-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.timeline-year {
+  background: linear-gradient(135deg, #8b4513, #daa520);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0 30px;
+  min-width: 100px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
+}
+
+.timeline-content {
+  flex: 1;
+  background: #f8f8f8;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h3 {
+  color: #8b4513;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.timeline-content p {
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Visi Misi */
+.visi-misi-section {
+  padding: 80px 0;
+  background: #f8f8f8;
+}
+
+.visi-misi-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.visi-card,
+.misi-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.visi-card h2,
+.misi-card h2 {
+  color: #8b4513;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-family: "Playfair Display", serif;
+}
+
+.visi-card p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.misi-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.misi-card li {
+  padding: 10px 0;
+  padding-left: 30px;
+  position: relative;
+  line-height: 1.6;
+  color: #333;
+}
+
+.misi-card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #daa520;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Prestasi */
+.prestasi-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.prestasi-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #8b4513;
+  margin-bottom: 60px;
+  font-family: "Playfair Display", serif;
+}
+
+.prestasi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.prestasi-card {
+  background: #f8f8f8;
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.prestasi-card:hover {
+  transform: translateY(-10px);
+}
+
+.prestasi-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.prestasi-card h3 {
+  color: #8b4513;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.prestasi-subtitle {
+  color: #daa520;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.prestasi-card p {
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Tokoh Masyarakat */
+.tokoh-section {
+  padding: 80px 0;
+  background: #f8f8f8;
+}
+
+.tokoh-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #8b4513;
+  margin-bottom: 60px;
+  font-family: "Playfair Display", serif;
+}
+
+.tokoh-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+}
+
+.tokoh-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.tokoh-foto {
+  flex-shrink: 0;
+}
+
+.tokoh-foto img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #daa520;
+}
+
+.tokoh-info h3 {
+  color: #8b4513;
+  margin-bottom: 5px;
+  font-size: 1.3rem;
+}
+
+.tokoh-jabatan {
+  color: #daa520;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.tokoh-info p {
+  line-height: 1.6;
+  color: #666;
+}
+
+/* CTA */
+.cta-section {
+  padding: 80px 0;
+  background: white;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  color: #8b4513;
+  margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
+}
+
+.cta-section p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #8b4513, #daa520);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(139, 69, 19, 0.3);
+}
+
+.btn-outline {
+  border: 2px solid #8b4513;
+  color: #8b4513;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: #8b4513;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tentang-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .timeline::before {
+    left: 30px;
+  }
+
+  .timeline-item {
+    flex-direction: row !important;
+    padding-left: 60px;
+  }
+
+  .timeline-year {
+    position: absolute;
+    left: 0;
+    margin: 0;
+    min-width: 80px;
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+
+  .visi-misi-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .tokoh-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 250px;
+  }
+}

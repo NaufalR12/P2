@@ -8,20 +8,23 @@
   --primary-color: #8b4513;
   --secondary-color: #daa520;
   --accent-color: #cd853f;
-  --text-dark: #2c1810;
-  --text-light: #f5f5dc;
+  --text-dark: #333;
+  --text-light: #ffffff;
   --background-light: #fff8dc;
-  --gradient-primary: linear-gradient(135deg, #8b4513 0%, #daa520 100%);
-  --gradient-secondary: linear-gradient(135deg, #cd853f 0%, #deb887 100%);
-  --shadow: 0 10px 30px rgba(139, 69, 19, 0.1);
-  --shadow-hover: 0 20px 40px rgba(139, 69, 19, 0.2);
+  --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.15);
+  --gradient-primary: linear-gradient(135deg, #8b4513, #daa520);
+  --gradient-secondary: linear-gradient(135deg, #daa520, #f4e4bc);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: var(--text-dark);
-  background-color: var(--background-light);
   overflow-x: hidden;
 }
 
@@ -110,4 +113,10 @@ h6 {
   .section {
     padding: 60px 0;
   }
+}
+
+/* Smooth animations */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

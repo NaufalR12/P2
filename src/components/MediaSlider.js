@@ -105,7 +105,12 @@ const MediaSlider = () => {
   };
 
   const getYouTubeEmbedUrl = (videoId) => {
-    return `https://www.youtube.com/embed/${videoId}?autoplay=0&rel=0&showinfo=0&controls=1`;
+    // Validasi video ID
+    if (!videoId || videoId === "ANOTHER_VIDEO_ID" || videoId.length !== 11) {
+      console.error("Invalid YouTube Video ID:", videoId);
+      return null;
+    }
+    return `https://www.youtube.com/embed/${videoId}?autoplay=0&rel=0&modestbranding=1&controls=1&showinfo=0&fs=1&enablejsapi=1`;
   };
 
   const getYouTubeThumbnail = (videoId) => {
@@ -113,7 +118,7 @@ const MediaSlider = () => {
   };
 
   return (
-    <section className="hero-media-slider">
+    <section id="media-slider" className="hero-media-slider">
       <div className="hero-slider-container">
         <Slider {...settings} className="hero-carousel">
           {mediaItems.map((item, index) => (
@@ -122,17 +127,24 @@ const MediaSlider = () => {
                 <div className="hero-media-container">
                   {item.type === "youtube" ? (
                     <div className="hero-youtube-wrapper">
-                      <iframe
-                        src={getYouTubeEmbedUrl(item.videoId)}
-                        title={item.title}
-                        className="hero-youtube-video"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                      ></iframe>
-                      <div className="hero-youtube-overlay">
-                        <div className="youtube-play-icon">▶</div>
-                      </div>
+                      {getYouTubeEmbedUrl(item.videoId) ? (
+                        <iframe
+                          src={getYouTubeEmbedUrl(item.videoId)}
+                          title={item.title}
+                          className="hero-youtube-video"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowFullScreen
+                          loading="lazy"
+                        ></iframe>
+                      ) : (
+                        <div className="youtube-error">
+                          <div className="error-content">
+                            <h3>❌ Video Tidak Tersedia</h3>
+                            <p>Video ID: {item.videoId} tidak valid</p>
+                          </div>
+                        </div>
+                      )}
                     </div>
                   ) : (
                     <div className="hero-image-wrapper">

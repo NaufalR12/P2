@@ -1,0 +1,238 @@
+.kebudayaan-page {
+  padding-top: 80px; /* Account for fixed navbar */
+}
+
+/* Header Section */
+.kebudayaan-header {
+  background: linear-gradient(135deg, #8b4513 0%, #daa520 100%);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.kebudayaan-header h1 {
+  font-size: 3rem;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 20px;
+}
+
+.kebudayaan-header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Budaya Content */
+.budaya-content {
+  padding: 80px 0;
+}
+
+.budaya-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 100px;
+  align-items: start;
+}
+
+.budaya-item.reverse {
+  direction: rtl;
+}
+
+.budaya-item.reverse > * {
+  direction: ltr;
+}
+
+.budaya-image {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.budaya-image:hover {
+  transform: translateY(-10px);
+}
+
+.budaya-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.budaya-content-text h2 {
+  font-size: 2.2rem;
+  color: #8b4513;
+  margin-bottom: 30px;
+  font-family: "Playfair Display", serif;
+}
+
+.content-section {
+  margin-bottom: 30px;
+}
+
+.content-section h3 {
+  font-size: 1.3rem;
+  color: #daa520;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.content-section p {
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.content-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.content-section li {
+  padding: 8px 0;
+  padding-left: 25px;
+  position: relative;
+  color: #333;
+  line-height: 1.6;
+}
+
+.content-section li::before {
+  content: "▸";
+  color: #daa520;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.jadwal {
+  background: #f8f8f8;
+  padding: 20px;
+  border-radius: 15px;
+  border-left: 4px solid #daa520;
+}
+
+.jadwal-text {
+  font-weight: 600;
+  color: #8b4513;
+  font-size: 1.1rem;
+}
+
+/* CTA Section */
+.cta-section {
+  background: #f8f8f8;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  color: #8b4513;
+  margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
+}
+
+.cta-section p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #8b4513, #daa520);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(139, 69, 19, 0.3);
+}
+
+.btn-outline {
+  border: 2px solid #8b4513;
+  color: #8b4513;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: #8b4513;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .kebudayaan-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .budaya-item,
+  .budaya-item.reverse {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 60px;
+    direction: ltr;
+  }
+
+  .budaya-content-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .kebudayaan-header {
+    padding: 60px 0;
+  }
+
+  .kebudayaan-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .budaya-content {
+    padding: 60px 0;
+  }
+
+  .budaya-image img {
+    height: 250px;
+  }
+
+  .cta-section {
+    padding: 60px 0;
+  }
+
+  .cta-section h2 {
+    font-size: 2rem;
+  }
+}

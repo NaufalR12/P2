@@ -7,7 +7,7 @@ const Kebudayaan = () => {
       id: "sanggar-tari",
       title: "Sanggar Tari Tradisional",
       image:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_500,c_fill/kampung-pujokusuman/sanggar-tari.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_500,c_fill/IMG_9508_fqelvn.jpg",
       sejarah:
         "Sanggar Tari Pujokusuman didirikan pada tahun 1985 sebagai wadah pelestarian tari klasik Jawa. Sanggar ini telah melahirkan banyak penari profesional yang tersebar di berbagai daerah.",
       deskripsi:
@@ -75,7 +75,7 @@ const Kebudayaan = () => {
       id: "ruwatan",
       title: "Upacara Ruwatan",
       image:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_500,c_fill/kampung-pujokusuman/ruwatan.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_500,c_fill/IMG_1381_1_fcfupy.jpg",
       sejarah:
         "Tradisi ruwatan di Pujokusuman telah berlangsung turun temurun sejak ratusan tahun lalu. Upacara ini merupakan ritual pembersihan spiritual menurut kepercayaan Jawa untuk menolak bala dan mendatangkan keselamatan.",
       deskripsi:
@@ -104,6 +104,23 @@ const Kebudayaan = () => {
         "Kolaborasi dengan komunitas seni dan UMKM lokal",
       ],
       jadwal: "Setiap Sabtu: 15.00-17.00 WIB",
+    },
+    {
+      id: "pasar-pujokusuman",
+      title: "Pasar Pujokusuman",
+      image:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_500,c_fill/IMG_9786_cdl0tt.jpg",
+      sejarah:
+        "Pasar Pujokusuman telah menjadi pusat perdagangan lokal sejak tahun 1960-an. Pasar ini berkembang dari kebutuhan warga sekitar untuk memiliki tempat jual beli yang dekat dengan rumah. Hingga kini, pasar ini tetap mempertahankan karakteristik pasar tradisional dengan nuansa kekeluargaan yang kental.",
+      deskripsi:
+        "Pasar Pujokusuman menawarkan berbagai kebutuhan sehari-hari mulai dari sayuran segar, buah-buahan, bumbu dapur, hingga makanan tradisional. Yang membuat pasar ini istimewa adalah suasana kekeluargaan antara pedagang dan pembeli, serta masih dijumpainya jajanan dan makanan tradisional yang sulit ditemukan di tempat lain.",
+      kegiatan: [
+        "Operasional pasar setiap hari kecuali Minggu",
+        "Bazar kuliner tradisional setiap Sabtu",
+        "Festival pasar rakyat pada hari-hari besar",
+        "Pelatihan UMKM untuk pedagang kecil",
+      ],
+      jadwal: "Senin-Sabtu: 05.00-12.00 WIB",
     },
   ];
 

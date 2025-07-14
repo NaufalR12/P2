@@ -8,8 +8,121 @@ const Kebudayaan = () => {
       title: "Sanggar Tari Tradisional",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_500,c_fill/IMG_9508_fqelvn.jpg",
-      sejarah:
-        "Sanggar Tari Pujokusuman didirikan pada tahun 1985 sebagai wadah pelestarian tari klasik Jawa. Sanggar ini telah melahirkan banyak penari profesional yang tersebar di berbagai daerah.",
+      gallery: [
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_300,c_fill/DSC07541_gcmnuy",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_300,c_fill/DSC07503_ysmria",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_300,c_fill/IMG_0161_zojodk",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_300,c_fill/kampung-pujokusuman/sanggar-tari-4.jpg",
+      ],
+      sejarah: (
+        <>
+          <p>
+            Ndalem Pujokusuman bukan sekadar bangunan cagar budaya. Ia adalah
+            pusaka hidup yang menjadi fondasi fisik dan spiritual bagi tradisi
+            tari klasik gaya Yogyakarta. Terletak di Kelurahan Keparakan,
+            Kemantren Mergangsan, Kota Yogyakarta, bangunan ini menjadi saksi
+            perjalanan kota dari era kesultanan, perjuangan kemerdekaan, hingga
+            era modern sebagai pusat pengembangan seni budaya.
+          </p>
+          <br />
+          <p>
+            Bangunan yang kini dikenal sebagai Ndalem Pujokusuman awalnya
+            disebut Ndalem Danudiningrat, kediaman dari KRT Danudiningrat,
+            menantu Sri Sultan Hamengku Buwana VII. Pada tahun 1901, dalem ini
+            resmi berpindah kepemilikan kepada GBPH Pujokusumo, salah satu putra
+            dari Sultan Hamengku Buwana VIII. Hubungan langsung dengan garis
+            darah keraton menjadikan Dalem ini tidak hanya prestisius secara
+            sosial, tetapi juga kaya secara budaya.
+          </p>
+          <br />
+          <p>
+            Sebagai sosok penting di lingkungan Keraton, GBPH Pujokusumo
+            menjabat sebagai pemimpin Kridhamardawa — lembaga tari resmi di
+            bawah Kesultanan Yogyakarta. Kecintaannya terhadap seni tari
+            menjadikan Dalem ini tak ubahnya pusat latihan dan pewarisan seni
+            gerak klasik yang penuh filosofi dan estetika. Dari sinilah benih
+            keberadaan sanggar tari tumbuh, sejalan dengan aura spiritual dan
+            legitimasi kultural dari sang pemilik.
+          </p>
+          <br />
+          <p>
+            Uniknya, Ndalem Pujokusuman tidak hanya mencerminkan kelembutan
+            budaya, tetapi juga pernah menjadi benteng perjuangan. Pada masa
+            revolusi fisik, bangunan ini difungsikan sebagai Markas Laskar Hantu
+            Maut, pasukan gerilya yang bertugas di malam hari. GBPH Pujokusumo
+            dikenal pula sebagai pejuang yang keras kepala terhadap penjajah —
+            sebuah dualitas yang melekat kuat pada karakter kampung dan dalem
+            ini: lembut dalam seni, gigih dalam perjuangan.
+          </p>
+          <br />
+          <p>
+            Pengakuan terhadap peran budaya Ndalem ini semakin kuat ketika pada
+            tahun 2011, Pemerintah Provinsi DIY resmi menetapkan Ndalem
+            Pujokusuman sebagai Pusat Seni Tari Gaya Yogyakarta. Bukan semata
+            keputusan administratif, melainkan penegasan terhadap realitas
+            historis dan kultural yang sudah berlangsung selama puluhan tahun.
+          </p>
+          <br />
+          <p>
+            Aktivitas tari di Ndalem Pujokusuman bermula dari komunitas kecil
+            bernama Mardawa Budaya. Berbeda dari bayangan umum, kelompok ini
+            justru lahir dari semangat lintas budaya. Salah satu tokoh
+            pentingnya adalah Honsche, seorang warga negara Inggris yang
+            tertarik pada seni tari Jawa klasik. Kehadiran Honsche menunjukkan
+            bahwa sejak awal, Ndalem Pujokusuman sudah membuka diri terhadap
+            dunia luar — menjadikannya ruang interkultural yang hidup.
+          </p>
+          <br />
+          <p>
+            Mardawa Budaya fokus pada pendidikan tari untuk anak-anak dan
+            generasi muda, menyadari pentingnya regenerasi sejak dini. Kelompok
+            ini perlahan tumbuh dan terstruktur, hingga pada akhirnya
+            bertransformasi menjadi Yayasan Pamulangan Beksa Sasminta Mardawa
+            (YPBSM).
+          </p>
+          <br />
+          <p>
+            Transformasi ini dipicu oleh momen penting wafatnya GBPH Pujokusumo
+            pada tahun 1961. Sebelum berpulang, beliau meninggalkan pesan kepada
+            putranya, KRT Sasminta Dipura (Romo Sas), untuk mendirikan sebuah
+            yayasan formal yang mewadahi pembelajaran berbagai macam tari.
+            Amanat ini menjadi landasan berdirinya YPBSM, yang hingga kini
+            menjadi rumah bagi pelestarian tari klasik gaya Yogyakarta.
+          </p>
+          <br />
+          <p>
+            YPBSM berdiri atas dua kekuatan: Inisiatif komunitas dari bawah
+            (bottom-up) yang memberikan semangat kolektif, keaslian, dan
+            keterbukaan lintas budaya, serta dukungan otoritatif dari atas
+            (top-down) melalui garis keturunan keraton, yang memberikan
+            legitimasi tradisi dan akses langsung ke sumber-sumber pengetahuan
+            tari klasik.
+          </p>
+          <br />
+          <p>
+            Romo Sas adalah figur sentral yang menjembatani keduanya — seorang
+            seniman yang juga pemegang mandat. Perannya mengokohkan posisi YPBSM
+            sebagai institusi tari yang tidak hanya memiliki akar komunitas
+            kuat, tetapi juga memiliki otoritas tradisi dari dalam lingkungan
+            keraton.
+          </p>
+          <br />
+          <p>
+            Kini, sanggar tari di Ndalem Pujokusuman terus berperan aktif dalam
+            pelatihan tari klasik, pertunjukan, lokakarya, dan regenerasi
+            seniman muda. Setiap gerakan tari yang diajarkan di sini membawa
+            warisan ratusan tahun sejarah, sekaligus membuka ruang bagi
+            perkembangan baru di era digital dan global.
+          </p>
+          <br />
+          <p>
+            Ndalem Pujokusuman bukan hanya tempat berlatih — ia adalah ruang
+            spiritual, tempat nilai luhur, estetika, dan nasionalisme bertemu.
+            Sebuah rumah budaya yang tetap hidup, relevan, dan berakar kuat di
+            hati masyarakat Yogyakarta.
+          </p>
+        </>
+      ),
       deskripsi:
         "Di sanggar ini, anak-anak dan remaja belajar berbagai jenis tarian tradisional Jawa seperti Tari Srimpi, Bedhaya, Gambyong, dan tarian rakyat lainnya. Pelatihan dilakukan oleh dalang dan penari senior yang berpengalaman puluhan tahun.",
       kegiatan: [
@@ -170,13 +283,28 @@ const Kebudayaan = () => {
                     e.target.src = getPlaceholderImage(item.title);
                   }}
                 />
+                {item.gallery && (
+                  <div className="photo-gallery">
+                    {item.gallery.map((photo, idx) => (
+                      <img
+                        key={idx}
+                        src={photo}
+                        alt={`${item.title} foto ${idx + 1}`}
+                        className="gallery-photo"
+                        onError={(e) => {
+                          e.target.src = getPlaceholderImage(`Foto ${idx + 1}`);
+                        }}
+                      />
+                    ))}
+                  </div>
+                )}
               </div>
               <div className="budaya-content-text">
                 <h2>{item.title}</h2>
 
                 <div className="content-section">
                   <h3>📜 Sejarah</h3>
-                  <p>{item.sejarah}</p>
+                  <div>{item.sejarah}</div>
                 </div>
 
                 <div className="content-section">

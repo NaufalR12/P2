@@ -4,41 +4,114 @@ import "./Tentang.css";
 const Tentang = () => {
   const timelineData = [
     {
-      year: "1945",
-      title: "Awal Pembentukan",
-      description:
-        "Kampung Pujokusuman mulai terbentuk pasca kemerdekaan Indonesia sebagai permukiman masyarakat Jawa.",
+      year: "Era Mataram",
+      title: "Warisan Sejarah yang Kaya",
+      description: (
+        <>
+          <p>
+            Kampung Pujokusuman menyimpan jejak panjang sejarah dari era
+            Kesultanan Mataram. Wilayah ini pada mulanya bukanlah milik GBPH
+            Pujokusuman, melainkan merupakan tempat tinggal Pangeran Dipokusumo,
+            salah satu tokoh penting di era tersebut. Data dan arsip digital
+            yang kini tersimpan di koleksi Leiden University menyebutkan adanya
+            penyerahan resmi wilayah ini dari seorang pangeran lain (diduga
+            masih dalam satu lingkar keraton) kepada Pangeran Dipokusumo, yang
+            merupakan putra dari Sri Sultan Hamengkubuwono VIII.
+          </p>
+          <br />
+          <p>
+            Pada masa itu, Keraton Yogyakarta telah berkembang dan pusat
+            kekuasaan telah berpindah ke kawasan Alun-Alun Utara, menjadikan
+            kawasan di sekitarnya sebagai basis para bangsawan dan pengikut
+            setia kesultanan. Kampung ini pun lambat laun berkembang menjadi
+            salah satu simpul penting bagi kegiatan budaya dan pertahanan
+            keraton.
+          </p>
+        </>
+      ),
     },
     {
-      year: "1965",
-      title: "Era Budaya",
-      description:
-        "Mulai berkembangnya kesenian tradisional seperti gamelan dan tari klasik Jawa di kampung ini.",
+      year: "Era Kemerdekaan",
+      title: "Hantu Maut dan Jejak Gerilya",
+      description: (
+        <>
+          <p>
+            Memasuki masa kemerdekaan, Kampung Pujokusuman tidak hanya dikenal
+            karena nilai budayanya, tapi juga karena kontribusi nyatanya dalam
+            perjuangan rakyat Yogyakarta. Pada masa Sultan Hamengkubuwono IX,
+            terbentuklah kelompok pejuang rakyat bernama Pasukan Hantu Maut.
+            Nama ini diberikan karena strategi gerilya mereka yang dilakukan di
+            malam hari — menyusup lewat selokan-selokan dan gorong-gorong
+            peninggalan Belanda, termasuk yang masih ada hingga kini di sekitar
+            Rumah Sakit Pratama.
+          </p>
+          <br />
+          <p>
+            Awalnya, kampung-kampung di sekitar Pujokusuman seperti Keparakan
+            dan Brontokusuman membentuk pasukan rakyat masing-masing. Namun pada
+            tahun 1949, berbagai kelompok ini bergabung dan Pujokusuman menjadi
+            basis utama Pasukan Hantu Maut. Salah satu jalur rahasia yang mereka
+            gunakan konon masih bisa ditelusuri — termasuk lorong-lorong di
+            bawah jalan bergelombang di titik nol kilometer. Di tempat ini,
+            banyak ditemukan bekas lubang angin dan fitting lampu yang diduga
+            dulunya menjadi bagian dari jalur persembunyian bawah tanah.
+          </p>
+          <br />
+          <p>
+            Salah satu cerita legendaris dari masa ini datang dari Doro Pujo,
+            tokoh sentral dari keluarga bangsawan Pujokusuman. Demi mendukung
+            perjuangan rakyat, beliau menyerahkan sebilah keris untuk ditukar
+            dengan logistik dapur umum pejuang di Keparakan.
+          </p>
+          <br />
+          <p>
+            Sosok lain yang tak kalah penting adalah Romo Ditik Suhardi, pejuang
+            muda berusia 15 tahun yang pernah dikirim ke medan tempur di
+            Ambarawa dan sempat menjadi tahanan politik. Di masa pengasingannya,
+            ia bertemu dan menjalin kedekatan dengan keluarga Doro Pujo. Dari
+            hubungan ini, Romo Ditik kemudian menikahi adik dari istri Doro
+            Pujo. Dari pasangan ini lahirlah dua tokoh yang juga berpengaruh
+            dalam kehidupan budaya kampung ini: Romo Ibnu Suhardi dan Romo
+            Titik.
+          </p>
+        </>
+      ),
     },
     {
-      year: "1985",
-      title: "Sanggar Tari Berdiri",
-      description:
-        "Didirikannya Sanggar Tari Pujokusuman yang menjadi cikal bakal pelestarian budaya formal.",
+      year: "Era Modern",
+      title: "Menjaga Tradisi di Tengah Perubahan",
+      description: (
+        <>
+          <p>
+            Kini, Kampung Pujokusuman terus melestarikan warisan budaya yang
+            telah mengakar selama ratusan tahun. Di kampung ini berdiri Sanggar
+            Wabanah, organisasi yang dirintis oleh Romo Ibnu Suhardi, yang
+            berfokus pada eksplorasi budaya lokal serta diskusi seputar
+            perkembangan budaya dan teknologi dunia.
+          </p>
+          <br />
+          <p>
+            Kehidupan seni dan budaya masih sangat aktif di kampung ini.
+            Beberapa kegiatan rutin yang masih sering digelar di antaranya:
+          </p>
+          <ul>
+            <li>Seni Sendratari dan Tari Tradisional</li>
+            <li>Jemparingan</li>
+            <li>Jathilan</li>
+            <li>Komunitas Pelukis dan Perupa</li>
+            <li>Theater</li>
+          </ul>
+          <br />
+          <p>
+            Dengan segala warisan sejarah, perjuangan, dan semangat kebudayaan
+            yang hidup hingga kini, Kampung Pujokusuman bukan hanya sekadar
+            permukiman. Ia adalah titik simpul sejarah, seni, dan semangat
+            rakyat Yogyakarta, yang terus mengalir dari masa ke masa.
+          </p>
+        </>
+      ),
     },
-    {
-      year: "2000",
-      title: "Revitalisasi Jemparingan",
-      description:
-        "Kebangkitan kembali tradisi jemparingan sebagai olahraga dan seni tradisional.",
-    },
-    {
-      year: "2010",
-      title: "Komunitas Seni Modern",
-      description:
-        "Terbentuknya komunitas pelukis dan seniman modern yang memadukan tradisi dengan kontemporer.",
-    },
-    {
-      year: "2020",
-      title: "Kampung Budaya Digital",
-      description:
-        "Transformasi digital dalam pelestarian dan promosi budaya melalui media sosial dan teknologi.",
-    },
+   
   ];
 
   const prestasi = [
@@ -139,7 +212,7 @@ const Tentang = () => {
                 <div className="timeline-year">{item.year}</div>
                 <div className="timeline-content">
                   <h3>{item.title}</h3>
-                  <p>{item.description}</p>
+                  <div>{item.description}</div>
                 </div>
               </div>
             ))}

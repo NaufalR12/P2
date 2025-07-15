@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "../components/LanguageSwitcher";
 import "./Galeri.css";
 
 const Galeri = () => {
+  const { t } = useTranslation();
   const [selectedCategory, setSelectedCategory] = useState("semua");
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -9,51 +12,66 @@ const Galeri = () => {
   const galeriItems = [
     {
       id: 1,
-      title: "Pertunjukan Tari Klasik",
+      title: t("galeriItem1Title", "Pertunjukan Tari Klasik"),
       category: "tari",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/kampung-pujokusuman/tari-1.jpg",
-      description: "Pentas tari Srimpi oleh sanggar tari kampung",
+      description: t(
+        "galeriItem1Desc",
+        "Pentas tari Srimpi oleh sanggar tari kampung"
+      ),
     },
     {
       id: 2,
-      title: "Workshop Batik",
+      title: t("galeriItem2Title", "Workshop Batik"),
       category: "kerajinan",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/kampung-pujokusuman/batik-1.jpg",
-      description: "Kegiatan membatik bersama anak-anak kampung",
+      description: t(
+        "galeriItem2Desc",
+        "Kegiatan membatik bersama anak-anak kampung"
+      ),
     },
     {
       id: 3,
-      title: "Latihan Jemparingan",
+      title: t("galeriItem3Title", "Latihan Jemparingan"),
       category: "olahraga",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/kampung-pujokusuman/jemparingan-1.jpg",
-      description: "Sesi latihan panahan tradisional di halaman kampung",
+      description: t(
+        "galeriItem3Desc",
+        "Sesi latihan panahan tradisional di halaman kampung"
+      ),
     },
     {
       id: 4,
-      title: "Festival Jathilan",
+      title: t("galeriItem4Title", "Festival Jathilan"),
       category: "pertunjukan",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/kampung-pujokusuman/jathilan-1.jpg",
-      description: "Pertunjukan jathilan dalam festival tahunan",
+      description: t(
+        "galeriItem4Desc",
+        "Pertunjukan jathilan dalam festival tahunan"
+      ),
     },
     {
       id: 5,
-      title: "Gotong Royong",
+      title: t("galeriItem5Title", "Gotong Royong"),
       category: "kegiatan",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/kampung-pujokusuman/gotong-royong-1.jpg",
-      description: "Kegiatan gotong royong membersihkan kampung",
+      description: t(
+        "galeriItem5Desc",
+        "Kegiatan gotong royong membersihkan kampung"
+      ),
     },
     {
       id: 6,
-      title: "Upacara Ruwatan",
+      title: t("galeriItem6Title", "Upacara Ruwatan"),
       category: "ritual",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/kampung-pujokusuman/ruwatan-1.jpg",
-      description: "Upacara ruwatan dengan wayang kulit",
+      description: t("galeriItem6Desc", "Upacara ruwatan dengan wayang kulit"),
     },
   ];
 
@@ -63,13 +81,13 @@ const Galeri = () => {
   ];
 
   const categories = [
-    { key: "semua", label: "Semua" },
-    { key: "tari", label: "Tari" },
-    { key: "kerajinan", label: "Kerajinan" },
-    { key: "olahraga", label: "Olahraga" },
-    { key: "pertunjukan", label: "Pertunjukan" },
-    { key: "kegiatan", label: "Kegiatan" },
-    { key: "ritual", label: "Ritual" },
+    { key: "semua", label: t("galeriCatSemua", "Semua") },
+    { key: "tari", label: t("galeriCatTari", "Tari") },
+    { key: "kerajinan", label: t("galeriCatKerajinan", "Kerajinan") },
+    { key: "olahraga", label: t("galeriCatOlahraga", "Olahraga") },
+    { key: "pertunjukan", label: t("galeriCatPertunjukan", "Pertunjukan") },
+    { key: "kegiatan", label: t("galeriCatKegiatan", "Kegiatan") },
+    { key: "ritual", label: t("galeriCatRitual", "Ritual") },
   ];
 
   const filteredItems =
@@ -99,13 +117,18 @@ const Galeri = () => {
 
   return (
     <div className="galeri-page">
+      <div style={{ position: "fixed", top: 10, right: 10, zIndex: 1000 }}>
+        <LanguageSwitcher />
+      </div>
       {/* Header */}
       <section className="galeri-header">
         <div className="container">
-          <h1>Galeri Kegiatan</h1>
+          <h1>{t("galeriHeader", "Galeri Kegiatan")}</h1>
           <p>
-            Dokumentasi visual kegiatan budaya dan kehidupan sehari-hari di
-            Kampung Pujokusuman
+            {t(
+              "galeriSubheader",
+              "Dokumentasi visual kegiatan budaya dan kehidupan sehari-hari di Kampung Pujokusuman"
+            )}
           </p>
         </div>
       </section>
@@ -150,7 +173,9 @@ const Galeri = () => {
                   <div className="galeri-overlay">
                     <h3>{item.title}</h3>
                     <p>{item.description}</p>
-                    <span className="view-icon">👁️ Lihat</span>
+                    <span className="view-icon">
+                      👁️ {t("galeriLihat", "Lihat")}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -187,14 +212,19 @@ const Galeri = () => {
       {/* CTA */}
       <section className="cta-section">
         <div className="container">
-          <h2>Ingin Berpartisipasi?</h2>
-          <p>Bergabunglah dengan kegiatan-kegiatan menarik di kampung kami!</p>
+          <h2>{t("galeriCtaTitle", "Ingin Berpartisipasi?")}</h2>
+          <p>
+            {t(
+              "galeriCtaDesc",
+              "Bergabunglah dengan kegiatan-kegiatan menarik di kampung kami!"
+            )}
+          </p>
           <div className="cta-buttons">
             <a href="/#kontak" className="btn btn-primary">
-              Hubungi Kami
+              {t("galeriCtaContact", "Hubungi Kami")}
             </a>
             <a href="/" className="btn btn-outline">
-              Kembali ke Beranda
+              {t("galeriCtaBackHome", "Kembali ke Beranda")}
             </a>
           </div>
         </div>

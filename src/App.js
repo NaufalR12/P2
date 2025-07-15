@@ -43,10 +43,6 @@ function App() {
     setIsMenuOpen(false);
   };
 
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  };
-
   const HomePage = () => (
     <>
       {/* Language Switcher */}

@@ -17,7 +17,7 @@ import LanguageSwitcher from "./components/LanguageSwitcher";
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navbarRef = useRef(null);
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {

@@ -26,10 +26,12 @@
 .hero-media-card {
   position: relative;
   width: 100%;
-  height: 70vh;
-  min-height: 500px;
+  height: 85vh;
+  min-height: 650px;
   overflow: hidden;
   background: var(--gradient-primary);
+  padding: 0;
+  margin: 0;
 }
 
 .hero-media-container {
@@ -38,19 +40,37 @@
   left: 0;
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 
 .hero-image-wrapper {
   width: 100%;
   height: 100%;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
 }
 
 .hero-media-image {
-  width: 100%;
+  width: auto;
   height: 100%;
-  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
   object-position: center;
+  background: #000;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .hero-image-overlay {
@@ -99,17 +119,6 @@
   margin-bottom: 20px;
   opacity: 0.9;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-.hero-media-badge {
-  display: inline-block;
-  background: var(--gradient-primary);
-  padding: 10px 20px;
-  border-radius: 25px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
 
 .hero-slider-indicator {
@@ -273,7 +282,7 @@
 .error-content h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
 }
 
 .error-content p {
@@ -289,7 +298,7 @@
 
 /* Add subtle border for YouTube videos */
 .hero-youtube-wrapper::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -344,12 +353,6 @@
   bottom: 60px;
 }
 
-/* Styling untuk badge media */
-.hero-media-badge {
-  padding: 8px 16px;
-  font-size: 0.8rem;
-}
-
 /* Animasi untuk transisi slide */
 .hero-carousel .slick-slide {
   transition: transform 0.3s ease;
@@ -371,8 +374,8 @@
 }
 @media (max-width: 480px) {
   .hero-media-card {
-    height: 45vh;
-    min-height: 350px;
+    height: 60vh;
+    min-height: 400px;
   }
 
   .hero-media-title {
@@ -394,11 +397,6 @@
 
   .hero-carousel .slick-dots {
     bottom: 60px;
-  }
-
-  .hero-media-badge {
-    padding: 8px 16px;
-    font-size: 0.8rem;
   }
 
   .custom-prev-arrow,
@@ -471,12 +469,6 @@
   bottom: 60px;
 }
 
-/* Styling untuk badge media */
-.hero-media-badge {
-  padding: 8px 16px;
-  font-size: 0.8rem;
-}
-
 /* Animasi untuk transisi slide */
 .hero-carousel .slick-slide {
   transition: transform 0.3s ease;
@@ -496,7 +488,6 @@
     transform: scale(1.05);
   }
 }
-
 
 @keyframes heroImageZoom {
   0%,

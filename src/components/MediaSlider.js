@@ -21,47 +21,42 @@ const MediaSlider = () => {
   const mediaItems = [
     {
       type: "image",
-      publicId: "WhatsApp_Image_2025-07-02_at_10.58.51_0e46cea1_prbbkv", // Ganti dengan public ID gambar Anda
-      title: "Suasana Kampung Pujokusuman",
+      publicId: "gerbang3_l9dtyi",
+      title: "Sugeng Rawuh",
       description:
         "Pemandangan indah kampung dengan arsitektur tradisional Jawa yang memukau",
     },
     {
+      type: "youtube",
+      videoId: "VclwyI3bcFI", // Ganti dengan ID video YouTube
+      title: "Profil Kampung",
+      description: "Dokumentasi Kampung Pujokusuman",
+    },
+    {
       type: "image",
-      publicId: "WhatsApp_Image_2025-07-06_at_18.38.43_e3e1ade7_usl6sj", // Ganti dengan public ID gambar Anda
-      title: "Tari Tradisional",
+      publicId: "DSC07541_gcmnuy", // Ganti dengan public ID gambar Anda
+      title: "Kesenian Sendratari",
       description: "Pertunjukan tari klasik Jawa oleh para penari muda",
     },
     {
-      type: "youtube",
-      videoId: "VclwyI3bcFI", // Ganti dengan ID video YouTube
-      title: "Video Kegiatan Kampung",
+      type: "image",
+      publicId: "IMG_9786_cdl0tt", // Ganti dengan public ID gambar Anda
+      title: "Pasar Tradisional Pujokusuman",
       description:
-        "Dokumentasi video kegiatan sehari-hari di Kampung Pujokusuman",
+        "Pusat aktivitas warga yang menghadirkan kesegaran sayur-mayur dan cita rasa kuliner tradisional dalam suasana kampung yang ramah.",
     },
     {
       type: "image",
-      publicId: "kampung-pujokusuman/workshop-batik", // Ganti dengan public ID gambar Anda
-      title: "Workshop Batik",
-      description: "Kegiatan membatik bersama warga kampung",
-    },
-    {
-      type: "youtube",
-      videoId: "ANOTHER_VIDEO_ID", // Ganti dengan ID video YouTube lainnya
-      title: "Pertunjukan Gamelan",
-      description: "Video pertunjukan musik gamelan tradisional Jawa",
+      publicId: "IMG_7033_ygheg4", // Tambah gambar baru
+      title: "Sejarah Kebudayaan",
+      description:
+        "Kisah-kisah budaya dan sejarah yang tumbuh di tanah Pujokusuman",
     },
     {
       type: "image",
-      publicId: "kampung-pujokusuman/gotong-royong", // Tambah gambar baru
-      title: "Gotong Royong",
-      description: "Kegiatan gotong royong warga kampung",
-    },
-    {
-      type: "image",
-      publicId: "kampung-pujokusuman/rumah-joglo", // Tambah gambar baru
-      title: "Rumah Joglo",
-      description: "Arsitektur rumah tradisional Jawa",
+      publicId: "WhatsApp_Image_2025-07-17_at_22.59.46_e01f73d5_ohbsdn", // Tambah gambar baru
+      title: "Founder Web",
+      description: "KKN AB 83 228 UPN VETERAN YOGYAKARTA",
     },
   ];
 
@@ -164,11 +159,6 @@ const MediaSlider = () => {
                       <p className="hero-media-description">
                         {item.description}
                       </p>
-                      <div className="hero-media-badge">
-                        {item.type === "youtube"
-                          ? "🎥 Video YouTube"
-                          : "📷 Dokumentasi Foto"}
-                      </div>
                     </div>
                   </div>
                 </div>

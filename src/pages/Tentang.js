@@ -124,9 +124,6 @@ const Tentang = () => {
 
   return (
     <div className="tentang-page">
-      <div style={{ position: "fixed", top: 10, right: 10, zIndex: 1000 }}>
-        <LanguageSwitcher />
-      </div>
       {/* Header */}
       <section className="tentang-header">
         <div className="container">

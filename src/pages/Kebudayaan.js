@@ -272,9 +272,6 @@ const Kebudayaan = () => {
 
   return (
     <div className="kebudayaan-page">
-      <div style={{ position: "fixed", top: 10, right: 10, zIndex: 1000 }}>
-        <LanguageSwitcher />
-      </div>
       {/* Header */}
       <section className="kebudayaan-header">
         <div className="container">

@@ -117,9 +117,6 @@ const Galeri = () => {
 
   return (
     <div className="galeri-page">
-      <div style={{ position: "fixed", top: 10, right: 10, zIndex: 1000 }}>
-        <LanguageSwitcher />
-      </div>
       {/* Header */}
       <section className="galeri-header">
         <div className="container">

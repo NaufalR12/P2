@@ -30,6 +30,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+}
+
+.nav-lang-switcher {
+  margin-left: 4px;
+  display: flex;
+  align-items: center;
 }
 
 .logo h2 {
@@ -612,6 +619,10 @@ body {
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
+  }
+
+  .nav-lang-switcher {
+    margin-left: 2px;
   }
 
   .hero-title {

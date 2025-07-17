@@ -45,10 +45,6 @@ function App() {
 
   const HomePage = () => (
     <>
-      {/* Language Switcher */}
-      <div style={{ position: "fixed", top: 10, right: 10, zIndex: 1000 }}>
-        <LanguageSwitcher />
-      </div>
       {/* Hero Section */}
       <section id="beranda" className="hero">
         <div className="hero-bg"></div>
@@ -275,13 +271,12 @@ function App() {
           <div className="maps-container fade-in">
             <div className="maps-wrapper">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3422.648765457053!2d110.36699412432293!3d-7.813804277586321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1spujokusuman!5e1!3m2!1sid!2sid!4v1752162142941!5m2!1sid!2sid"
+                src="https://storymaps.arcgis.com/stories/266dbfcead6347ac984a76f1904e0246"
                 width="100%"
-                height="450"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
+                height="500px"
+                frameBorder="0"
+                allowFullScreen
+                allow="geolocation"
                 title={t("mapsTitle")}
               ></iframe>
             </div>
@@ -387,6 +382,10 @@ function App() {
               <span></span>
               <span></span>
               <span></span>
+            </div>
+            {/* Tambahkan LanguageSwitcher di pojok kanan navbar */}
+            <div className="nav-lang-switcher">
+              <LanguageSwitcher />
             </div>
           </div>
         </div>

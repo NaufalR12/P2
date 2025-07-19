@@ -13,6 +13,7 @@ import Galeri from "./pages/Galeri";
 import "./App.css";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./components/LanguageSwitcher";
+import { Image, CloudinaryContext } from "cloudinary-react";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -98,25 +99,37 @@ function App() {
               <div className="vision-mission">
                 <div className="vision">
                   <h4>{t("vision")}</h4>
-                  <p>{t("visionText")}</p>
+                  <ul>
+                    <li>{t("visionA")}</li>
+                    <li>{t("visionB")}</li>
+                    <li>{t("visionC")}</li>
+                  </ul>
                 </div>
                 <div className="mission">
                   <h4>{t("mission")}</h4>
                   <ul>
-                    <li>{t("mission1")}</li>
-                    <li>{t("mission2")}</li>
-                    <li>{t("mission3")}</li>
-                    <li>{t("mission4")}</li>
+                    <li>{t("missionA")}</li>
+                    <li>{t("missionB")}</li>
+                    <li>{t("missionC")}</li>
+                    <li>{t("missionD")}</li>
+                    <li>{t("missionE")}</li>
+                    <li>{t("missionF")}</li>
                   </ul>
                 </div>
               </div>
             </div>
             <div className="about-image fade-in">
-              <div className="image-placeholder">
-                <div className="image-content">
-                  <h4>{t("kampungAtmosphere")}</h4>
-                  <p>{t("traditionalPhoto")}</p>
-                </div>
+              <CloudinaryContext cloudName="ddfcjabrm">
+                <Image
+                  publicId="DSC07277_ip8vtk"
+                  width="100%"
+                  style={{ borderRadius: "20px", marginBottom: "1rem" }}
+                  alt={t("kampungAtmosphere")}
+                />
+              </CloudinaryContext>
+              <div className="image-content">
+                <h4>{t("kampungAtmosphere")}</h4>
+                <p>{t("traditionalPhoto")}</p>
               </div>
             </div>
           </div>
@@ -133,34 +146,34 @@ function App() {
           <div className="culture-grid">
             {[
               {
-                title: t("culture1Title"),
+                title: t("culture1Title"), // Sanggar Tari
                 description: t("culture1Desc"),
                 icon: "💃",
               },
               {
-                title: t("culture2Title"),
+                title: t("culture2Title"), // Jemparingan
                 description: t("culture2Desc"),
-                icon: "🎨",
+                icon: "🏹",
               },
               {
-                title: t("culture3Title"),
+                title: t("culture3Title"), // Teater – Sanggar Obah
                 description: t("culture3Desc"),
-                icon: "🎵",
-              },
-              {
-                title: t("culture4Title"),
-                description: t("culture4Desc"),
-                icon: "✋",
-              },
-              {
-                title: t("culture5Title"),
-                description: t("culture5Desc"),
-                icon: "🍲",
-              },
-              {
-                title: t("culture6Title"),
-                description: t("culture6Desc"),
                 icon: "🎭",
+              },
+              {
+                title: t("culture4Title"), // Ketoprak
+                description: t("culture4Desc"),
+                icon: "🎬",
+              },
+              {
+                title: t("culture5Title"), // Orkes Kentongan
+                description: t("culture5Desc"),
+                icon: "🥁",
+              },
+              {
+                title: t("culture6Title"), // Jathilan
+                description: t("culture6Desc"),
+                icon: "🐎",
               },
             ].map((item, index) => (
               <div key={index} className="culture-card fade-in">
@@ -186,15 +199,62 @@ function App() {
             <p>{t("gallerySubtitle")}</p>
           </div>
           <div className="gallery-grid">
-            {[1, 2, 3, 4, 5, 6].map((item, index) => (
+            {[
+              {
+                publicId: "DSC07518_bgcqsq",
+                title: t("Sanggar Tari"),
+                description: t(
+                  "Aktivitas latihan tari"
+                ),
+              },
+              {
+                publicId: "IMG-20211127-WA0008_eruzi0",
+                title: t("Jemparingan"),
+                description: t(
+                  "Lomba jemparingan"
+                ),
+              },
+              {
+                publicId: "DSC07520_bgcqsq",
+                title: t("Teater Sanggar Obah"),
+                description: t("Deskripsi aktivitas budaya Teater tradisional"),
+              },
+              {
+                publicId: "DSC07521_bgcqsq",
+                title: t("Ketoprak"),
+                description: t(
+                  "Deskripsi aktivitas budaya Ketoprak atau drama tradisional"
+                ),
+              },
+              {
+                publicId: "DSC07522_bgcqsq",
+                title: t("Orkes Kentongan"),
+                description: t("Deskripsi aktivitas budaya Orkes Kentongan"),
+              },
+              {
+                publicId: "DSC07523_bgcqsq",
+                title: t("Jathilan"),
+                description: t(
+                  "Deskripsi aktivitas budaya Jathilan atau tari kuda lumping"
+                ),
+              },
+            ].map((item, index) => (
               <div key={index} className="gallery-item fade-in">
-                <div className="gallery-placeholder">
-                  <div className="gallery-overlay">
-                    <h4>
-                      {t("activity")} {item}
-                    </h4>
-                    <p>{t("activityDesc")}</p>
-                  </div>
+                <div className="gallery-image-container">
+                  <img
+                    src={`https://res.cloudinary.com/ddfcjabrm/image/upload/c_fill,w_400,h_250/${item.publicId}.jpg`}
+                    alt={item.title}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      borderRadius: "10px",
+                    }}
+                  />
+                </div>
+                <div className="gallery-overlay">
+                  <h4>{item.title}</h4>
+                  <p>{item.description}</p>
                 </div>
               </div>
             ))}
@@ -394,62 +454,65 @@ function App() {
   };
 
   return (
-    <Router>
-      <div className="App">
-        <Navigation />
+    <CloudinaryContext cloudName="ddfcjabrm">
+      <Router>
+        <div className="App">
+          <Navigation />
 
-        {/* Routes */}
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/tentang" element={<Tentang />} />
-          <Route path="/kebudayaan" element={<Kebudayaan />} />
-          <Route path="/galeri" element={<Galeri />} />
-        </Routes>
+          {/* Routes */}
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/tentang" element={<Tentang />} />
+            <Route path="/kebudayaan" element={<Kebudayaan />} />
+            <Route path="/galeri" element={<Galeri />} />
+          </Routes>
 
-        {/* Footer */}
-        <footer className="footer">
-          <div className="container">
-            <div className="footer-content">
-              <div className="footer-section">
-                <h3>Kampung Kebudayaan Pujokusuman</h3>
+          {/* Footer */}
+          <footer className="footer">
+            <div className="container">
+              <div className="footer-content">
+                <div className="footer-section">
+                  <h3>Kampung Kebudayaan Pujokusuman</h3>
+                  <p>
+                    "Menyelaraskan budaya tradisional Indonesia dengan semangat
+                    kerja sama dan kebersamaan"
+                  </p>
+                </div>
+                <div className="footer-section">
+                  <h4>{t("footerMenu")}</h4>
+                  <ul>
+                    <li>
+                      <a href="#beranda">{t("navHome")}</a>
+                    </li>
+                    <li>
+                      <a href="#tentang">{t("navAbout")}</a>
+                    </li>
+                    <li>
+                      <a href="#kebudayaan">{t("navCulture")}</a>
+                    </li>
+                    <li>
+                      <a href="#galeri">{t("navGallery")}</a>
+                    </li>
+                  </ul>
+                </div>
+                <div className="footer-section">
+                  <h4>{t("footerContact")}</h4>
+                  <p>Yogyakarta, Indonesia</p>
+                  <p>📞 +62 274 123456</p>
+                  <p>✉️ info@pujokusuman.id</p>
+                </div>
+              </div>
+              <div className="footer-bottom">
                 <p>
-                  "Menyelaraskan budaya tradisional Indonesia dengan semangat
-                  kerja sama dan kebersamaan"
+                  &copy; 2025 Kampung Kebudayaan Pujokusuman. All rights
+                  reserved.
                 </p>
               </div>
-              <div className="footer-section">
-                <h4>{t("footerMenu")}</h4>
-                <ul>
-                  <li>
-                    <a href="#beranda">{t("navHome")}</a>
-                  </li>
-                  <li>
-                    <a href="#tentang">{t("navAbout")}</a>
-                  </li>
-                  <li>
-                    <a href="#kebudayaan">{t("navCulture")}</a>
-                  </li>
-                  <li>
-                    <a href="#galeri">{t("navGallery")}</a>
-                  </li>
-                </ul>
-              </div>
-              <div className="footer-section">
-                <h4>{t("footerContact")}</h4>
-                <p>Yogyakarta, Indonesia</p>
-                <p>📞 +62 274 123456</p>
-                <p>✉️ info@pujokusuman.id</p>
-              </div>
             </div>
-            <div className="footer-bottom">
-              <p>
-                &copy; 2025 Kampung Kebudayaan Pujokusuman. All rights reserved.
-              </p>
-            </div>
-          </div>
-        </footer>
-      </div>
-    </Router>
+          </footer>
+        </div>
+      </Router>
+    </CloudinaryContext>
   );
 }
 

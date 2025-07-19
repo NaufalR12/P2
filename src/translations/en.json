@@ -37,6 +37,12 @@
   "gallerySubtitle": "Documentation of cultural activities and daily life",
   "activity": "Activity",
   "activityDesc": "Description of cultural activity",
+  "Deskripsi aktivitas budaya Sanggar Tari tradisional": "Traditional dance studio that preserves Yogyakarta style classical dance with regular practice and periodic performances",
+  "Deskripsi aktivitas budaya Jemparingan atau panahan tradisional": "Traditional Javanese archery art that teaches inner calm and focus through bamboo bow practice",
+  "Deskripsi aktivitas budaya Teater tradisional": "Sanggar Obah presents a performing arts theater space that is open to young people to create and enliven local culture",
+  "Deskripsi aktivitas budaya Ketoprak atau drama tradisional": "Pujokusuman Village Ketoprak raises local stories and builds togetherness in traditional performing arts",
+  "Deskripsi aktivitas budaya Orkes Kentongan": "SUKA RENA kentongan orchestra is an art form that was once lived by the elderly and is now being preserved by the younger generation",
+  "Deskripsi aktivitas budaya Jathilan atau tari kuda lumping": "Jathilan performance that combines spiritual elements and dynamic movements as a form of strong and magical folk cultural expression",
   "viewGalleryDetails": "View Gallery Details",
   "socialMediaTitle": "Follow Us on Social Media",
   "socialMediaSubtitle": "Stay connected with our activities and latest updates",
@@ -242,5 +248,14 @@
   "ctaTitleKebudayaan": "Interested in Joining?",
   "ctaDescKebudayaan": "Let’s preserve culture together! Contact us below for more information.",
   "ctaContactKebudayaan": "Contact Us",
-  "ctaBackHome": "Back to Home"
+  "ctaBackHome": "Back to Home",
+  "visionA": "To realize a quality, competitive, and just Pujokusuman community.",
+  "visionB": "To create a strong and sustainable economy based on local potential.",
+  "visionC": "To achieve social harmony and democratic governance.",
+  "missionA": "Improve the quality of human resources through education, training, and community empowerment.",
+  "missionB": "Enhance the community's economy by developing local potential and creating jobs.",
+  "missionC": "Improve the quality of the environment and cleanliness of the area.",
+  "missionD": "Establish a clean, transparent, and accountable government.",
+  "missionE": "Increase community participation in development.",
+  "missionF": "Create a harmonious and peaceful atmosphere among residents."
 }

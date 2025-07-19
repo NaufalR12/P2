@@ -387,7 +387,7 @@ function App() {
               </div>
               <div className="contact-item">
                 <h3>✉️ {t("email")}</h3>
-                <p>info@pujokusuman.id</p>
+                <p>djelajahpujoku@gmail.com</p>
               </div>
             </div>
             <div className="contact-form fade-in">
@@ -524,7 +524,7 @@ function App() {
                   <h4>{t("footerContact")}</h4>
                   <p>Yogyakarta, Indonesia</p>
                   <p>📞 +62 274 123456</p>
-                  <p>✉️ info@pujokusuman.id</p>
+                  <p>✉️ djelajahpujoku@gmail.com</p>
                 </div>
               </div>
               <div className="footer-bottom">

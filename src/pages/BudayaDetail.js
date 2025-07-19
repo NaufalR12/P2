@@ -7,6 +7,7 @@ const BudayaDetail = () => {
   const { id } = useParams();
   const { t } = useTranslation();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const budayaData = {
     "sanggar-tari-tradisional": {
@@ -444,6 +445,8 @@ const BudayaDetail = () => {
                         `Foto ${currentImageIndex + 1}`
                       );
                     }}
+                    style={{ cursor: "zoom-in" }}
+                    onClick={() => setIsModalOpen(true)}
                   />
                   <button className="gallery-nav prev" onClick={prevImage}>
                     ‹
@@ -470,6 +473,57 @@ const BudayaDetail = () => {
                     />
                   ))}
                 </div>
+                {/* Modal for fullscreen image */}
+                {isModalOpen && (
+                  <div
+                    style={{
+                      position: "fixed",
+                      top: 0,
+                      left: 0,
+                      width: "100vw",
+                      height: "100vh",
+                      background: "rgba(0,0,0,0.8)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      zIndex: 2000,
+                    }}
+                    onClick={() => setIsModalOpen(false)}
+                  >
+                    <img
+                      src={budaya.gallery[currentImageIndex]}
+                      alt="Fullsize"
+                      style={{
+                        maxWidth: "90vw",
+                        maxHeight: "90vh",
+                        borderRadius: "12px",
+                        boxShadow: "0 8px 32px rgba(0,0,0,0.5)",
+                        background: "#fff",
+                      }}
+                      onClick={(e) => e.stopPropagation()}
+                    />
+                    <button
+                      onClick={() => setIsModalOpen(false)}
+                      style={{
+                        position: "fixed",
+                        top: 32,
+                        right: 32,
+                        background: "rgba(0,0,0,0.7)",
+                        color: "#fff",
+                        border: "none",
+                        borderRadius: "50%",
+                        width: 40,
+                        height: 40,
+                        fontSize: 24,
+                        cursor: "pointer",
+                        zIndex: 2100,
+                      }}
+                      aria-label="Tutup"
+                    >
+                      ×
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
           </div>

@@ -498,10 +498,7 @@ function App() {
               <div className="footer-content">
                 <div className="footer-section">
                   <h3>Kampung Kebudayaan Pujokusuman</h3>
-                  <p>
-                    "Menyelaraskan budaya tradisional Indonesia dengan semangat
-                    kerja sama dan kebersamaan"
-                  </p>
+                  <p>"Dari jejak laskar Hantu Maut hingga geliat seni tradisi, Pujokusuman adalah ruang hidup budaya dan sejarah yang terus bernapas bersama warganya."</p>
                 </div>
                 <div className="footer-section">
                   <h4>{t("footerMenu")}</h4>

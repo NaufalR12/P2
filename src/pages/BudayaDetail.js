@@ -1,0 +1,503 @@
+import React, { useState } from "react";
+import { useParams, Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import "./BudayaDetail.css";
+
+const BudayaDetail = () => {
+  const { id } = useParams();
+  const { t } = useTranslation();
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const budayaData = {
+    "sanggar-tari-tradisional": {
+      title: t("budaya1Title", "Sanggar Tari Tradisional"),
+      heroImage:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/IMG_9508_fqelvn.jpg",
+      gallery: [
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/DSC07541_gcmnuy",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/DSC07503_ysmria",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_0161_zojodk",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/kampung-pujokusuman/sanggar-tari-4.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/DSC07518_bgcqsq",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/DSC07520_bgcqsq",
+      ],
+      sejarah: [
+        t("budaya1Sejarah1"),
+        t("budaya1Sejarah2"),
+        t("budaya1Sejarah3"),
+        t("budaya1Sejarah4"),
+        t("budaya1Sejarah5"),
+        t("budaya1Sejarah6"),
+        t("budaya1Sejarah7"),
+        t("budaya1Sejarah8"),
+        t("budaya1Sejarah9"),
+        t("budaya1Sejarah10"),
+        t("budaya1Sejarah11"),
+        t("budaya1Sejarah12"),
+      ],
+      deskripsi: t("budaya1Deskripsi"),
+      kegiatan: [
+        t("budaya1Kegiatan1"),
+        t("budaya1Kegiatan2"),
+        t("budaya1Kegiatan3"),
+        t("budaya1Kegiatan4"),
+      ],
+      jadwal: t("budaya1Jadwal"),
+      prestasi: [
+        "Juara 1 Festival Tari Tradisional DIY 2023",
+        "Pertunjukan di Istana Negara Jakarta 2022",
+        "Kolaborasi dengan Sanggar Tari Keraton Yogyakarta",
+        "Workshop Internasional dengan Seniman Jepang 2021",
+      ],
+      tokoh: [
+        {
+          nama: "Bu Sari Wulandari",
+          jabatan: "Pelatih Senior",
+          deskripsi:
+            "Seniman tari dengan pengalaman 25 tahun, pendiri Sanggar Tari Pujokusuman",
+          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/tokoh1.jpg",
+        },
+        {
+          nama: "Pak Sutarno",
+          jabatan: "Ketua Sanggar",
+          deskripsi:
+            "Memimpin sanggar selama 15 tahun dan aktif melestarikan budaya tradisional",
+          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/tokoh2.jpg",
+        },
+      ],
+    },
+    jemparingan: {
+      title: t("budaya2Title", "Jemparingan (Panahan Tradisional)"),
+      heroImage:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/kampung-pujokusuman/jemparingan.jpg",
+      gallery: [
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/jemparingan1.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/jemparingan2.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/jemparingan3.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/jemparingan4.jpg",
+      ],
+      sejarah: [t("budaya2Sejarah")],
+      deskripsi: t("budaya2Deskripsi"),
+      kegiatan: [
+        t("budaya2Kegiatan1"),
+        t("budaya2Kegiatan2"),
+        t("budaya2Kegiatan3"),
+        t("budaya2Kegiatan4"),
+      ],
+      jadwal: t("budaya2Jadwal"),
+      prestasi: [
+        "Rekor MURI Peserta Jemparingan Terbanyak 2020",
+        "Juara 1 Kompetisi Jemparingan DIY 2023",
+        "Pertunjukan di Festival Budaya Nasional 2022",
+        "Pelatihan untuk Sekolah-sekolah di Yogyakarta",
+      ],
+      tokoh: [
+        {
+          nama: "Pak Bambang",
+          jabatan: "Pelatih Jemparingan",
+          deskripsi:
+            "Ahli jemparingan dengan pengalaman 20 tahun, melatih lebih dari 100 murid",
+          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/tokoh-jemparingan.jpg",
+        },
+      ],
+    },
+    jatilan: {
+      title: t("budaya3Title", "Jathilan (Tari Kuda Lumping)"),
+      heroImage:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/kampung-pujokusuman/jathilan.jpg",
+      gallery: [
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/jathilan1.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/jathilan2.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/jathilan3.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/jathilan4.jpg",
+      ],
+      sejarah: [t("budaya3Sejarah")],
+      deskripsi: t("budaya3Deskripsi"),
+      kegiatan: [
+        t("budaya3Kegiatan1"),
+        t("budaya3Kegiatan2"),
+        t("budaya3Kegiatan3"),
+        t("budaya3Kegiatan4"),
+      ],
+      jadwal: t("budaya3Jadwal"),
+      prestasi: [
+        "Juara 1 Festival Jathilan Se-Yogyakarta 2023",
+        "Pertunjukan di Taman Mini Indonesia Indah 2022",
+        "Kolaborasi dengan Grup Jathilan dari Solo 2021",
+        "Pelatihan untuk Komunitas Jathilan Muda",
+      ],
+      tokoh: [
+        {
+          nama: "Ki Dalang Sukoco",
+          jabatan: "Dalang Senior",
+          deskripsi:
+            "Dalang wayang kulit yang sering memimpin upacara ruwatan dan pertunjukan wayang",
+          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/tokoh-jathilan.jpg",
+        },
+      ],
+    },
+    pelukis: {
+      title: t("budaya4Title", "Komunitas Pelukis Kampoeng"),
+      heroImage:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/kampung-pujokusuman/pelukis.jpg",
+      gallery: [
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/pelukis1.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/pelukis2.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/pelukis3.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/pelukis4.jpg",
+      ],
+      sejarah: [t("budaya4Sejarah")],
+      deskripsi: t("budaya4Deskripsi"),
+      kegiatan: [
+        t("budaya4Kegiatan1"),
+        t("budaya4Kegiatan2"),
+        t("budaya4Kegiatan3"),
+        t("budaya4Kegiatan4"),
+      ],
+      jadwal: t("budaya4Jadwal"),
+      prestasi: [
+        "Pameran Lukisan Nasional Jakarta 2022",
+        "Kolaborasi dengan Galeri Seni Yogyakarta 2023",
+        "Workshop Seni untuk Anak-anak Sekolah 2021",
+        "Mural Bersama di Dinding Kampung 2023",
+      ],
+      tokoh: [
+        {
+          nama: "Pak Agus",
+          jabatan: "Ketua Komunitas",
+          deskripsi:
+            "Seniman lukis dengan pengalaman 15 tahun, pendiri komunitas pelukis kampung",
+          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/tokoh-pelukis.jpg",
+        },
+      ],
+    },
+    ruwatan: {
+      title: t("budaya5Title", "Upacara Ruwatan"),
+      heroImage:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/IMG_1381_1_fcfupy.jpg",
+      gallery: [
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/ruwatan1.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/ruwatan2.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/ruwatan3.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/ruwatan4.jpg",
+      ],
+      sejarah: [t("budaya5Sejarah")],
+      deskripsi: t("budaya5Deskripsi"),
+      kegiatan: [
+        t("budaya5Kegiatan1"),
+        t("budaya5Kegiatan2"),
+        t("budaya5Kegiatan3"),
+        t("budaya5Kegiatan4"),
+      ],
+      jadwal: t("budaya5Jadwal"),
+      prestasi: [
+        "Upacara Ruwatan Massal 2023 dengan 1000 peserta",
+        "Kolaborasi dengan Keraton Yogyakarta 2022",
+        "Dokumentasi UNESCO untuk Pelestarian Budaya 2021",
+        "Pelatihan Dalang Muda untuk Regenerasi",
+      ],
+      tokoh: [
+        {
+          nama: "Ki Dalang Sukoco",
+          jabatan: "Dalang Senior",
+          deskripsi:
+            "Dalang wayang kulit yang sering memimpin upacara ruwatan dan pertunjukan wayang",
+          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/tokoh-ruwatan.jpg",
+        },
+      ],
+    },
+    "pujokusuman-creative-lab": {
+      title: t("budaya6Title", "Pujokusuman Creative Lab"),
+      heroImage:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/WhatsApp_Image_2025-07-10_at_19.13.54_0f817fc4_mwpwlp.jpg",
+      gallery: [
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/creative1.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/creative2.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/creative3.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/creative4.jpg",
+      ],
+      sejarah: [t("budaya6Sejarah")],
+      deskripsi: t("budaya6Deskripsi"),
+      kegiatan: [
+        t("budaya6Kegiatan1"),
+        t("budaya6Kegiatan2"),
+        t("budaya6Kegiatan3"),
+        t("budaya6Kegiatan4"),
+      ],
+      jadwal: t("budaya6Jadwal"),
+      prestasi: [
+        "Website Kampung Pujokusuman - Juara 1 Kompetisi Digital 2023",
+        "Video Dokumenter Budaya - Tampil di Festival Film Yogyakarta 2022",
+        "Kolaborasi dengan Universitas Gadjah Mada 2023",
+        "Pelatihan Digital untuk UMKM Kampung 2022",
+      ],
+      tokoh: [
+        {
+          nama: "Pak Rudi",
+          jabatan: "Koordinator Creative Lab",
+          deskripsi:
+            "Ahli teknologi dengan passion di bidang budaya, pendiri Creative Lab",
+          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/tokoh-creative.jpg",
+        },
+      ],
+    },
+    "pasar-pujokusuman": {
+      title: t("budaya7Title", "Pasar Pujokusuman"),
+      heroImage:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/IMG_9786_cdl0tt.jpg",
+      gallery: [
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/pasar1.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/pasar2.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/pasar3.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/pasar4.jpg",
+      ],
+      sejarah: [t("budaya7Sejarah")],
+      deskripsi: t("budaya7Deskripsi"),
+      kegiatan: [
+        t("budaya7Kegiatan1"),
+        t("budaya7Kegiatan2"),
+        t("budaya7Kegiatan3"),
+        t("budaya7Kegiatan4"),
+      ],
+      jadwal: t("budaya7Jadwal"),
+      prestasi: [
+        "Festival Pasar Rakyat Terbaik DIY 2023",
+        "Bazar Kuliner Tradisional - 5000 pengunjung 2022",
+        "Pelatihan UMKM untuk 100 pedagang 2023",
+        "Kolaborasi dengan Dinas Pariwisata DIY 2022",
+      ],
+      tokoh: [
+        {
+          nama: "Bu Siti",
+          jabatan: "Ketua Paguyuban Pedagang",
+          deskripsi:
+            "Pedagang senior dengan pengalaman 30 tahun, memimpin paguyuban pedagang pasar",
+          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/tokoh-pasar.jpg",
+        },
+      ],
+    },
+  };
+
+  const budaya = budayaData[id];
+
+  if (!budaya) {
+    return (
+      <div className="budaya-detail-page">
+        <div className="container">
+          <h1>Budaya tidak ditemukan</h1>
+          <Link to="/kebudayaan" className="btn btn-primary">
+            Kembali ke Kebudayaan
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) =>
+      prev === budaya.gallery.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) =>
+      prev === 0 ? budaya.gallery.length - 1 : prev - 1
+    );
+  };
+
+  const getPlaceholderImage = (title) => {
+    const canvas = document.createElement("canvas");
+    canvas.width = 800;
+    canvas.height = 600;
+    const ctx = canvas.getContext("2d");
+
+    const gradient = ctx.createLinearGradient(0, 0, 800, 600);
+    gradient.addColorStop(0, "#8B4513");
+    gradient.addColorStop(1, "#DAA520");
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, 800, 600);
+
+    ctx.fillStyle = "white";
+    ctx.font = "bold 24px Arial";
+    ctx.textAlign = "center";
+    ctx.fillText(title, 400, 300);
+
+    return canvas.toDataURL();
+  };
+
+  return (
+    <div className="budaya-detail-page">
+      {/* Hero Section */}
+      <section className="hero-section">
+        <div className="hero-image">
+          <img
+            src={budaya.heroImage}
+            alt={budaya.title}
+            onError={(e) => {
+              e.target.src = getPlaceholderImage(budaya.title);
+            }}
+          />
+          <div className="hero-overlay">
+            <div className="container">
+              <h1>{budaya.title}</h1>
+              <p>{budaya.deskripsi}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Navigation Breadcrumb */}
+      <section className="breadcrumb-section">
+        <div className="container">
+          <nav className="breadcrumb">
+            <Link to="/">Beranda</Link>
+            <span>/</span>
+            <Link to="/kebudayaan">Kebudayaan</Link>
+            <span>/</span>
+            <span>{budaya.title}</span>
+          </nav>
+        </div>
+      </section>
+
+      {/* Main Content */}
+      <section className="main-content">
+        <div className="container">
+          <div className="content-grid">
+            {/* Left Column - Text Content */}
+            <div className="content-text">
+              {/* Sejarah Section */}
+              <div className="content-section">
+                <h2>📜 {t("labelSejarah", "Sejarah")}</h2>
+                {budaya.sejarah.map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
+              </div>
+
+              {/* Deskripsi Section */}
+              <div className="content-section">
+                <h2>📝 {t("labelDeskripsi", "Deskripsi")}</h2>
+                <p>{budaya.deskripsi}</p>
+              </div>
+
+              {/* Kegiatan Section */}
+              <div className="content-section">
+                <h2>🎯 {t("labelKegiatan", "Kegiatan")}</h2>
+                <ul>
+                  {budaya.kegiatan.map((kegiatan, index) => (
+                    <li key={index}>{kegiatan}</li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Jadwal Section */}
+              <div className="content-section">
+                <h2>⏰ {t("labelJadwal", "Jadwal")}</h2>
+                <p className="jadwal-text">{budaya.jadwal}</p>
+              </div>
+
+              {/* Prestasi Section */}
+              <div className="content-section">
+                <h2>🏆 {t("prestasiPencapaian", "Prestasi & Pencapaian")}</h2>
+                <ul>
+                  {budaya.prestasi.map((prestasi, index) => (
+                    <li key={index}>{prestasi}</li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Tokoh Section */}
+              <div className="content-section">
+                <h2>👥 {t("tokohUtama", "Tokoh Utama")}</h2>
+                <div className="tokoh-grid">
+                  {budaya.tokoh.map((tokoh, index) => (
+                    <div key={index} className="tokoh-card">
+                      <div className="tokoh-image">
+                        <img
+                          src={tokoh.foto}
+                          alt={tokoh.nama}
+                          onError={(e) => {
+                            e.target.src = getPlaceholderImage(tokoh.nama);
+                          }}
+                        />
+                      </div>
+                      <div className="tokoh-info">
+                        <h3>{tokoh.nama}</h3>
+                        <p className="tokoh-jabatan">{tokoh.jabatan}</p>
+                        <p className="tokoh-deskripsi">{tokoh.deskripsi}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column - Gallery */}
+            <div className="content-gallery">
+              <h2>📸 {t("galeriFoto", "Galeri Foto")}</h2>
+              <div className="gallery-container">
+                <div className="main-image">
+                  <img
+                    src={budaya.gallery[currentImageIndex]}
+                    alt={`${budaya.title} - Foto ${currentImageIndex + 1}`}
+                    onError={(e) => {
+                      e.target.src = getPlaceholderImage(
+                        `Foto ${currentImageIndex + 1}`
+                      );
+                    }}
+                  />
+                  <button className="gallery-nav prev" onClick={prevImage}>
+                    ‹
+                  </button>
+                  <button className="gallery-nav next" onClick={nextImage}>
+                    ›
+                  </button>
+                </div>
+                <div className="thumbnail-grid">
+                  {budaya.gallery.map((image, index) => (
+                    <img
+                      key={index}
+                      src={image}
+                      alt={`${budaya.title} - Thumbnail ${index + 1}`}
+                      className={`thumbnail ${
+                        index === currentImageIndex ? "active" : ""
+                      }`}
+                      onClick={() => setCurrentImageIndex(index)}
+                      onError={(e) => {
+                        e.target.src = getPlaceholderImage(
+                          `Thumbnail ${index + 1}`
+                        );
+                      }}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="cta-section">
+        <div className="container">
+          <h2>{t("ctaTitleKebudayaan", "Tertarik Bergabung?")}</h2>
+          <p>
+            {t(
+              "ctaDescKebudayaan",
+              "Ayo lestarikan budaya bersama kami! Hubungi kontak di bawah untuk informasi lebih lanjut."
+            )}
+          </p>
+          <div className="cta-buttons">
+            <a href="#kontak" className="btn btn-primary">
+              {t("ctaContactKebudayaan", "Hubungi Kami")}
+            </a>
+            <Link to="/kebudayaan" className="btn btn-outline">
+              {t("kembaliKeKebudayaan", "Kembali ke Kebudayaan")}
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default BudayaDetail;

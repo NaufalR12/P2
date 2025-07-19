@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import MediaSlider from "./components/MediaSlider";
 import Kebudayaan from "./pages/Kebudayaan";
+import BudayaDetail from "./pages/BudayaDetail";
 import Tentang from "./pages/Tentang";
 import Galeri from "./pages/Galeri";
 import "./App.css";
@@ -203,16 +204,12 @@ function App() {
               {
                 publicId: "DSC07518_bgcqsq",
                 title: t("Sanggar Tari"),
-                description: t(
-                  "Aktivitas latihan tari"
-                ),
+                description: t("Aktivitas latihan tari"),
               },
               {
                 publicId: "IMG-20211127-WA0008_eruzi0",
                 title: t("Jemparingan"),
-                description: t(
-                  "Lomba jemparingan"
-                ),
+                description: t("Lomba jemparingan"),
               },
               {
                 publicId: "DSC07520_bgcqsq",
@@ -464,6 +461,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/tentang" element={<Tentang />} />
             <Route path="/kebudayaan" element={<Kebudayaan />} />
+            <Route path="/kebudayaan/:id" element={<BudayaDetail />} />
             <Route path="/galeri" element={<Galeri />} />
           </Routes>
 

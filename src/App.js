@@ -15,11 +15,14 @@ import "./App.css";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./components/LanguageSwitcher";
 import { Image, CloudinaryContext } from "cloudinary-react";
+import MusicPlayer from "./components/MusicPlayer";
+import emailjs from "@emailjs/browser";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navbarRef = useRef(null);
   const { t } = useTranslation();
+  const formRef = useRef();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,6 +46,26 @@ function App() {
       behavior: "smooth",
     });
     setIsMenuOpen(false);
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_i9sm5dp", // Service ID
+        "template_pgoyytq", // Ganti dengan Template ID kamu
+        formRef.current,
+        "C6Yszf5xDJobY5TJC" // Public Key
+      )
+      .then(
+        (result) => {
+          alert("Pesan berhasil dikirim!");
+          formRef.current.reset();
+        },
+        (error) => {
+          alert("Gagal mengirim pesan. Silakan coba lagi.");
+        }
+      );
   };
 
   const HomePage = () => (
@@ -366,21 +389,24 @@ function App() {
                 <h3>✉️ {t("email")}</h3>
                 <p>info@pujokusuman.id</p>
               </div>
-              <div className="contact-item">
-                <h3>🕒 {t("visitHours")}</h3>
-                <p>
-                  {t("openDays")}
-                  <br />
-                  {t("openHours")}
-                </p>
-              </div>
             </div>
             <div className="contact-form fade-in">
-              <form>
-                <input type="text" placeholder={t("fullName")} required />
-                <input type="email" placeholder={t("email")} required />
-                <input type="tel" placeholder={t("phoneNumber")} />
+              <form ref={formRef} onSubmit={sendEmail}>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder={t("fullName")}
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder={t("email")}
+                  required
+                />
+                <input type="tel" name="phone" placeholder={t("phoneNumber")} />
                 <textarea
+                  name="message"
                   placeholder={t("yourMessage")}
                   rows="5"
                   required
@@ -454,6 +480,7 @@ function App() {
     <CloudinaryContext cloudName="ddfcjabrm">
       <Router>
         <div className="App">
+          <MusicPlayer />
           <Navigation />
 
           {/* Routes */}
@@ -501,10 +528,8 @@ function App() {
                 </div>
               </div>
               <div className="footer-bottom">
-                <p>
-                  &copy; 2025 Kampung Kebudayaan Pujokusuman. All rights
-                  reserved.
-                </p>
+                &copy; {new Date().getFullYear()} Kampung Kebudayaan
+                Pujokusuman. All rights reserved.
               </div>
             </div>
           </footer>

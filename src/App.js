@@ -75,359 +75,373 @@ function App() {
       );
   };
 
-  const HomePage = () => (
-    <>
-      {/* Hero Section */}
-      <section id="beranda" className="hero">
-        <div className="hero-bg"></div>
-        <div className="container">
-          <div className="hero-content fade-in">
-            <h1 className="hero-title">
-              {t("heroTitle")}
-              <br />
-              {t("heroSubtitle")}
-            </h1>
-            <p className="hero-subtitle">{t("heroDescription")}</p>
-            <div className="hero-buttons">
-              <button
-                className="btn"
-                onClick={() => smoothScroll("media-slider")}
-              >
-                {t("exploreNow")}
-              </button>
-              <button
-                className="btn btn-outline"
-                onClick={() => smoothScroll("kebudayaan")}
-              >
-                {t("viewCulture")}
-              </button>
+  const HomePage = () => {
+    const location = useLocation();
+    useEffect(() => {
+      if (location.hash === "#kontak") {
+        setTimeout(() => {
+          const kontakSection = document.getElementById("kontak");
+          if (kontakSection) {
+            kontakSection.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 200);
+      }
+    }, [location]);
+
+    return (
+      <>
+        {/* Hero Section */}
+        <section id="beranda" className="hero">
+          <div className="hero-bg"></div>
+          <div className="container">
+            <div className="hero-content fade-in">
+              <h1 className="hero-title">
+                {t("heroTitle")}
+                <br />
+                {t("heroSubtitle")}
+              </h1>
+              <p className="hero-subtitle">{t("heroDescription")}</p>
+              <div className="hero-buttons">
+                <button
+                  className="btn"
+                  onClick={() => smoothScroll("media-slider")}
+                >
+                  {t("exploreNow")}
+                </button>
+                <button
+                  className="btn btn-outline"
+                  onClick={() => smoothScroll("kebudayaan")}
+                >
+                  {t("viewCulture")}
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="hero-decoration floating">
-          <div className="decoration-circle"></div>
-          <div className="decoration-circle"></div>
-          <div className="decoration-circle"></div>
-        </div>
-      </section>
-
-      {/* Hero Media Slider Section - Positioned right after main hero */}
-      <MediaSlider />
-
-      {/* About Section */}
-      <section id="tentang" className="section about">
-        <div className="container">
-          <div className="section-header fade-in">
-            <h2>{t("aboutTitle")}</h2>
-            <p>{t("aboutSubtitle")}</p>
+          <div className="hero-decoration floating">
+            <div className="decoration-circle"></div>
+            <div className="decoration-circle"></div>
+            <div className="decoration-circle"></div>
           </div>
-          <div className="about-content">
-            <div className="about-text fade-in">
-              <h3>{t("historyTitle")}</h3>
-              <p>{t("historyDescription")}</p>
+        </section>
 
-              <h3>{t("visionMissionTitle")}</h3>
-              <div className="vision-mission">
-                <div className="vision">
-                  <h4>{t("vision")}</h4>
-                  <ul>
-                    <li>{t("visionA")}</li>
-                    <li>{t("visionB")}</li>
-                    <li>{t("visionC")}</li>
-                  </ul>
+        {/* Hero Media Slider Section - Positioned right after main hero */}
+        <MediaSlider />
+
+        {/* About Section */}
+        <section id="tentang" className="section about">
+          <div className="container">
+            <div className="section-header fade-in">
+              <h2>{t("aboutTitle")}</h2>
+              <p>{t("aboutSubtitle")}</p>
+            </div>
+            <div className="about-content">
+              <div className="about-text fade-in">
+                <h3>{t("historyTitle")}</h3>
+                <p>{t("historyDescription")}</p>
+
+                <h3>{t("visionMissionTitle")}</h3>
+                <div className="vision-mission">
+                  <div className="vision">
+                    <h4>{t("vision")}</h4>
+                    <ul>
+                      <li>{t("visionA")}</li>
+                      <li>{t("visionB")}</li>
+                      <li>{t("visionC")}</li>
+                    </ul>
+                  </div>
+                  <div className="mission">
+                    <h4>{t("mission")}</h4>
+                    <ul>
+                      <li>{t("missionA")}</li>
+                      <li>{t("missionB")}</li>
+                      <li>{t("missionC")}</li>
+                      <li>{t("missionD")}</li>
+                      <li>{t("missionE")}</li>
+                      <li>{t("missionF")}</li>
+                    </ul>
+                  </div>
                 </div>
-                <div className="mission">
-                  <h4>{t("mission")}</h4>
-                  <ul>
-                    <li>{t("missionA")}</li>
-                    <li>{t("missionB")}</li>
-                    <li>{t("missionC")}</li>
-                    <li>{t("missionD")}</li>
-                    <li>{t("missionE")}</li>
-                    <li>{t("missionF")}</li>
-                  </ul>
-                </div>
               </div>
-            </div>
-            <div className="about-image fade-in">
-              <CloudinaryContext cloudName="ddfcjabrm">
-                <Image
-                  publicId="DSC07277_ip8vtk"
-                  width="100%"
-                  style={{ borderRadius: "20px", marginBottom: "1rem" }}
-                  alt={t("kampungAtmosphere")}
-                />
-              </CloudinaryContext>
-              <div className="image-content">
-                <h4>{t("kampungAtmosphere")}</h4>
-                <p>{t("traditionalPhoto")}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Culture Section */}
-      <section id="kebudayaan" className="section culture">
-        <div className="container">
-          <div className="section-header fade-in">
-            <h2>{t("cultureTitle")}</h2>
-            <p>{t("cultureSubtitle")}</p>
-          </div>
-          <div className="culture-grid">
-            {[
-              {
-                title: t("culture1Title"), // Sanggar Tari
-                description: t("culture1Desc"),
-                icon: "💃",
-              },
-              {
-                title: t("culture2Title"), // Jemparingan
-                description: t("culture2Desc"),
-                icon: "🏹",
-              },
-              {
-                title: t("culture3Title"), // Teater – Sanggar Obah
-                description: t("culture3Desc"),
-                icon: "🎭",
-              },
-              {
-                title: t("culture4Title"), // Ketoprak
-                description: t("culture4Desc"),
-                icon: "🎬",
-              },
-              {
-                title: t("culture5Title"), // Orkes Kentongan
-                description: t("culture5Desc"),
-                icon: "🥁",
-              },
-              {
-                title: t("culture6Title"), // Jathilan
-                description: t("culture6Desc"),
-                icon: "🐎",
-              },
-            ].map((item, index) => (
-              <div key={index} className="culture-card fade-in">
-                <div className="culture-icon">{item.icon}</div>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-              </div>
-            ))}
-          </div>
-          <div className="culture-cta">
-            <Link to="/kebudayaan" className="btn btn-primary">
-              {t("viewCultureDetails")}
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery Section */}
-      <section id="galeri" className="section gallery">
-        <div className="container">
-          <div className="section-header fade-in">
-            <h2>{t("galleryTitle")}</h2>
-            <p>{t("gallerySubtitle")}</p>
-          </div>
-          <div className="gallery-grid">
-            {[
-              {
-                publicId: "DSC07518_bgcqsq",
-                title: t("Sanggar Tari"),
-                description: t("Aktivitas latihan tari"),
-              },
-              {
-                publicId: "IMG-20211127-WA0008_eruzi0",
-                title: t("Jemparingan"),
-                description: t("Lomba jemparingan"),
-              },
-              {
-                publicId: "Screenshot_2025-07-20_164214_a9vybk",
-                title: t("Teater Sanggar Obah"),
-                description: t("Deskripsi aktivitas budaya Teater tradisional"),
-              },
-              {
-                publicId: "IMG-20250716-WA0048_zfueb5",
-                title: t("Ketoprak"),
-                description: t(
-                  "Deskripsi aktivitas budaya Ketoprak atau drama tradisional"
-                ),
-              },
-              {
-                publicId: "orkes_gypwn2",
-                title: t("Orkes Kentongan"),
-                description: t("Deskripsi aktivitas budaya Orkes Kentongan"),
-              },
-              {
-                publicId: "jatilan_qsmvtj",
-                title: t("Jathilan"),
-                description: t(
-                  "Deskripsi aktivitas budaya Jathilan atau tari kuda lumping"
-                ),
-              },
-            ].map((item, index) => (
-              <div key={index} className="gallery-item fade-in">
-                <div className="gallery-image-container">
-                  <img
-                    src={`https://res.cloudinary.com/ddfcjabrm/image/upload/c_fill,w_400,h_250/${item.publicId}.jpg`}
-                    alt={item.title}
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                      borderRadius: "10px",
-                    }}
+              <div className="about-image fade-in">
+                <CloudinaryContext cloudName="ddfcjabrm">
+                  <Image
+                    publicId="DSC07277_ip8vtk"
+                    width="100%"
+                    style={{ borderRadius: "20px", marginBottom: "1rem" }}
+                    alt={t("kampungAtmosphere")}
                   />
+                </CloudinaryContext>
+                <div className="image-content">
+                  <h4>{t("kampungAtmosphere")}</h4>
+                  <p>{t("traditionalPhoto")}</p>
                 </div>
-                <div className="gallery-overlay">
-                  <h4>{item.title}</h4>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Culture Section */}
+        <section id="kebudayaan" className="section culture">
+          <div className="container">
+            <div className="section-header fade-in">
+              <h2>{t("cultureTitle")}</h2>
+              <p>{t("cultureSubtitle")}</p>
+            </div>
+            <div className="culture-grid">
+              {[
+                {
+                  title: t("culture1Title"), // Sanggar Tari
+                  description: t("culture1Desc"),
+                  icon: "💃",
+                },
+                {
+                  title: t("culture2Title"), // Jemparingan
+                  description: t("culture2Desc"),
+                  icon: "🏹",
+                },
+                {
+                  title: t("culture3Title"), // Teater – Sanggar Obah
+                  description: t("culture3Desc"),
+                  icon: "🎭",
+                },
+                {
+                  title: t("culture4Title"), // Ketoprak
+                  description: t("culture4Desc"),
+                  icon: "🎬",
+                },
+                {
+                  title: t("culture5Title"), // Orkes Kentongan
+                  description: t("culture5Desc"),
+                  icon: "🥁",
+                },
+                {
+                  title: t("culture6Title"), // Jathilan
+                  description: t("culture6Desc"),
+                  icon: "🐎",
+                },
+              ].map((item, index) => (
+                <div key={index} className="culture-card fade-in">
+                  <div className="culture-icon">{item.icon}</div>
+                  <h3>{item.title}</h3>
                   <p>{item.description}</p>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+            <div className="culture-cta">
+              <Link to="/kebudayaan" className="btn btn-primary">
+                {t("viewCultureDetails")}
+              </Link>
+            </div>
           </div>
-          <div
-            className="gallery-cta"
-            style={{ textAlign: "center", marginTop: "2rem" }}
-          >
-            <Link to="/galeri" className="btn btn-primary">
-              {t("viewGalleryDetails")}
-            </Link>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Social Media Section */}
-      <section className="section social-media-section">
-        <div className="container">
-          <div className="section-header fade-in">
-            <h2>{t("socialMediaTitle")}</h2>
-            <p>{t("socialMediaSubtitle")}</p>
-          </div>
-          <div className="social-media-grid">
-            <a
-              href="https://www.instagram.com/kampungpujokusumanyk?igsh=bDUzb2NkdWo1dnc="
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-card instagram fade-in"
+        {/* Gallery Section */}
+        <section id="galeri" className="section gallery">
+          <div className="container">
+            <div className="section-header fade-in">
+              <h2>{t("galleryTitle")}</h2>
+              <p>{t("gallerySubtitle")}</p>
+            </div>
+            <div className="gallery-grid">
+              {[
+                {
+                  publicId: "DSC07518_bgcqsq",
+                  title: t("Sanggar Tari"),
+                  description: t("Aktivitas latihan tari"),
+                },
+                {
+                  publicId: "IMG-20211127-WA0008_eruzi0",
+                  title: t("Jemparingan"),
+                  description: t("Lomba jemparingan"),
+                },
+                {
+                  publicId: "Screenshot_2025-07-20_164214_a9vybk",
+                  title: t("Teater Sanggar Obah"),
+                  description: t("Deskripsi aktivitas budaya Teater tradisional"),
+                },
+                {
+                  publicId: "IMG-20250716-WA0048_zfueb5",
+                  title: t("Ketoprak"),
+                  description: t(
+                    "Deskripsi aktivitas budaya Ketoprak atau drama tradisional"
+                  ),
+                },
+                {
+                  publicId: "orkes_gypwn2",
+                  title: t("Orkes Kentongan"),
+                  description: t("Deskripsi aktivitas budaya Orkes Kentongan"),
+                },
+                {
+                  publicId: "jatilan_qsmvtj",
+                  title: t("Jathilan"),
+                  description: t(
+                    "Deskripsi aktivitas budaya Jathilan atau tari kuda lumping"
+                  ),
+                },
+              ].map((item, index) => (
+                <div key={index} className="gallery-item fade-in">
+                  <div className="gallery-image-container">
+                    <img
+                      src={`https://res.cloudinary.com/ddfcjabrm/image/upload/c_fill,w_400,h_250/${item.publicId}.jpg`}
+                      alt={item.title}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        borderRadius: "10px",
+                      }}
+                    />
+                  </div>
+                  <div className="gallery-overlay">
+                    <h4>{item.title}</h4>
+                    <p>{item.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div
+              className="gallery-cta"
+              style={{ textAlign: "center", marginTop: "2rem" }}
             >
-              <div className="social-logo">
-                <svg
-                  width="40"
-                  height="40"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                </svg>
-              </div>
-              <h3>{t("instagram")}</h3>
-              <p>{t("instagramDesc")}</p>
-            </a>
-
-            <a
-              href="https://www.youtube.com/channel/UCCPyxwIkxWXAxAq1iL47yiQ"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-card youtube fade-in"
-            >
-              <div className="social-logo">
-                <svg
-                  width="40"
-                  height="40"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                </svg>
-              </div>
-              <h3>{t("youtube")}</h3>
-              <p>{t("youtubeDesc")}</p>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Maps Section */}
-      <section className="section gallery">
-        <div className="container">
-          <div className="section-header fade-in">
-            <h2>{t("locationTitle")}</h2>
-            <p>{t("locationSubtitle")}</p>
-          </div>
-          <div className="maps-container fade-in">
-            <div className="maps-wrapper">
-              <iframe
-                src="https://storymaps.arcgis.com/stories/266dbfcead6347ac984a76f1904e0246"
-                width="100%"
-                height="500px"
-                frameBorder="0"
-                allowFullScreen
-                allow="geolocation"
-                title={t("mapsTitle")}
-              ></iframe>
+              <Link to="/galeri" className="btn btn-primary">
+                {t("viewGalleryDetails")}
+              </Link>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Contact Section */}
-      <section id="kontak" className="section social-media-section">
-        <div className="container">
-          <div className="section-header fade-in">
-            <h2>{t("contactTitle")}</h2>
-            <p>{t("contactSubtitle")}</p>
-          </div>
-          <div className="contact-content">
-            <div className="contact-info fade-in">
-              <div className="contact-item">
-                <h3>📍 {t("address")}</h3>
-                <p>
-                  Kampung Pujokusuman
-                  <br />
-                  Yogyakarta, Indonesia
-                </p>
-              </div>
-              <div className="contact-item">
-                <h3>📞 {t("phone")}</h3>
-                <p>+62 274 123456</p>
-              </div>
-              <div className="contact-item">
-                <h3>✉️ {t("email")}</h3>
-                <p>djelajahpujoku@gmail.com</p>
-              </div>
+        {/* Social Media Section */}
+        <section className="section social-media-section">
+          <div className="container">
+            <div className="section-header fade-in">
+              <h2>{t("socialMediaTitle")}</h2>
+              <p>{t("socialMediaSubtitle")}</p>
             </div>
-            <div className="contact-form fade-in">
-              <form ref={formRef} onSubmit={sendEmail}>
-                <input
-                  type="text"
-                  name="name"
-                  placeholder={t("fullName")}
-                  required
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder={t("email")}
-                  required
-                />
-                <input type="tel" name="phone" placeholder={t("phoneNumber")} />
-                <textarea
-                  name="message"
-                  placeholder={t("yourMessage")}
-                  rows="5"
-                  required
-                ></textarea>
-                <button type="submit" className="btn">
-                  {t("sendMessage")}
-                </button>
-              </form>
+            <div className="social-media-grid">
+              <a
+                href="https://www.instagram.com/kampungpujokusumanyk?igsh=bDUzb2NkdWo1dnc="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-card instagram fade-in"
+              >
+                <div className="social-logo">
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                  </svg>
+                </div>
+                <h3>{t("instagram")}</h3>
+                <p>{t("instagramDesc")}</p>
+              </a>
+
+              <a
+                href="https://www.youtube.com/channel/UCCPyxwIkxWXAxAq1iL47yiQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-card youtube fade-in"
+              >
+                <div className="social-logo">
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                  </svg>
+                </div>
+                <h3>{t("youtube")}</h3>
+                <p>{t("youtubeDesc")}</p>
+              </a>
             </div>
           </div>
-        </div>
-      </section>
-    </>
-  );
+        </section>
+
+        {/* Maps Section */}
+        <section className="section gallery">
+          <div className="container">
+            <div className="section-header fade-in">
+              <h2>{t("locationTitle")}</h2>
+              <p>{t("locationSubtitle")}</p>
+            </div>
+            <div className="maps-container fade-in">
+              <div className="maps-wrapper">
+                <iframe
+                  src="https://storymaps.arcgis.com/stories/266dbfcead6347ac984a76f1904e0246"
+                  width="100%"
+                  height="500px"
+                  frameBorder="0"
+                  allowFullScreen
+                  allow="geolocation"
+                  title={t("mapsTitle")}
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section id="kontak" className="section social-media-section">
+          <div className="container">
+            <div className="section-header fade-in">
+              <h2>{t("contactTitle")}</h2>
+              <p>{t("contactSubtitle")}</p>
+            </div>
+            <div className="contact-content">
+              <div className="contact-info fade-in">
+                <div className="contact-item">
+                  <h3>📍 {t("address")}</h3>
+                  <p>
+                    Kampung Pujokusuman
+                    <br />
+                    Yogyakarta, Indonesia
+                  </p>
+                </div>
+                <div className="contact-item">
+                  <h3>📞 {t("phone")}</h3>
+                  <p>+62 274 123456</p>
+                </div>
+                <div className="contact-item">
+                  <h3>✉️ {t("email")}</h3>
+                  <p>djelajahpujoku@gmail.com</p>
+                </div>
+              </div>
+              <div className="contact-form fade-in">
+                <form ref={formRef} onSubmit={sendEmail}>
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder={t("fullName")}
+                    required
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder={t("email")}
+                    required
+                  />
+                  <input type="tel" name="phone" placeholder={t("phoneNumber")} />
+                  <textarea
+                    name="message"
+                    placeholder={t("yourMessage")}
+                    rows="5"
+                    required
+                  ></textarea>
+                  <button type="submit" className="btn">
+                    {t("sendMessage")}
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </>
+    );
+  };
 
   const Navigation = () => {
     const location = useLocation();

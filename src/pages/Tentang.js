@@ -249,7 +249,7 @@ const Tentang = () => {
             <h2>{t("ctaTitle")}</h2>
             <p>{t("ctaDesc")}</p>
             <div className="cta-buttons">
-              <a href="#kontak" className="btn btn-primary">
+              <a href="/#kontak" className="btn btn-primary">
                 {t("ctaContact")}
               </a>
               <a href="/kebudayaan" className="btn btn-outline">

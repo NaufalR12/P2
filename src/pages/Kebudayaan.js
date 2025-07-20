@@ -180,7 +180,7 @@ const Kebudayaan = () => {
             )}
           </p>
           <div className="cta-buttons">
-            <a href="#kontak" className="btn btn-primary">
+            <a href="/#kontak" className="btn btn-primary">
               {t("ctaContactKebudayaan", "Hubungi Kami")}
             </a>
             <a href="/" className="btn btn-outline">

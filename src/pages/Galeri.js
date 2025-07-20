@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import "../Galeri.css";
 import "./Galeri.css";
 
 const Galeri = () => {
@@ -9,68 +10,251 @@ const Galeri = () => {
 
   // Modified to ensure no duplicate items with the same title
   const galeriItems = [
+    // Sanggar Tari
     {
       id: 1,
-      title: t("galeriItem1Title", "Pertunjukan Tari Klasik"),
-      category: "tari",
+      title: "Latihan Sanggar Tari 1",
+      category: "sanggar-tari",
       image:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/kampung-pujokusuman/tari-1.jpg",
-      description: t(
-        "galeriItem1Desc",
-        "Pentas tari Srimpi oleh sanggar tari kampung"
-      ),
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-tari1.jpg",
+      description: "Latihan tari klasik di sanggar, sesi 1.",
     },
     {
       id: 2,
-      title: t("galeriItem2Title", "Workshop Batik"),
-      category: "kerajinan",
+      title: "Latihan Sanggar Tari 2",
+      category: "sanggar-tari",
       image:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/kampung-pujokusuman/batik-1.jpg",
-      description: t(
-        "galeriItem2Desc",
-        "Kegiatan membatik bersama anak-anak kampung"
-      ),
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-tari2.jpg",
+      description: "Latihan tari klasik di sanggar, sesi 2.",
     },
     {
       id: 3,
-      title: t("galeriItem3Title", "Latihan Jemparingan"),
-      category: "olahraga",
+      title: "Pentas Sanggar Tari 1",
+      category: "sanggar-tari",
       image:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/kampung-pujokusuman/jemparingan-1.jpg",
-      description: t(
-        "galeriItem3Desc",
-        "Sesi latihan panahan tradisional di halaman kampung"
-      ),
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-tari3.jpg",
+      description: "Pentas tari oleh anak-anak sanggar, sesi 1.",
     },
     {
       id: 4,
-      title: t("galeriItem4Title", "Festival Jathilan"),
-      category: "pertunjukan",
+      title: "Pentas Sanggar Tari 2",
+      category: "sanggar-tari",
       image:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/kampung-pujokusuman/jathilan-1.jpg",
-      description: t(
-        "galeriItem4Desc",
-        "Pertunjukan jathilan dalam festival tahunan"
-      ),
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-tari4.jpg",
+      description: "Pentas tari oleh anak-anak sanggar, sesi 2.",
     },
     {
       id: 5,
-      title: t("galeriItem5Title", "Gotong Royong"),
-      category: "kegiatan",
+      title: "Pentas Sanggar Tari 3",
+      category: "sanggar-tari",
       image:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/kampung-pujokusuman/gotong-royong-1.jpg",
-      description: t(
-        "galeriItem5Desc",
-        "Kegiatan gotong royong membersihkan kampung"
-      ),
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-tari5.jpg",
+      description: "Pentas tari oleh anak-anak sanggar, sesi 3.",
     },
+    // Jemparingan
     {
       id: 6,
-      title: t("galeriItem6Title", "Upacara Ruwatan"),
-      category: "ritual",
+      title: "Latihan Jemparingan 1",
+      category: "jemparingan",
       image:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/kampung-pujokusuman/ruwatan-1.jpg",
-      description: t("galeriItem6Desc", "Upacara ruwatan dengan wayang kulit"),
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-jemparingan1.jpg",
+      description: "Latihan jemparingan di lapangan, sesi 1.",
+    },
+    {
+      id: 7,
+      title: "Latihan Jemparingan 2",
+      category: "jemparingan",
+      image:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-jemparingan2.jpg",
+      description: "Latihan jemparingan di lapangan, sesi 2.",
+    },
+    {
+      id: 8,
+      title: "Lomba Jemparingan 1",
+      category: "jemparingan",
+      image:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-jemparingan3.jpg",
+      description: "Lomba jemparingan antar kampung, sesi 1.",
+    },
+    {
+      id: 9,
+      title: "Lomba Jemparingan 2",
+      category: "jemparingan",
+      image:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-jemparingan4.jpg",
+      description: "Lomba jemparingan antar kampung, sesi 2.",
+    },
+    {
+      id: 10,
+      title: "Lomba Jemparingan 3",
+      category: "jemparingan",
+      image:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-jemparingan5.jpg",
+      description: "Lomba jemparingan antar kampung, sesi 3.",
+    },
+    // Ketoprak
+    {
+      id: 11,
+      title: "Pentas Ketoprak 1",
+      category: "ketoprak",
+      image:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-ketoprak1.jpg",
+      description: "Pentas seni ketoprak di balai kampung, sesi 1.",
+    },
+    {
+      id: 12,
+      title: "Pentas Ketoprak 2",
+      category: "ketoprak",
+      image:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-ketoprak2.jpg",
+      description: "Pentas seni ketoprak di balai kampung, sesi 2.",
+    },
+    {
+      id: 13,
+      title: "Latihan Ketoprak 1",
+      category: "ketoprak",
+      image:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-ketoprak3.jpg",
+      description: "Latihan rutin kelompok ketoprak, sesi 1.",
+    },
+    {
+      id: 14,
+      title: "Latihan Ketoprak 2",
+      category: "ketoprak",
+      image:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-ketoprak4.jpg",
+      description: "Latihan rutin kelompok ketoprak, sesi 2.",
+    },
+    {
+      id: 15,
+      title: "Latihan Ketoprak 3",
+      category: "ketoprak",
+      image:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-ketoprak5.jpg",
+      description: "Latihan rutin kelompok ketoprak, sesi 3.",
+    },
+    // Teater
+    {
+      id: 16,
+      title: "Pentas Teater 1",
+      category: "teater",
+      image:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-teater1.jpg",
+      description: "Pentas teater remaja kampung, sesi 1.",
+    },
+    {
+      id: 17,
+      title: "Pentas Teater 2",
+      category: "teater",
+      image:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-teater2.jpg",
+      description: "Pentas teater remaja kampung, sesi 2.",
+    },
+    {
+      id: 18,
+      title: "Latihan Teater 1",
+      category: "teater",
+      image:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-teater3.jpg",
+      description: "Latihan teater di aula kampung, sesi 1.",
+    },
+    {
+      id: 19,
+      title: "Latihan Teater 2",
+      category: "teater",
+      image:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-teater4.jpg",
+      description: "Latihan teater di aula kampung, sesi 2.",
+    },
+    {
+      id: 20,
+      title: "Latihan Teater 3",
+      category: "teater",
+      image:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-teater5.jpg",
+      description: "Latihan teater di aula kampung, sesi 3.",
+    },
+    // PCL
+    {
+      id: 21,
+      title: "Kegiatan PCL 1",
+      category: "pcl",
+      image:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-pcl1.jpg",
+      description: "Workshop PCL, sesi 1.",
+    },
+    {
+      id: 22,
+      title: "Kegiatan PCL 2",
+      category: "pcl",
+      image:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-pcl2.jpg",
+      description: "Workshop PCL, sesi 2.",
+    },
+    {
+      id: 23,
+      title: "PCL Digital 1",
+      category: "pcl",
+      image:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-pcl3.jpg",
+      description: "Kegiatan digitalisasi budaya oleh PCL, sesi 1.",
+    },
+    {
+      id: 24,
+      title: "PCL Digital 2",
+      category: "pcl",
+      image:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-pcl4.jpg",
+      description: "Kegiatan digitalisasi budaya oleh PCL, sesi 2.",
+    },
+    {
+      id: 25,
+      title: "PCL Digital 3",
+      category: "pcl",
+      image:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-pcl5.jpg",
+      description: "Kegiatan digitalisasi budaya oleh PCL, sesi 3.",
+    },
+    // Kringmen
+    {
+      id: 26,
+      title: "Kegiatan Kringmen 1",
+      category: "kringmen",
+      image:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-kringmen1.jpg",
+      description: "Kegiatan ronda malam kringmen, sesi 1.",
+    },
+    {
+      id: 27,
+      title: "Kegiatan Kringmen 2",
+      category: "kringmen",
+      image:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-kringmen2.jpg",
+      description: "Kegiatan ronda malam kringmen, sesi 2.",
+    },
+    {
+      id: 28,
+      title: "Rapat Kringmen 1",
+      category: "kringmen",
+      image:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-kringmen3.jpg",
+      description: "Rapat koordinasi kringmen kampung, sesi 1.",
+    },
+    {
+      id: 29,
+      title: "Rapat Kringmen 2",
+      category: "kringmen",
+      image:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-kringmen4.jpg",
+      description: "Rapat koordinasi kringmen kampung, sesi 2.",
+    },
+    {
+      id: 30,
+      title: "Rapat Kringmen 3",
+      category: "kringmen",
+      image:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-kringmen5.jpg",
+      description: "Rapat koordinasi kringmen kampung, sesi 3.",
     },
   ];
 
@@ -80,13 +264,13 @@ const Galeri = () => {
   ];
 
   const categories = [
-    { key: "semua", label: t("galeriCatSemua", "Semua") },
-    { key: "tari", label: t("galeriCatTari", "Tari") },
-    { key: "kerajinan", label: t("galeriCatKerajinan", "Kerajinan") },
-    { key: "olahraga", label: t("galeriCatOlahraga", "Olahraga") },
-    { key: "pertunjukan", label: t("galeriCatPertunjukan", "Pertunjukan") },
-    { key: "kegiatan", label: t("galeriCatKegiatan", "Kegiatan") },
-    { key: "ritual", label: t("galeriCatRitual", "Ritual") },
+    { key: "semua", label: "Semua" },
+    { key: "sanggar-tari", label: "Sanggar Tari" },
+    { key: "jemparingan", label: "Jemparingan" },
+    { key: "ketoprak", label: "Ketoprak" },
+    { key: "teater", label: "Teater" },
+    { key: "pcl", label: "PCL" },
+    { key: "kringmen", label: "Kringmen" },
   ];
 
   const filteredItems =
@@ -187,6 +371,7 @@ const Galeri = () => {
             <button
               className="modal-close"
               onClick={() => setSelectedImage(null)}
+              aria-label="Tutup"
             >
               ×
             </button>

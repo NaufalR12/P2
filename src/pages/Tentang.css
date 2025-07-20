@@ -238,12 +238,14 @@
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   display: flex;
-  gap: 20px;
+  flex-direction: column;
   align-items: center;
+  gap: 20px;
 }
 
 .tokoh-foto {
   flex-shrink: 0;
+  margin-bottom: 18px;
 }
 
 .tokoh-foto img {
@@ -252,6 +254,10 @@
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid #daa520;
+}
+
+.tokoh-info {
+  text-align: center;
 }
 
 .tokoh-info h3 {

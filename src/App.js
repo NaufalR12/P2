@@ -17,12 +17,14 @@ import LanguageSwitcher from "./components/LanguageSwitcher";
 import { Image, CloudinaryContext } from "cloudinary-react";
 import MusicPlayer from "./components/MusicPlayer";
 import emailjs from "@emailjs/browser";
+import Notification from "./components/Notification";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navbarRef = useRef(null);
   const { t } = useTranslation();
   const formRef = useRef();
+  const [notif, setNotif] = useState({ message: "", type: "success" });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,11 +61,16 @@ function App() {
       )
       .then(
         (result) => {
-          alert("Pesan berhasil dikirim!");
+          setNotif({ message: "Pesan berhasil dikirim!", type: "success" });
           formRef.current.reset();
+          setTimeout(() => setNotif({ ...notif, message: "" }), 5000);
         },
         (error) => {
-          alert("Gagal mengirim pesan. Silakan coba lagi.");
+          setNotif({
+            message: "Gagal mengirim pesan. Silakan coba lagi.",
+            type: "error",
+          });
+          setTimeout(() => setNotif({ ...notif, message: "" }), 5000);
         }
       );
   };
@@ -235,24 +242,24 @@ function App() {
                 description: t("Lomba jemparingan"),
               },
               {
-                publicId: "DSC07520_bgcqsq",
+                publicId: "Screenshot_2025-07-20_164214_a9vybk",
                 title: t("Teater Sanggar Obah"),
                 description: t("Deskripsi aktivitas budaya Teater tradisional"),
               },
               {
-                publicId: "DSC07521_bgcqsq",
+                publicId: "IMG-20250716-WA0048_zfueb5",
                 title: t("Ketoprak"),
                 description: t(
                   "Deskripsi aktivitas budaya Ketoprak atau drama tradisional"
                 ),
               },
               {
-                publicId: "DSC07522_bgcqsq",
+                publicId: "orkes_gypwn2",
                 title: t("Orkes Kentongan"),
                 description: t("Deskripsi aktivitas budaya Orkes Kentongan"),
               },
               {
-                publicId: "DSC07523_bgcqsq",
+                publicId: "jatilan_qsmvtj",
                 title: t("Jathilan"),
                 description: t(
                   "Deskripsi aktivitas budaya Jathilan atau tari kuda lumping"
@@ -481,6 +488,11 @@ function App() {
       <Router>
         <div className="App">
           <MusicPlayer />
+          <Notification
+            message={notif.message}
+            type={notif.type}
+            onClose={() => setNotif({ ...notif, message: "" })}
+          />
           <Navigation />
 
           {/* Routes */}
@@ -498,7 +510,11 @@ function App() {
               <div className="footer-content">
                 <div className="footer-section">
                   <h3>Kampung Kebudayaan Pujokusuman</h3>
-                  <p>"Dari jejak laskar Hantu Maut hingga geliat seni tradisi, Pujokusuman adalah ruang hidup budaya dan sejarah yang terus bernapas bersama warganya."</p>
+                  <p>
+                    "Dari jejak laskar Hantu Maut hingga geliat seni tradisi,
+                    Pujokusuman adalah ruang hidup budaya dan sejarah yang terus
+                    bernapas bersama warganya."
+                  </p>
                 </div>
                 <div className="footer-section">
                   <h4>{t("footerMenu")}</h4>

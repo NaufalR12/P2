@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import "./Tentang.css";
+import { CloudinaryContext, Image } from "cloudinary-react";
 
 const Tentang = () => {
   const { t } = useTranslation();
@@ -86,18 +87,36 @@ const Tentang = () => {
       jabatan: t("tokoh1Jabatan"),
       deskripsi: t("tokoh1Deskripsi"),
       foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_300,h_300,c_fill/kampung-pujokusuman/pak-sutarno.jpg",
+      publicId: "IMG_9429_zfk3p7",
     },
     {
       nama: t("tokoh2Nama"),
       jabatan: t("tokoh2Jabatan"),
       deskripsi: t("tokoh2Deskripsi"),
       foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_300,h_300,c_fill/kampung-pujokusuman/bu-sari.jpg",
+      publicId: "WhatsApp_Image_2025-07-16_at_17.13.21_3c9f3f95_hadppt",
     },
     {
       nama: t("tokoh3Nama"),
       jabatan: t("tokoh3Jabatan"),
       deskripsi: t("tokoh3Deskripsi"),
       foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_300,h_300,c_fill/kampung-pujokusuman/ki-sukoco.jpg",
+      publicId: "kampung-pujokusuman/ki-sukoco",
+    },
+    // Tokoh tambahan
+    {
+      nama: t("tokoh4Nama"),
+      jabatan: t("tokoh4Jabatan"),
+      deskripsi: t("tokoh4Deskripsi"),
+      foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_300,h_300,c_fill/kampung-pujokusuman/budi-santosa.jpg",
+      publicId: "kampung-pujokusuman/budi-santosa",
+    },
+    {
+      nama: t("tokoh5Nama"),
+      jabatan: t("tokoh5Jabatan"),
+      deskripsi: t("tokoh5Deskripsi"),
+      foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_300,h_300,c_fill/kampung-pujokusuman/siti-aminah.jpg",
+      publicId: "kampung-pujokusuman/siti-aminah",
     },
   ];
 
@@ -122,115 +141,125 @@ const Tentang = () => {
   };
 
   return (
-    <div className="tentang-page">
-      {/* Header */}
-      <section className="tentang-header">
-        <div className="container">
-          <h1>{t("aboutHeader")}</h1>
-          <p>{t("aboutHeaderDesc")}</p>
-        </div>
-      </section>
+    <CloudinaryContext cloudName="ddfcjabrm">
+      <div className="tentang-page">
+        {/* Header */}
+        <section className="tentang-header">
+          <div className="container">
+            <h1>{t("aboutHeader")}</h1>
+            <p>{t("aboutHeaderDesc")}</p>
+          </div>
+        </section>
 
-      {/* Sejarah Timeline */}
-      <section className="sejarah-section">
-        <div className="container">
-          <h2>{t("timelineTitle")}</h2>
-          <div className="timeline">
-            {timelineData.map((item, index) => (
-              <div key={index} className="timeline-item">
-                <div className="timeline-year">{item.year}</div>
-                <div className="timeline-content">
+        {/* Sejarah Timeline */}
+        <section className="sejarah-section">
+          <div className="container">
+            <h2>{t("timelineTitle")}</h2>
+            <div className="timeline">
+              {timelineData.map((item, index) => (
+                <div key={index} className="timeline-item">
+                  <div className="timeline-year">{item.year}</div>
+                  <div className="timeline-content">
+                    <h3>{item.title}</h3>
+                    <div>{item.description}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Visi Misi */}
+        <section className="visi-misi-section">
+          <div className="container">
+            <div className="visi-misi-grid">
+              <div className="visi-card">
+                <h2>🎯 {t("visiTitle")}</h2>
+                <p>{t("visiDesc")}</p>
+              </div>
+              <div className="misi-card">
+                <h2>🚀 {t("misiTitle")}</h2>
+                <ul>
+                  <li>{t("misi1")}</li>
+                  <li>{t("misi2")}</li>
+                  <li>{t("misi3")}</li>
+                  <li>{t("misi4")}</li>
+                  <li>{t("misi5")}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Prestasi */}
+        <section className="prestasi-section">
+          <div className="container">
+            <h2>{t("prestasiTitle")}</h2>
+            <div className="prestasi-grid">
+              {prestasi.map((item, index) => (
+                <div key={index} className="prestasi-card">
+                  <div className="prestasi-icon">{item.icon}</div>
                   <h3>{item.title}</h3>
-                  <div>{item.description}</div>
+                  <p className="prestasi-subtitle">{item.subtitle}</p>
+                  <p>{item.description}</p>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Visi Misi */}
-      <section className="visi-misi-section">
-        <div className="container">
-          <div className="visi-misi-grid">
-            <div className="visi-card">
-              <h2>🎯 {t("visiTitle")}</h2>
-              <p>{t("visiDesc")}</p>
-            </div>
-            <div className="misi-card">
-              <h2>🚀 {t("misiTitle")}</h2>
-              <ul>
-                <li>{t("misi1")}</li>
-                <li>{t("misi2")}</li>
-                <li>{t("misi3")}</li>
-                <li>{t("misi4")}</li>
-                <li>{t("misi5")}</li>
-              </ul>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Prestasi */}
-      <section className="prestasi-section">
-        <div className="container">
-          <h2>{t("prestasiTitle")}</h2>
-          <div className="prestasi-grid">
-            {prestasi.map((item, index) => (
-              <div key={index} className="prestasi-card">
-                <div className="prestasi-icon">{item.icon}</div>
-                <h3>{item.title}</h3>
-                <p className="prestasi-subtitle">{item.subtitle}</p>
-                <p>{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Tokoh Masyarakat */}
-      <section className="tokoh-section">
-        <div className="container">
-          <h2>{t("tokohTitle")}</h2>
-          <div className="tokoh-grid">
-            {tokohMasyarakat.map((tokoh, index) => (
-              <div key={index} className="tokoh-card">
-                <div className="tokoh-foto">
-                  <img
-                    src={tokoh.foto}
-                    alt={tokoh.nama}
-                    onError={(e) => {
-                      e.target.src = getPlaceholderImage(tokoh.nama);
-                    }}
-                  />
+        {/* Tokoh Masyarakat */}
+        <section className="tokoh-section">
+          <div className="container">
+            <h2>{t("tokohTitle")}</h2>
+            <div className="tokoh-grid">
+              {tokohMasyarakat.map((tokoh, index) => (
+                <div key={index} className="tokoh-card">
+                  <div className="tokoh-foto">
+                    <Image
+                      publicId={tokoh.publicId}
+                      width="120"
+                      height="120"
+                      crop="fill"
+                      alt={tokoh.nama}
+                      style={{
+                        borderRadius: "50%",
+                        objectFit: "cover",
+                        border: "4px solid #daa520",
+                      }}
+                      onError={(e) => {
+                        e.target.src = getPlaceholderImage(tokoh.nama);
+                      }}
+                    />
+                  </div>
+                  <div className="tokoh-info">
+                    <h3>{tokoh.nama}</h3>
+                    <p className="tokoh-jabatan">{tokoh.jabatan}</p>
+                    <p>{tokoh.deskripsi}</p>
+                  </div>
                 </div>
-                <div className="tokoh-info">
-                  <h3>{tokoh.nama}</h3>
-                  <p className="tokoh-jabatan">{tokoh.jabatan}</p>
-                  <p>{tokoh.deskripsi}</p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA */}
-      <section className="cta-section">
-        <div className="container">
-          <h2>{t("ctaTitle")}</h2>
-          <p>{t("ctaDesc")}</p>
-          <div className="cta-buttons">
-            <a href="#kontak" className="btn btn-primary">
-              {t("ctaContact")}
-            </a>
-            <a href="/kebudayaan" className="btn btn-outline">
-              {t("ctaCulture")}
-            </a>
+        {/* CTA */}
+        <section className="cta-section">
+          <div className="container">
+            <h2>{t("ctaTitle")}</h2>
+            <p>{t("ctaDesc")}</p>
+            <div className="cta-buttons">
+              <a href="#kontak" className="btn btn-primary">
+                {t("ctaContact")}
+              </a>
+              <a href="/kebudayaan" className="btn btn-outline">
+                {t("ctaCulture")}
+              </a>
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </CloudinaryContext>
   );
 };
 

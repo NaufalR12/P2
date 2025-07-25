@@ -101,7 +101,7 @@ const Tentang = () => {
       jabatan: t("tokoh3Jabatan"),
       deskripsi: t("tokoh3Deskripsi"),
       foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_300,h_300,c_fill/kampung-pujokusuman/ki-sukoco.jpg",
-      publicId: "kampung-pujokusuman/ki-sukoco",
+      publicId: "IMG_9425_12_czck3l",
     },
     // Tokoh tambahan
     {
@@ -109,7 +109,7 @@ const Tentang = () => {
       jabatan: t("tokoh4Jabatan"),
       deskripsi: t("tokoh4Deskripsi"),
       foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_300,h_300,c_fill/kampung-pujokusuman/budi-santosa.jpg",
-      publicId: "kampung-pujokusuman/budi-santosa",
+      publicId: "WhatsApp_Image_2025-07-21_at_21.01.55_3ce33573_pytrtx",
     },
     {
       nama: t("tokoh5Nama"),
@@ -218,8 +218,8 @@ const Tentang = () => {
                   <div className="tokoh-foto">
                     <Image
                       publicId={tokoh.publicId}
-                      width="120"
-                      height="120"
+                      width="240"
+                      height="240"
                       crop="fill"
                       alt={tokoh.nama}
                       style={{

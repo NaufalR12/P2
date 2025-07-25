@@ -18,9 +18,16 @@ const BudayaDetail = () => {
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/DSC07541_gcmnuy",
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/DSC07503_ysmria",
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_0161_zojodk",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/kampung-pujokusuman/sanggar-tari-4.jpg",
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/DSC07518_bgcqsq",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/DSC07520_bgcqsq",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20250723-WA0111_hzrbnj",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20250723-WA0006_jsfh7o",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20250723-WA0001_niid2c",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20250723-WA0005_mr2sbn",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20250723-WA0003_yitjed", //////////ed",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20250723-WA0109_qgl1om",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20250723-WA0110_k3hgbt",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20250723-WA0004_khtwjd",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20250723-WA0108_jxgfv0",
       ],
       sejarah: [
         t("budaya1Sejarah1"),
@@ -36,7 +43,11 @@ const BudayaDetail = () => {
         t("budaya1Sejarah11"),
         t("budaya1Sejarah12"),
       ],
-      deskripsi: t("budaya1Deskripsi"),
+      deskripsi: [
+        t("budaya1Deskripsi1"),
+        t("budaya1Deskripsi2"),
+        t("budaya1Deskripsi3"),
+      ],
       kegiatan: [
         t("budaya1Kegiatan1"),
         t("budaya1Kegiatan2"),
@@ -70,14 +81,34 @@ const BudayaDetail = () => {
     jemparingan: {
       title: t("budaya2Title", "Jemparingan (Panahan Tradisional)"),
       heroImage:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/kampung-pujokusuman/jemparingan.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/IMG_20220101_085413_hfoz4e",
       gallery: [
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/jemparingan1.jpg",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/jemparingan2.jpg",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/jemparingan3.jpg",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/jemparingan4.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20200308-WA0041_braskp",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_20210331_161935_rokjjw",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_20210322_162956_b7fqkw",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_20210324_161230_ediapj",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20200115-WA0037_ryo6sf",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_20220101_084932_ceidpt",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20211127-WA0006_xwggfs",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20240107-WA0007_skrfxy",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_20220101_085413_hfoz4e",
       ],
-      sejarah: [t("budaya2Sejarah")],
+      sejarah: [
+        t("budaya2Sejarah1"),
+        t("budaya2Sejarah2"),
+        t("budaya2Sejarah3"),
+        t("budaya2Sejarah4"),
+        t("budaya2Sejarah5"),
+        t("budaya2Sejarah6"),
+        t("budaya2Sejarah7"),
+        t("budaya2Sejarah8"),
+        t("budaya2Sejarah9"),
+        t("budaya2Sejarah10"),
+        t("budaya2Sejarah11"),
+        t("budaya2Sejarah12"),
+        t("budaya2Sejarah13"),
+        t("budaya2Sejarah14"),
+      ],
       deskripsi: t("budaya2Deskripsi"),
       kegiatan: [
         t("budaya2Kegiatan1"),
@@ -137,8 +168,8 @@ const BudayaDetail = () => {
         },
       ],
     },
-    pelukis: {
-      title: t("budaya4Title", "Komunitas Pelukis Kampoeng"),
+    teater: {
+      title: t("budaya4Title", "teater-sanggar-obah"),
       heroImage:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/kampung-pujokusuman/pelukis.jpg",
       gallery: [
@@ -341,7 +372,6 @@ const BudayaDetail = () => {
           <div className="hero-overlay">
             <div className="container">
               <h1>{budaya.title}</h1>
-              <p>{budaya.deskripsi}</p>
             </div>
           </div>
         </div>
@@ -369,15 +399,100 @@ const BudayaDetail = () => {
               {/* Sejarah Section */}
               <div className="content-section">
                 <h2>📜 {t("labelSejarah", "Sejarah")}</h2>
-                {budaya.sejarah.map((paragraph, index) => (
-                  <p key={index}>{paragraph}</p>
-                ))}
+                {id === "jemparingan" ? (
+                  <>
+                    <p>{t("budaya2Sejarah1")}</p>
+                    <p>{t("budaya2Sejarah2")}</p>
+                    <b>Sejarah Jemparingan</b>
+                    <div style={{ marginTop: 4 }}>{t("budaya2Sejarah3")}</div>
+                    <b>Perkembangan Gaya Jemparingan</b>
+                    <ol type="1" style={{ marginTop: 4 }}>
+                      <li>
+                        <b>Gagrag Mataram Ngayogyakarta</b>
+                        <div>{t("budaya2Sejarah4")}</div>
+                      </li>
+                      <li>
+                        <b>Gaya Bidikan (1953)</b>
+                        <div>{t("budaya2Sejarah5")}</div>
+                      </li>
+                    </ol>
+                  </>
+                ) : (
+                  budaya.sejarah.map((paragraph, index) => (
+                    <p key={index}>{paragraph}</p>
+                  ))
+                )}
               </div>
 
               {/* Deskripsi Section */}
               <div className="content-section">
                 <h2>📝 {t("labelDeskripsi", "Deskripsi")}</h2>
-                <p>{budaya.deskripsi}</p>
+                {id === "jemparingan" ? (
+                  <>
+                    <p>{t("budaya2Deskripsi")}</p>
+                    <b>Tata Cara Bermain</b>
+                    <ol type="1" style={{ marginTop: 4 }}>
+                      <li>
+                        <b>Posisi Duduk Bersila Miring ke Kiri</b>
+                        <div>{t("budaya2Sejarah7")}</div>
+                      </li>
+                      <li>
+                        <b>Pegangan Busur dan Tarik Anak Panah</b>
+                        <div>{t("budaya2Sejarah8")}</div>
+                      </li>
+                      <li>
+                        <b>Jarak Sasaran: 10–20 Meter</b>
+                        <div>{t("budaya2Sejarah9")}</div>
+                      </li>
+                      <li>
+                        <b>Sistem Nilai: Lonceng Tanda Sasaran</b>
+                        <div>{t("budaya2Sejarah10")}</div>
+                      </li>
+                    </ol>
+                    <b>Nilai Kemataraman dalam Jemparingan</b>
+                    <div style={{ marginTop: 4 }}>{t("budaya2Sejarah11")}</div>
+                    <ul style={{ marginTop: 4 }}>
+                      <li>
+                        <b>Untuk Laki-laki:</b>
+                        <div>
+                          {t("budaya2Sejarah11").split("Untuk Laki-laki:")[1]}
+                        </div>
+                      </li>
+                      <li>
+                        <b>Untuk Perempuan:</b>
+                        <div>
+                          {t("budaya2Sejarah12").split("Untuk Perempuan:")[1]}
+                        </div>
+                      </li>
+                    </ul>
+                    <b>Manfaat dan Keutamaan Berlatih Jemparingan</b>
+                    <ol type="1" style={{ marginTop: 4 }}>
+                      {t("budaya2Sejarah13")
+                        .split("\n")
+                        .slice(1, 7)
+                        .map((item, idx) => (
+                          <li key={idx}>{item}</li>
+                        ))}
+                    </ol>
+                    <b>Pendidikan Karakter dalam Jemparingan</b>
+                    <div style={{ marginTop: 4 }}>
+                      Jiwa Ksatria Mataram sebagaimana diajarkan oleh Pangeran
+                      Mangkubumi (Sri Sultan Hamengku Buwono I):
+                    </div>
+                    <ol type="1" style={{ marginTop: 4 }}>
+                      {t("budaya2Sejarah14")
+                        .split("\n")
+                        .slice(1, 5)
+                        .map((item, idx) => (
+                          <li key={idx}>{item}</li>
+                        ))}
+                    </ol>
+                  </>
+                ) : Array.isArray(budaya.deskripsi) ? (
+                  budaya.deskripsi.map((desc, idx) => <p key={idx}>{desc}</p>)
+                ) : (
+                  <p>{budaya.deskripsi}</p>
+                )}
               </div>
 
               {/* Kegiatan Section */}

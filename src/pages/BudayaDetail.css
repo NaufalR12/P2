@@ -144,6 +144,20 @@
   font-size: 0.8rem;
 }
 
+.content-section ol {
+  list-style: decimal inside;
+  padding-left: 1.5rem;
+}
+
+.content-section ol li {
+  position: static;
+  padding-left: 0;
+}
+
+.content-section ol li::before {
+  content: none;
+}
+
 .jadwal-text {
   background: var(--gradient-primary);
   color: white;

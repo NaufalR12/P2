@@ -217,8 +217,16 @@ const BudayaDetail = () => {
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/ruwatan3.jpg",
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/ruwatan4.jpg",
       ],
-      sejarah: [t("budaya5Sejarah")],
-      deskripsi: t("budaya5Deskripsi"),
+      sejarah: [
+        t("budaya5Sejarah1"),
+        t("budaya5Sejarah2"),
+      ],
+      deskripsi: [
+        t("budaya5Deskripsi1"),
+        t("budaya5Deskripsi2"),
+        t("budaya5Deskripsi3"),
+        
+      ],
       kegiatan: [
         t("budaya5Kegiatan1"),
         t("budaya5Kegiatan2"),
@@ -430,6 +438,87 @@ const BudayaDetail = () => {
                       </li>
                     </ol>
                   </>
+                ) : id === "pujokusuman-creative-lab" ? (
+                  <div>
+                    <p>
+                      <b>"Dari Keresahan Sosial Menuju Ruang Warga Kreatif"</b>
+                    </p>
+                    <ul style={{ paddingLeft: 20 }}>
+                      <li>
+                        <b>Awal Mula: Berangkat dari Realita Kampung</b>
+                        <p style={{ textAlign: "justify", marginBottom: 0 }}>
+                          {t("budaya6Sejarah1")}
+                        </p>
+                        <p style={{ textAlign: "justify", marginTop: 0 }}>
+                          {t("budaya6Sejarah2")}
+                        </p>
+                      </li>
+                      <li>
+                        <b>2022: Coffee Shop Sebagai Titik Kumpul</b>
+                        <p style={{ textAlign: "justify", marginBottom: 0 }}>
+                          {t("budaya6Sejarah3")}
+                        </p>
+                        <p style={{ textAlign: "justify", marginTop: 0 }}>
+                          {t("budaya6Sejarah4")}
+                        </p>
+                      </li>
+                      <li>
+                        <b>Jatuh, Bangun, dan Belajar Bareng</b>
+                        <p style={{ textAlign: "justify", marginBottom: 0 }}>
+                          {t("budaya6Sejarah5")}
+                        </p>
+                        <p style={{ fontStyle: "italic", margin: "8px 0" }}>
+                          "Mau jadi tempat kumpul doang? Atau jadi ruang belajar
+                          yang beneran bikin perubahan?"
+                        </p>
+                      </li>
+                      <li>
+                        <b>Dari situ lahirlah gagasan “Sekolah Warga”</b>
+                        <span>
+                          {" "}
+                          — pendekatan baru yang membagi ruang PCL jadi dua
+                          jalur:
+                        </span>
+                        <ol style={{ marginTop: 8, marginBottom: 8 }}>
+                          <li>
+                            Jalur Akademik: diskusi, kelas warga, sejarah
+                            kampung, pemetaan sosial, hingga media warga.
+                          </li>
+                          <li>
+                            Jalur Non-Akademik / Sekolah Industri: pelatihan
+                            praktis seperti bikin angkringan.
+                          </li>
+                        </ol>
+                      </li>
+                      <li>
+                        <b>Hari Ini: Masih Berproses, Belum Selesai</b>
+                        <p style={{ textAlign: "justify", marginBottom: 0 }}>
+                          {t("budaya6Sejarah7")}
+                        </p>
+                        <p style={{ textAlign: "justify", marginTop: 0 }}>
+                          {t("budaya6Sejarah8")}
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                ) : id === "upacara-ruwatan" ? (
+                  <div>
+                    <p style={{ textAlign: "justify", marginBottom: 16 }}>
+                      {t("budaya5Deskripsi1")}
+                    </p>
+                    <p style={{ textAlign: "justify", marginBottom: 16 }}>
+                      {t("budaya5Deskripsi2")}
+                    </p>
+                    <p style={{ textAlign: "justify", marginBottom: 16 }}>
+                      {t("budaya5Deskripsi3")}
+                    </p>
+                    <p style={{ textAlign: "justify", marginBottom: 16 }}>
+                      {t("budaya5Deskripsi4")}
+                    </p>
+                    <p style={{ textAlign: "justify", marginBottom: 16 }}>
+                      {t("budaya5Deskripsi5")}
+                    </p>
+                  </div>
                 ) : (
                   budaya.sejarah.map((paragraph, index) => (
                     <p key={index}>{paragraph}</p>

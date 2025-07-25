@@ -24,14 +24,14 @@ const Kebudayaan = () => {
       id: "jatilan",
       title: t("budaya3Title", "Jathilan (Tari Kuda Lumping)"),
       image:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_500,c_fill/kampung-pujokusuman/jathilan.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_500,c_fill/jatilan_qsmvtj",
       sejarah: t("budaya3SejarahSingkat"),
     },
     {
       id: "teater",
       title: t("budaya4Title", "Teater Sanggar Obah"),
       image:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_500,c_fill/kampung-pujokusuman/pelukis.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_500,c_fill/Screenshot_2025-07-20_164214_a9vybk",
       sejarah: t("budaya4SejarahSingkat"),
     },
     {

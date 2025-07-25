@@ -136,14 +136,14 @@ const BudayaDetail = () => {
     jatilan: {
       title: t("budaya3Title", "Jathilan (Tari Kuda Lumping)"),
       heroImage:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/kampung-pujokusuman/jathilan.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/jatilan_qsmvtj",
       gallery: [
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/jathilan1.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/jatilan_qsmvtj",
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/jathilan2.jpg",
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/jathilan3.jpg",
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/jathilan4.jpg",
       ],
-      sejarah: [t("budaya3Sejarah")],
+      sejarah: [t("budaya3Sejarah1"), t("budaya3Sejarah2")],
       deskripsi: t("budaya3Deskripsi"),
       kegiatan: [
         t("budaya3Kegiatan1"),
@@ -169,16 +169,20 @@ const BudayaDetail = () => {
       ],
     },
     teater: {
-      title: t("budaya4Title", "teater-sanggar-obah"),
+      title: t("budaya4Title", "Teater – Sanggar Obah"),
       heroImage:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/kampung-pujokusuman/pelukis.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/Screenshot_2025-07-20_164214_a9vybk",
       gallery: [
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/pelukis1.jpg",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/pelukis2.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/Screenshot_2025-07-20_164214_a9vybk",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/DSC06929_xup9mq",
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/pelukis3.jpg",
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/pelukis4.jpg",
       ],
-      sejarah: [t("budaya4Sejarah")],
+      sejarah: [
+        t("budaya4Sejarah1"),
+        t("budaya4Sejarah2"),
+        t("budaya4Sejarah3"),
+      ],
       deskripsi: t("budaya4Deskripsi"),
       kegiatan: [
         t("budaya4Kegiatan1"),
@@ -248,7 +252,16 @@ const BudayaDetail = () => {
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/creative3.jpg",
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/creative4.jpg",
       ],
-      sejarah: [t("budaya6Sejarah")],
+      sejarah: [
+        t("budaya6Sejarah1"),
+        t("budaya6Sejarah2"),
+        t("budaya6Sejarah3"),
+        t("budaya6Sejarah4"),
+        t("budaya6Sejarah5"),
+        t("budaya6Sejarah6"),
+        t("budaya6Sejarah7"),
+        t("budaya6Sejarah8"),
+      ],
       deskripsi: t("budaya6Deskripsi"),
       kegiatan: [
         t("budaya6Kegiatan1"),

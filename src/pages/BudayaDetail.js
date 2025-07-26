@@ -298,41 +298,7 @@ const BudayaDetail = () => {
       jadwal: t("budaya7Jadwal"),
       // Tidak ada lagi: kegiatan, prestasi, tokoh
     },
-    "kringmen": {
-      title: t("kringmenTitle", "Komunitas Kringmen"),
-      heroImage:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/kringmen_hero.jpg",
-      gallery: [
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/kringmen1.jpg",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/kringmen2.jpg",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/kringmen3.jpg",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/kringmen4.jpg",
-      ],
-      sejarah: [t("kringmenSejarah")],
-      deskripsi: t("kringmenDeskripsi"),
-      kegiatan: [
-        t("kringmenKegiatan1"),
-        t("kringmenKegiatan2"),
-        t("kringmenKegiatan3"),
-        t("kringmenKegiatan4"),
-      ],
-      jadwal: t("kringmenJadwal"),
-      prestasi: [
-        "Juara 1 Lomba Inovasi Komunitas DIY 2023",
-        "Kolaborasi dengan Komunitas Sosial Yogyakarta 2022",
-        "Pelatihan Kewirausahaan untuk Anggota 2023",
-        "Pameran Karya Komunitas di Balai Kota 2022",
-      ],
-      tokoh: [
-        {
-          nama: "Pak Slamet",
-          jabatan: "Ketua Komunitas",
-          deskripsi:
-            "Aktif menggerakkan kegiatan sosial dan ekonomi kreatif di lingkungan kringmen.",
-          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/tokoh-kringmen.jpg",
-        },
-      ],
-    },
+    
   };
 
   const budaya = budayaData[id];

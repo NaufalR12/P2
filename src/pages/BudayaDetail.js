@@ -217,16 +217,8 @@ const BudayaDetail = () => {
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/ruwatan3.jpg",
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/ruwatan4.jpg",
       ],
-      sejarah: [
-        t("budaya5Sejarah1"),
-        t("budaya5Sejarah2"),
-      ],
-      deskripsi: [
-        t("budaya5Deskripsi1"),
-        t("budaya5Deskripsi2"),
-        t("budaya5Deskripsi3"),
-        
-      ],
+      sejarah: [t("budaya5Sejarah")],
+      deskripsi: t("budaya5Deskripsi"),
       kegiatan: [
         t("budaya5Kegiatan1"),
         t("budaya5Kegiatan2"),
@@ -260,16 +252,7 @@ const BudayaDetail = () => {
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/creative3.jpg",
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/creative4.jpg",
       ],
-      sejarah: [
-        t("budaya6Sejarah1"),
-        t("budaya6Sejarah2"),
-        t("budaya6Sejarah3"),
-        t("budaya6Sejarah4"),
-        t("budaya6Sejarah5"),
-        t("budaya6Sejarah6"),
-        t("budaya6Sejarah7"),
-        t("budaya6Sejarah8"),
-      ],
+      sejarah: [t("budaya6Sejarah")],
       deskripsi: t("budaya6Deskripsi"),
       kegiatan: [
         t("budaya6Kegiatan1"),
@@ -304,28 +287,49 @@ const BudayaDetail = () => {
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/pasar3.jpg",
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/pasar4.jpg",
       ],
-      sejarah: [t("budaya7Sejarah")],
-      deskripsi: t("budaya7Deskripsi"),
-      kegiatan: [
-        t("budaya7Kegiatan1"),
-        t("budaya7Kegiatan2"),
-        t("budaya7Kegiatan3"),
-        t("budaya7Kegiatan4"),
+      sejarah: [
+        t("budaya7Sejarah"),
+        t("budaya7Sejarah1"),
+        t("budaya7Sejarah2"),
+        t("budaya7Sejarah3"),
+        t("budaya7Sejarah4"),
       ],
+      deskripsi: t("budaya7Deskripsi"),
       jadwal: t("budaya7Jadwal"),
+      // Tidak ada lagi: kegiatan, prestasi, tokoh
+    },
+    "kringmen": {
+      title: t("kringmenTitle", "Komunitas Kringmen"),
+      heroImage:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/kringmen_hero.jpg",
+      gallery: [
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/kringmen1.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/kringmen2.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/kringmen3.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/kringmen4.jpg",
+      ],
+      sejarah: [t("kringmenSejarah")],
+      deskripsi: t("kringmenDeskripsi"),
+      kegiatan: [
+        t("kringmenKegiatan1"),
+        t("kringmenKegiatan2"),
+        t("kringmenKegiatan3"),
+        t("kringmenKegiatan4"),
+      ],
+      jadwal: t("kringmenJadwal"),
       prestasi: [
-        "Festival Pasar Rakyat Terbaik DIY 2023",
-        "Bazar Kuliner Tradisional - 5000 pengunjung 2022",
-        "Pelatihan UMKM untuk 100 pedagang 2023",
-        "Kolaborasi dengan Dinas Pariwisata DIY 2022",
+        "Juara 1 Lomba Inovasi Komunitas DIY 2023",
+        "Kolaborasi dengan Komunitas Sosial Yogyakarta 2022",
+        "Pelatihan Kewirausahaan untuk Anggota 2023",
+        "Pameran Karya Komunitas di Balai Kota 2022",
       ],
       tokoh: [
         {
-          nama: "Bu Siti",
-          jabatan: "Ketua Paguyuban Pedagang",
+          nama: "Pak Slamet",
+          jabatan: "Ketua Komunitas",
           deskripsi:
-            "Pedagang senior dengan pengalaman 30 tahun, memimpin paguyuban pedagang pasar",
-          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/tokoh-pasar.jpg",
+            "Aktif menggerakkan kegiatan sosial dan ekonomi kreatif di lingkungan kringmen.",
+          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/tokoh-kringmen.jpg",
         },
       ],
     },
@@ -438,87 +442,6 @@ const BudayaDetail = () => {
                       </li>
                     </ol>
                   </>
-                ) : id === "pujokusuman-creative-lab" ? (
-                  <div>
-                    <p>
-                      <b>"Dari Keresahan Sosial Menuju Ruang Warga Kreatif"</b>
-                    </p>
-                    <ul style={{ paddingLeft: 20 }}>
-                      <li>
-                        <b>Awal Mula: Berangkat dari Realita Kampung</b>
-                        <p style={{ textAlign: "justify", marginBottom: 0 }}>
-                          {t("budaya6Sejarah1")}
-                        </p>
-                        <p style={{ textAlign: "justify", marginTop: 0 }}>
-                          {t("budaya6Sejarah2")}
-                        </p>
-                      </li>
-                      <li>
-                        <b>2022: Coffee Shop Sebagai Titik Kumpul</b>
-                        <p style={{ textAlign: "justify", marginBottom: 0 }}>
-                          {t("budaya6Sejarah3")}
-                        </p>
-                        <p style={{ textAlign: "justify", marginTop: 0 }}>
-                          {t("budaya6Sejarah4")}
-                        </p>
-                      </li>
-                      <li>
-                        <b>Jatuh, Bangun, dan Belajar Bareng</b>
-                        <p style={{ textAlign: "justify", marginBottom: 0 }}>
-                          {t("budaya6Sejarah5")}
-                        </p>
-                        <p style={{ fontStyle: "italic", margin: "8px 0" }}>
-                          "Mau jadi tempat kumpul doang? Atau jadi ruang belajar
-                          yang beneran bikin perubahan?"
-                        </p>
-                      </li>
-                      <li>
-                        <b>Dari situ lahirlah gagasan “Sekolah Warga”</b>
-                        <span>
-                          {" "}
-                          — pendekatan baru yang membagi ruang PCL jadi dua
-                          jalur:
-                        </span>
-                        <ol style={{ marginTop: 8, marginBottom: 8 }}>
-                          <li>
-                            Jalur Akademik: diskusi, kelas warga, sejarah
-                            kampung, pemetaan sosial, hingga media warga.
-                          </li>
-                          <li>
-                            Jalur Non-Akademik / Sekolah Industri: pelatihan
-                            praktis seperti bikin angkringan.
-                          </li>
-                        </ol>
-                      </li>
-                      <li>
-                        <b>Hari Ini: Masih Berproses, Belum Selesai</b>
-                        <p style={{ textAlign: "justify", marginBottom: 0 }}>
-                          {t("budaya6Sejarah7")}
-                        </p>
-                        <p style={{ textAlign: "justify", marginTop: 0 }}>
-                          {t("budaya6Sejarah8")}
-                        </p>
-                      </li>
-                    </ul>
-                  </div>
-                ) : id === "upacara-ruwatan" ? (
-                  <div>
-                    <p style={{ textAlign: "justify", marginBottom: 16 }}>
-                      {t("budaya5Deskripsi1")}
-                    </p>
-                    <p style={{ textAlign: "justify", marginBottom: 16 }}>
-                      {t("budaya5Deskripsi2")}
-                    </p>
-                    <p style={{ textAlign: "justify", marginBottom: 16 }}>
-                      {t("budaya5Deskripsi3")}
-                    </p>
-                    <p style={{ textAlign: "justify", marginBottom: 16 }}>
-                      {t("budaya5Deskripsi4")}
-                    </p>
-                    <p style={{ textAlign: "justify", marginBottom: 16 }}>
-                      {t("budaya5Deskripsi5")}
-                    </p>
-                  </div>
                 ) : (
                   budaya.sejarah.map((paragraph, index) => (
                     <p key={index}>{paragraph}</p>
@@ -590,6 +513,48 @@ const BudayaDetail = () => {
                         ))}
                     </ol>
                   </>
+                ) : id === "pasar-pujokusuman" ? (
+                  // Tampilkan deskripsi dengan format paragraf dan list jika ada, tanpa <li>
+                  <div>
+                    {budaya.deskripsi.split("\n").map((line, idx) => {
+                      // List item: tampilkan sebagai <div> dengan indentasi, tanpa <li>
+                      if (line.startsWith("- ")) {
+                        return (
+                          <div
+                            key={idx}
+                            style={{ marginLeft: 20, marginBottom: 4 }}
+                          >
+                            • {line.replace("- ", "")}
+                          </div>
+                        );
+                      }
+                      // Heading
+                      if (
+                        line.endsWith(":") &&
+                        !line.startsWith("-") &&
+                        line.trim().length > 1
+                      ) {
+                        return (
+                          <b
+                            key={idx}
+                            style={{ display: "block", marginTop: 12 }}
+                          >
+                            {line.replace(":", "")}
+                          </b>
+                        );
+                      }
+                      // Empty line
+                      if (line.trim() === "") {
+                        return <br key={idx} />;
+                      }
+                      // Normal paragraph
+                      return (
+                        <p key={idx} style={{ marginBottom: 8 }}>
+                          {line}
+                        </p>
+                      );
+                    })}
+                  </div>
                 ) : Array.isArray(budaya.deskripsi) ? (
                   budaya.deskripsi.map((desc, idx) => <p key={idx}>{desc}</p>)
                 ) : (
@@ -598,14 +563,16 @@ const BudayaDetail = () => {
               </div>
 
               {/* Kegiatan Section */}
-              <div className="content-section">
-                <h2>🎯 {t("labelKegiatan", "Kegiatan")}</h2>
-                <ul>
-                  {budaya.kegiatan.map((kegiatan, index) => (
-                    <li key={index}>{kegiatan}</li>
-                  ))}
-                </ul>
-              </div>
+              {id !== "pasar-pujokusuman" && (
+                <div className="content-section">
+                  <h2>🎯 {t("labelKegiatan", "Kegiatan")}</h2>
+                  <ul>
+                    {budaya.kegiatan.map((kegiatan, index) => (
+                      <li key={index}>{kegiatan}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
               {/* Jadwal Section */}
               <div className="content-section">
@@ -614,39 +581,43 @@ const BudayaDetail = () => {
               </div>
 
               {/* Prestasi Section */}
-              <div className="content-section">
-                <h2>🏆 {t("prestasiPencapaian", "Prestasi & Pencapaian")}</h2>
-                <ul>
-                  {budaya.prestasi.map((prestasi, index) => (
-                    <li key={index}>{prestasi}</li>
-                  ))}
-                </ul>
-              </div>
+              {id !== "pasar-pujokusuman" && (
+                <div className="content-section">
+                  <h2>🏆 {t("prestasiPencapaian", "Prestasi & Pencapaian")}</h2>
+                  <ul>
+                    {budaya.prestasi.map((prestasi, index) => (
+                      <li key={index}>{prestasi}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
               {/* Tokoh Section */}
-              <div className="content-section">
-                <h2>👥 {t("tokohUtama", "Tokoh Utama")}</h2>
-                <div className="tokoh-grid">
-                  {budaya.tokoh.map((tokoh, index) => (
-                    <div key={index} className="tokoh-card">
-                      <div className="tokoh-image">
-                        <img
-                          src={tokoh.foto}
-                          alt={tokoh.nama}
-                          onError={(e) => {
-                            e.target.src = getPlaceholderImage(tokoh.nama);
-                          }}
-                        />
+              {id !== "pasar-pujokusuman" && (
+                <div className="content-section">
+                  <h2>👥 {t("tokohUtama", "Tokoh Utama")}</h2>
+                  <div className="tokoh-grid">
+                    {budaya.tokoh.map((tokoh, index) => (
+                      <div key={index} className="tokoh-card">
+                        <div className="tokoh-image">
+                          <img
+                            src={tokoh.foto}
+                            alt={tokoh.nama}
+                            onError={(e) => {
+                              e.target.src = getPlaceholderImage(tokoh.nama);
+                            }}
+                          />
+                        </div>
+                        <div className="tokoh-info">
+                          <h3>{tokoh.nama}</h3>
+                          <p className="tokoh-jabatan">{tokoh.jabatan}</p>
+                          <p className="tokoh-deskripsi">{tokoh.deskripsi}</p>
+                        </div>
                       </div>
-                      <div className="tokoh-info">
-                        <h3>{tokoh.nama}</h3>
-                        <p className="tokoh-jabatan">{tokoh.jabatan}</p>
-                        <p className="tokoh-deskripsi">{tokoh.deskripsi}</p>
-                      </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
 
             {/* Right Column - Gallery */}

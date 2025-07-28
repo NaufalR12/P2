@@ -45,7 +45,7 @@ const Kebudayaan = () => {
       id: "pujokusuman-creative-lab",
       title: t("budaya6Title", "Pujokusuman Creative Lab"),
       image:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_500,c_fill/WhatsApp_Image_2025-07-10_at_19.13.54_0f817fc4_mwpwlp.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_500,c_fill/WhatsApp_Image_2025-07-28_at_22.08.09_b16e4f55_wwom4p",
       sejarah: t("budaya6SejarahSingkat"),
     },
     {

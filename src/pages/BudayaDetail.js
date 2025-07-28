@@ -109,23 +109,10 @@ const BudayaDetail = () => {
         t("budaya1Sejarah12"),
       ],
       deskripsi: [
-        t("budaya1Deskripsi1"),
-        t("budaya1Deskripsi2"),
-        t("budaya1Deskripsi3"),
-      ],
-      kegiatan: [
-        t("budaya1Kegiatan1"),
-        t("budaya1Kegiatan2"),
-        t("budaya1Kegiatan3"),
-        t("budaya1Kegiatan4"),
+        t("budaya1Deskripsi"),
+       
       ],
       jadwal: t("budaya1Jadwal"),
-      prestasi: [
-        "Juara 1 Festival Tari Tradisional DIY 2023",
-        "Pertunjukan di Istana Negara Jakarta 2022",
-        "Kolaborasi dengan Sanggar Tari Keraton Yogyakarta",
-        "Workshop Internasional dengan Seniman Jepang 2021",
-      ],
       tokoh: [
         {
           nama: "KRT Jati Hadiningrat",
@@ -186,15 +173,15 @@ const BudayaDetail = () => {
         },
         {
           type: "image",
-          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_20211127-WA0006_xwggfs",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20200115-WA0042_yfpdnf",
           thumbnail:
-            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_20211127-WA0006_xwggfs",
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG-20200115-WA0042_yfpdnf",
         },
         {
           type: "image",
-          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_20240107-WA0007_skrfxy",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20200115-WA0040_wk1og9",
           thumbnail:
-            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_20240107-WA0007_skrfxy",
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG-20200115-WA0040_wk1og9",
         },
         {
           type: "image",
@@ -220,26 +207,13 @@ const BudayaDetail = () => {
         t("budaya2Sejarah14"),
       ],
       deskripsi: t("budaya2Deskripsi"),
-      kegiatan: [
-        t("budaya2Kegiatan1"),
-        t("budaya2Kegiatan2"),
-        t("budaya2Kegiatan3"),
-        t("budaya2Kegiatan4"),
-      ],
-      jadwal: t("budaya2Jadwal"),
-      prestasi: [
-        "Rekor MURI Peserta Jemparingan Terbanyak 2020",
-        "Juara 1 Kompetisi Jemparingan DIY 2023",
-        "Pertunjukan di Festival Budaya Nasional 2022",
-        "Pelatihan untuk Sekolah-sekolah di Yogyakarta",
-      ],
       tokoh: [
         {
-          nama: "Pak Bambang",
-          jabatan: "Pelatih Jemparingan",
+          nama: "Agung Budi Santoso",
+          jabatan: "Ketua Jemparingan",
           deskripsi:
-            "Ahli jemparingan dengan pengalaman 20 tahun, melatih lebih dari 100 murid",
-          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/tokoh-jemparingan.jpg",
+            "Memimpin kegiatan Jemparingan di Kampung Pujokusuman, termasuk latihan rutin, pengenalan tradisi panahan gaya Mataram, serta pelibatan generasi muda dalam pelestarian nilai-nilai kemataraman.",
+          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/IMG_1465_v0gdqh",
         },
       ],
     },
@@ -275,26 +249,13 @@ const BudayaDetail = () => {
       ],
       sejarah: [t("budaya3Sejarah1"), t("budaya3Sejarah2")],
       deskripsi: t("budaya3Deskripsi"),
-      kegiatan: [
-        t("budaya3Kegiatan1"),
-        t("budaya3Kegiatan2"),
-        t("budaya3Kegiatan3"),
-        t("budaya3Kegiatan4"),
-      ],
-      jadwal: t("budaya3Jadwal"),
-      prestasi: [
-        "Juara 1 Festival Jathilan Se-Yogyakarta 2023",
-        "Pertunjukan di Taman Mini Indonesia Indah 2022",
-        "Kolaborasi dengan Grup Jathilan dari Solo 2021",
-        "Pelatihan untuk Komunitas Jathilan Muda",
-      ],
       tokoh: [
         {
-          nama: "Ki Dalang Sukoco",
-          jabatan: "Dalang Senior",
+          nama: "Sugiarto",
+          jabatan: "Ketua kelompok Jathilan",
           deskripsi:
-            "Dalang wayang kulit yang sering memimpin upacara ruwatan dan pertunjukan wayang",
-          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/tokoh-jathilan.jpg",
+            "Ketua kelompok Jathilan di Kampung Pujokusuman yang memimpin jalannya latihan dan pertunjukan dalam berbagai acara kampung. Mengoordinasi para pemain, penabuh, dan kebutuhan teknis lainnya untuk memastikan keberlangsungan kesenian ini secara mandiri dan rutin.",
+          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/WhatsApp_Image_2025-07-24_at_20.33.18_1d1c9260_kddryt",
         },
       ],
     },
@@ -317,15 +278,15 @@ const BudayaDetail = () => {
         },
         {
           type: "image",
-          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/pelukis3.jpg",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/DSC08741_eq0tjd",
           thumbnail:
-            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/pelukis3.jpg",
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/DSC08741_eq0tjd",
         },
         {
           type: "image",
-          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/pelukis4.jpg",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/Screenshot_2025-07-25_135643_kjewzq",
           thumbnail:
-            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/pelukis4.jpg",
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/Screenshot_2025-07-25_135643_kjewzq",
         },
       ],
       sejarah: [
@@ -334,26 +295,20 @@ const BudayaDetail = () => {
         t("budaya4Sejarah3"),
       ],
       deskripsi: t("budaya4Deskripsi"),
-      kegiatan: [
-        t("budaya4Kegiatan1"),
-        t("budaya4Kegiatan2"),
-        t("budaya4Kegiatan3"),
-        t("budaya4Kegiatan4"),
-      ],
-      jadwal: t("budaya4Jadwal"),
-      prestasi: [
-        "Pameran Lukisan Nasional Jakarta 2022",
-        "Kolaborasi dengan Galeri Seni Yogyakarta 2023",
-        "Workshop Seni untuk Anak-anak Sekolah 2021",
-        "Mural Bersama di Dinding Kampung 2023",
-      ],
       tokoh: [
         {
-          nama: "Pak Agus",
-          jabatan: "Ketua Komunitas",
+          nama: "Danang Rusmandoko",
+          jabatan: "Penggerak Teater Sanggar Obah",
           deskripsi:
-            "Seniman lukis dengan pengalaman 15 tahun, pendiri komunitas pelukis kampung",
-          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/tokoh-pelukis.jpg",
+            "Salah satu tokoh sentral dalam kegiatan kebudayaan di Kampung Pujokusuman. Ia kerap menjadi pengarah, penghubung, sekaligus penggerak berbagai kegiatan seni dan tradisi lokal. Perannya penting dalam menjaga kesinambungan antar generasi, menjembatani inisiatif warga dengan program kampung budaya secara konsisten dan penuh dedikasi.",
+          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/WhatsApp_Image_2025-07-21_at_21.01.55_3ce33573_pytrtx",
+        },
+        {
+          nama: "Nana",
+          jabatan: "Penggerak Teater Sanggar Obah",
+          deskripsi:
+            "Menginisiasi dan mengelola kegiatan Teater Obah sebagai ruang ekspresi warga, khususnya anak muda. Berperan dalam pengembangan naskah, proses latihan, dan kolaborasi lintas komunitas dalam pertunjukan teater berbasis isu sosial kampung.",
+          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/nana",
         },
       ],
     },
@@ -401,28 +356,6 @@ const BudayaDetail = () => {
       ],
       sejarah: [t("budaya5Sejarah"), t("budaya5Sejarah1")],
       deskripsi: [t("budaya5Deskripsi"), t("budaya5Deskripsi1")],
-      kegiatan: [
-        t("budaya5Kegiatan1"),
-        t("budaya5Kegiatan2"),
-        t("budaya5Kegiatan3"),
-        t("budaya5Kegiatan4"),
-      ],
-      jadwal: t("budaya5Jadwal"),
-      prestasi: [
-        "Upacara Ruwatan Massal 2023 dengan 1000 peserta",
-        "Kolaborasi dengan Keraton Yogyakarta 2022",
-        "Dokumentasi UNESCO untuk Pelestarian Budaya 2021",
-        "Pelatihan Dalang Muda untuk Regenerasi",
-      ],
-      tokoh: [
-        {
-          nama: "KRT Jati Hadiningrat",
-          jabatan: "Pemilik dan pengelola ndalem pujokusuman",
-          deskripsi:
-            "KRT Jati Hadiningrat berperan aktif dalam melestarikan warisan budaya dengan menjaga fungsi dan nilai historis Ndalem Pujokusuman, sekaligus mempertahankan identitas budaya lokal sebagai bagian dari keluarga bangsawan.",
-          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/tokoh-ruwatan.jpg",
-        },
-      ],
     },
     "pujokusuman-creative-lab": {
       title: t("budaya6Title", "Pujokusuman Creative Lab"),
@@ -431,51 +364,47 @@ const BudayaDetail = () => {
       gallery: [
         {
           type: "image",
-          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/creative1.jpg",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fit/WhatsApp_Image_2025-07-28_at_21.25.44_f17ee83a_g8anzj",
           thumbnail:
-            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/creative1.jpg",
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/WhatsApp_Image_2025-07-28_at_21.25.44_f17ee83a_g8anzj",
         },
         {
           type: "image",
-          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/creative2.jpg",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fit/WhatsApp_Image_2025-07-28_at_21.25.44_dafe0131_p3smuj",
           thumbnail:
-            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/creative2.jpg",
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/WhatsApp_Image_2025-07-28_at_21.25.44_dafe0131_p3smuj",
         },
         {
           type: "image",
-          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/creative3.jpg",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fit/WhatsApp_Image_2025-07-28_at_21.25.45_984a5ba5_po4gjo",
           thumbnail:
-            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/creative3.jpg",
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/WhatsApp_Image_2025-07-28_at_21.25.45_984a5ba5_po4gjo",
         },
         {
           type: "image",
-          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/creative4.jpg",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fit/creative4.jpg",
           thumbnail:
             "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/creative4.jpg",
         },
       ],
-      sejarah: [t("budaya6Sejarah")],
+      sejarah: [
+        t("budaya6Sejarah1"),
+        t("budaya6Sejarah2"),
+        t("budaya6Sejarah3"),
+        t("budaya6Sejarah4"),
+        t("budaya6Sejarah5"),
+        t("budaya6Sejarah6"),
+        t("budaya6Sejarah7"),
+        t("budaya6Sejarah8"),
+      ],
       deskripsi: t("budaya6Deskripsi"),
-      kegiatan: [
-        t("budaya6Kegiatan1"),
-        t("budaya6Kegiatan2"),
-        t("budaya6Kegiatan3"),
-        t("budaya6Kegiatan4"),
-      ],
-      jadwal: t("budaya6Jadwal"),
-      prestasi: [
-        "Website Kampung Pujokusuman - Juara 1 Kompetisi Digital 2023",
-        "Video Dokumenter Budaya - Tampil di Festival Film Yogyakarta 2022",
-        "Kolaborasi dengan Universitas Gadjah Mada 2023",
-        "Pelatihan Digital untuk UMKM Kampung 2022",
-      ],
       tokoh: [
         {
-          nama: "Pak Rudi",
-          jabatan: "Koordinator Creative Lab",
+          nama: "Farhan",
+          jabatan: "Pendiri Pujokusuman Creative Lab",
           deskripsi:
-            "Ahli teknologi dengan passion di bidang budaya, pendiri Creative Lab",
-          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/tokoh-creative.jpg",
+            "Mengelola dan mengembangkan Pujokusuman Creative Lab sebagai ruang bertemu, belajar, dan berkreasi bagi warga. Menyusun program-program warga seperti Sekolah Kampung dan kegiatan kolektif lainnya yang berbasis isu sosial, budaya, dan kewirausahaan lokal.",
+          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/WhatsApp_Image_2025-07-28_at_21.25.45_8a95e08f_vgy5l9",
         },
       ],
     },
@@ -486,27 +415,105 @@ const BudayaDetail = () => {
       gallery: [
         {
           type: "image",
-          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/pasar1.jpg",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_9813_qktdgq",
           thumbnail:
-            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/pasar1.jpg",
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_9813_qktdgq",
         },
         {
           type: "image",
-          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/pasar2.jpg",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_9786_qauhdm",
           thumbnail:
-            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/pasar2.jpg",
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_9786_qauhdm",
         },
         {
           type: "image",
-          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/pasar3.jpg",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_9811_pysxcp",
           thumbnail:
-            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/pasar3.jpg",
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_9811_pysxcp",
         },
         {
           type: "image",
-          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/pasar4.jpg",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_9810_gpo1pp",
           thumbnail:
-            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/pasar4.jpg",
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_9810_gpo1pp",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_9820_yjxuiu",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_9820_yjxuiu",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_9769_n5hlxw",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_9769_n5hlxw",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_9893_wbpclz",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_9893_wbpclz",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/DSC09350_qrukym",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/DSC09350_qrukym",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_9784_xwalen",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_9784_xwalen",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/DSC09321_axby6x",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/DSC09321_axby6x",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/DSC09287_nozuax",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/DSC09287_nozuax",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/DSC09299_c78bmt",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/DSC09299_c78bmt",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/DSC09308_xkuxmx",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/DSC09308_xkuxmx",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_9836_xpki7f",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_9836_xpki7f",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_0442_cr1bfu",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_0442_cr1bfu",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_0444_ewlbfp",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_0444_ewlbfp",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_9848_wwboad",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_9848_wwboad",
         },
       ],
       sejarah: [
@@ -567,11 +574,11 @@ const BudayaDetail = () => {
       ],
       tokoh: [
         {
-          nama: "Bu Siti Aminah",
-          jabatan: "Ketua Komunitas Kringmen",
+          nama: "Danang Rusmandoko",
+          jabatan: "Penggerak Kebudayaan Pujokusuman & Ketua KringMan",
           deskripsi:
-            "Aktivis sosial dan lingkungan, penggerak utama Komunitas Kringmen di Pujokusuman.",
-          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/kringmen_tokoh.jpg",
+            "Selain aktif di bidang budaya, Danang juga merupakan salah satu penggerak komunitas sepeda “Kring Man” di Kampung Pujokusuman. Komunitas ini tumbuh dari kebiasaan warga bersepeda bersama tanpa jadwal khusus, sebagai ruang silaturahmi dan olahraga ringan yang merawat kebersamaan. Di dalamnya, Danang mendorong semangat kebugaran, kebersamaan, dan kecintaan pada kampung sendiri melalui kegiatan yang sederhana namun bermakna.",
+          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/WhatsApp_Image_2025-07-21_at_21.01.55_3ce33573_pytrtx",
         },
       ],
     },
@@ -613,15 +620,6 @@ const BudayaDetail = () => {
         t("budaya9Sejarah4"),
       ],
       deskripsi: t("budaya9Deskripsi"),
-      kegiatan: [
-        t("budaya9Kegiatan1"),
-        t("budaya9Kegiatan2"),
-        t("budaya9Kegiatan3"),
-        t("budaya9Kegiatan4"),
-      ],
-      jadwal: t("budaya9Jadwal"),
-      prestasi: [],
-      tokoh: [],
     },
     "komunitas-pohon": {
       title: t(
@@ -664,15 +662,22 @@ const BudayaDetail = () => {
         t("budaya10Sejarah2"),
       ],
       deskripsi: t("budaya10Deskripsi"),
-      kegiatan: [
-        t("budaya10Kegiatan1"),
-        t("budaya10Kegiatan2"),
-        t("budaya10Kegiatan3"),
-        t("budaya10Kegiatan4"),
+      tokoh: [
+        {
+          nama: "Danang Rusmandoko",
+          jabatan: "Penggerak Kebudayaan Pujokusuman & Pengagas Komunitas POHON",
+          deskripsi:
+            "Salah satu tokoh sentral dalam kegiatan kebudayaan di Kampung Pujokusuman. Ia kerap menjadi pengarah, penghubung, sekaligus penggerak berbagai kegiatan seni dan tradisi lokal. Perannya penting dalam menjaga kesinambungan antar generasi, menjembatani inisiatif warga dengan program kampung budaya secara konsisten dan penuh dedikasi.",
+          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/WhatsApp_Image_2025-07-21_at_21.01.55_3ce33573_pytrtx",
+        },
+        {
+          nama: "Wili Lumintang",
+          jabatan: "Editor dan director of photography POHON",
+          deskripsi:
+            "Editor dan director of photography di Komunitas POHON yang merangkai kisah sejarah kampung menjadi dokumenter visual yang kuat dan menyentuh. Lewat bidikan kamera dan penyuntingan yang cermat, cerita-cerita lama dari warga dihidupkan kembali sebagai bagian dari ingatan kolektif Pujokusuman.",
+          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/1I1A8396_ekty32",
+        },
       ],
-      jadwal: t("budaya10Jadwal"),
-      prestasi: [],
-      tokoh: [],
     },
   };
 
@@ -782,6 +787,40 @@ const BudayaDetail = () => {
                         <div>{t("budaya2Sejarah5")}</div>
                       </li>
                     </ol>
+                  </>
+                ) : id === "pujokusuman-creative-lab" ? (
+                  <>
+                    <div style={{ marginBottom: 20 }}>
+                      <h3 style={{ color: "#8B4513", marginBottom: 10 }}>
+                        Latar Belakang
+                      </h3>
+                      <p>{t("budaya6Sejarah1")}</p>
+                      <p>{t("budaya6Sejarah2")}</p>
+                    </div>
+
+                    <div style={{ marginBottom: 20 }}>
+                      <h3 style={{ color: "#8B4513", marginBottom: 10 }}>
+                        Pembentukan dan Tujuan
+                      </h3>
+                      <p>{t("budaya6Sejarah3")}</p>
+                      <p>{t("budaya6Sejarah4")}</p>
+                    </div>
+
+                    <div style={{ marginBottom: 20 }}>
+                      <h3 style={{ color: "#8B4513", marginBottom: 10 }}>
+                        Aktivitas Utama
+                      </h3>
+                      <p>{t("budaya6Sejarah5")}</p>
+                      <p>{t("budaya6Sejarah6")}</p>
+                    </div>
+
+                    <div style={{ marginBottom: 20 }}>
+                      <h3 style={{ color: "#8B4513", marginBottom: 10 }}>
+                        Kontribusi untuk Kampung
+                      </h3>
+                      <p>{t("budaya6Sejarah7")}</p>
+                      <p>{t("budaya6Sejarah8")}</p>
+                    </div>
                   </>
                 ) : (
                   budaya.sejarah.map((paragraph, index) => (
@@ -904,61 +943,89 @@ const BudayaDetail = () => {
               </div>
 
               {/* Kegiatan Section */}
-              {id !== "pasar-pujokusuman" && (
-                <div className="content-section">
-                  <h2>🎯 {t("labelKegiatan", "Kegiatan")}</h2>
-                  <ul>
-                    {budaya.kegiatan.map((kegiatan, index) => (
-                      <li key={index}>{kegiatan}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+              {id !== "pasar-pujokusuman" &&
+                id !== "sanggar-tari-tradisional" &&
+                id !== "jemparingan" &&
+                id !== "jatilan" &&
+                id !== "teater" &&
+                id !== "ruwatan" &&
+                id !== "pujokusuman-creative-lab" &&
+                id !== "orkes-kentongan-sukarena" &&
+                id !== "komunitas-pohon" && (
+                  <div className="content-section">
+                    <h2>🎯 {t("labelKegiatan", "Kegiatan")}</h2>
+                    <ul>
+                      {budaya.kegiatan.map((kegiatan, index) => (
+                        <li key={index}>{kegiatan}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
 
               {/* Jadwal Section */}
-              <div className="content-section">
-                <h2>⏰ {t("labelJadwal", "Jadwal")}</h2>
-                <p className="jadwal-text">{budaya.jadwal}</p>
-              </div>
+              {id !== "jemparingan" &&
+                id !== "jatilan" &&
+                id !== "teater" &&
+                id !== "ruwatan" &&
+                id !== "pujokusuman-creative-lab" &&
+                id !== "orkes-kentongan-sukarena" &&
+                id !== "komunitas-pohon" && (
+                  <div className="content-section">
+                    <h2>⏰ {t("labelJadwal", "Jadwal")}</h2>
+                    <p className="jadwal-text">{budaya.jadwal}</p>
+                  </div>
+                )}
 
               {/* Prestasi Section */}
-              {id !== "pasar-pujokusuman" && (
-                <div className="content-section">
-                  <h2>🏆 {t("prestasiPencapaian", "Prestasi & Pencapaian")}</h2>
-                  <ul>
-                    {budaya.prestasi.map((prestasi, index) => (
-                      <li key={index}>{prestasi}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+              {id !== "pasar-pujokusuman" &&
+                id !== "sanggar-tari-tradisional" &&
+                id !== "jemparingan" &&
+                id !== "jatilan" &&
+                id !== "teater" &&
+                id !== "ruwatan" &&
+                id !== "pujokusuman-creative-lab" &&
+                id !== "orkes-kentongan-sukarena" &&
+                id !== "komunitas-pohon" && (
+                  <div className="content-section">
+                    <h2>
+                      🏆 {t("prestasiPencapaian", "Prestasi & Pencapaian")}
+                    </h2>
+                    <ul>
+                      {budaya.prestasi.map((prestasi, index) => (
+                        <li key={index}>{prestasi}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
 
               {/* Tokoh Section */}
-              {id !== "pasar-pujokusuman" && (
-                <div className="content-section">
-                  <h2>👥 {t("tokohUtama", "Tokoh Utama")}</h2>
-                  <div className="tokoh-grid">
-                    {budaya.tokoh.map((tokoh, index) => (
-                      <div key={index} className="tokoh-card">
-                        <div className="tokoh-image">
-                          <img
-                            src={tokoh.foto}
-                            alt={tokoh.nama}
-                            onError={(e) => {
-                              e.target.src = getPlaceholderImage(tokoh.nama);
-                            }}
-                          />
+              {id !== "pasar-pujokusuman" &&
+                id !== "ruwatan" &&
+                id !== "orkes-kentongan-sukarena" && (
+                  <div className="content-section">
+                    <h2>👥 {t("tokohUtama", "Tokoh Utama")}</h2>
+                    <div className="tokoh-grid">
+                      {budaya.tokoh.map((tokoh, index) => (
+                        <div key={index} className="tokoh-card">
+                          <div className="tokoh-image">
+                            <img
+                              src={tokoh.foto}
+                              alt={tokoh.nama}
+                              onError={(e) => {
+                                e.target.src = getPlaceholderImage(tokoh.nama);
+                              }}
+                            />
+                          </div>
+                          <div className="tokoh-info">
+                            <h3>{tokoh.nama}</h3>
+                            <p className="tokoh-jabatan">{tokoh.jabatan}</p>
+                            <p className="tokoh-deskripsi">{tokoh.deskripsi}</p>
+                          </div>
                         </div>
-                        <div className="tokoh-info">
-                          <h3>{tokoh.nama}</h3>
-                          <p className="tokoh-jabatan">{tokoh.jabatan}</p>
-                          <p className="tokoh-deskripsi">{tokoh.deskripsi}</p>
-                        </div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
             </div>
 
             {/* Right Column - Gallery */}
@@ -1044,6 +1111,9 @@ const BudayaDetail = () => {
                         style={{
                           maxWidth: "90vw",
                           maxHeight: "90vh",
+                          width: "auto",
+                          height: "auto",
+                          objectFit: "contain",
                           borderRadius: "12px",
                           boxShadow: "0 8px 32px rgba(0,0,0,0.5)",
                           background: "#fff",
@@ -1057,6 +1127,9 @@ const BudayaDetail = () => {
                         style={{
                           maxWidth: "90vw",
                           maxHeight: "90vh",
+                          width: "auto",
+                          height: "auto",
+                          objectFit: "contain",
                           borderRadius: "12px",
                           boxShadow: "0 8px 32px rgba(0,0,0,0.5)",
                           background: "#fff",
@@ -1115,5 +1188,7 @@ const BudayaDetail = () => {
     </div>
   );
 };
+
+
 
 export default BudayaDetail;

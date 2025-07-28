@@ -91,6 +91,41 @@ const Tentang = () => {
       foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_300,h_300,c_fill/kampung-pujokusuman/siti-aminah.jpg",
       publicId: "kampung-pujokusuman/siti-aminah",
     },
+    {
+      nama: t("tokoh6Nama"),
+      jabatan: t("tokoh6Jabatan"),
+      deskripsi: t("tokoh6Deskripsi"),
+      foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_300,h_300,c_fill/kampung-pujokusuman/tokoh6.jpg",
+      publicId: "tokoh6",
+    },
+    {
+      nama: t("tokoh7Nama"),
+      jabatan: t("tokoh7Jabatan"),
+      deskripsi: t("tokoh7Deskripsi"),
+      foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_300,h_300,c_fill/kampung-pujokusuman/tokoh7.jpg",
+      publicId: "tokoh7",
+    },
+    {
+      nama: t("tokoh8Nama"),
+      jabatan: t("tokoh8Jabatan"),
+      deskripsi: t("tokoh8Deskripsi"),
+      foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_300,h_300,c_fill/kampung-pujokusuman/tokoh8.jpg",
+      publicId: "tokoh8",
+    },
+    {
+      nama: t("tokoh9Nama"),
+      jabatan: t("tokoh9Jabatan"),
+      deskripsi: t("tokoh9Deskripsi"),
+      foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_300,h_300,c_fill/kampung-pujokusuman/tokoh9.jpg",
+      publicId: "tokoh9",
+    },
+    {
+      nama: t("tokoh10Nama"),
+      jabatan: t("tokoh10Jabatan"),
+      deskripsi: t("tokoh10Deskripsi"),
+      foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_300,h_300,c_fill/kampung-pujokusuman/tokoh10.jpg",
+      publicId: "tokoh10",
+    },
   ];
 
   const getPlaceholderImage = (nama) => {

@@ -402,10 +402,6 @@ function App() {
                   </p>
                 </div>
                 <div className="contact-item">
-                  <h3>📞 {t("phone")}</h3>
-                  <p>+62 274 123456</p>
-                </div>
-                <div className="contact-item">
                   <h3>✉️ {t("email")}</h3>
                   <p>djelajahpujoku@gmail.com</p>
                 </div>
@@ -550,7 +546,6 @@ function App() {
                 <div className="footer-section">
                   <h4>{t("footerContact")}</h4>
                   <p>Yogyakarta, Indonesia</p>
-                  <p>📞 +62 274 123456</p>
                   <p>✉️ djelajahpujoku@gmail.com</p>
                 </div>
               </div>

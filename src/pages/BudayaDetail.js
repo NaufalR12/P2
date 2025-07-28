@@ -132,14 +132,14 @@ const BudayaDetail = () => {
           jabatan: "Pemilik dan pengelola ndalem pujokusuman",
           deskripsi:
             "KRT Jati Hadiningrat berperan aktif dalam melestarikan warisan budaya dengan menjaga fungsi dan nilai historis Ndalem Pujokusuman, sekaligus mempertahankan identitas budaya lokal sebagai bagian dari keluarga bangsawan.",
-          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/tokoh-ruwatan.jpg",
+          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/IMG_9429_zfk3p7",
         },
         {
-          nama: "Pak Sutarno",
-          jabatan: "Ketua Sanggar",
+          nama: "Ali Nursotya Nugraha, M.Sn",
+          jabatan: "Pemilik Yayasan Tari",
           deskripsi:
-            "Memimpin sanggar selama 15 tahun dan aktif melestarikan budaya tradisional",
-          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/tokoh2.jpg",
+            "Generasi muda yang kini memimpin Yayasan Pamulangan Beksa Sasminta Mardawa (YPBSM), melanjutkan estafet kepemimpinan dalam pelestarian tari klasik gaya Yogyakarta. Dengan pendekatan yang terbuka dan adaptif, Alin aktif menjembatani nilai-nilai tradisi dengan dinamika zaman, menjadikan sanggar tidak hanya sebagai ruang latihan tari, tetapi juga tempat tumbuhnya generasi muda yang mencintai budaya.",
+          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/IMG_9425_12_czck3l",
         },
       ],
     },

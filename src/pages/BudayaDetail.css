@@ -290,25 +290,25 @@
 
 /* Tokoh Section */
 .tokoh-grid {
-  display: grid;
-  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center; /* Tambahkan agar semua card di tengah */
 }
 
 .tokoh-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  padding: 2rem;
+  gap: 1rem;
+  padding: 1rem;
   background: var(--background-light);
-  border-radius: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.tokoh-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center; /* Pastikan semua teks di dalam card rata tengah */
 }
 
 .tokoh-image {
@@ -327,27 +327,39 @@
   object-fit: cover;
 }
 
+.tokoh-info {
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+
 .tokoh-info h3 {
   color: var(--primary-color);
   margin-bottom: 0.5rem;
-  font-size: 1.3rem;
+  font-size: 1.7rem;
+  text-align: center !important; /* Paksa text-align center */
+  width: 100%;
   font-weight: bold;
+  display: block;
 }
 
 .tokoh-jabatan {
   color: var(--secondary-color);
-  font-weight: 600;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  text-align: center !important; /* Paksa text-align center */
+  width: 100%;
+  display: block;
 }
 
 .tokoh-deskripsi {
   color: var(--text-dark);
-  font-size: 0.95rem;
-  line-height: 1.6;
-  max-width: 400px;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center !important; /* Paksa text-align center */
+  width: 100%;
+  display: block;
 }
 
 /* CTA Section */

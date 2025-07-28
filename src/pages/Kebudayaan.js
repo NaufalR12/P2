@@ -55,6 +55,30 @@ const Kebudayaan = () => {
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_500,c_fill/IMG_9786_cdl0tt.jpg",
       sejarah: t("budaya7SejarahSingkat"),
     },
+    {
+      id: "komunitas-kringmen",
+      title: t("budaya8Title", "Komunitas Kringmen"),
+      image:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_500,c_fill/IMG_20180304_102302_arsnaw",
+      sejarah: t("budaya8SejarahSingkat"),
+    },
+    {
+      id: "orkes-kentongan-sukarena",
+      title: t("budaya9Title", "Orkes Kentongan SUKA RENA"),
+      image:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_500,c_fill/orkes_gypwn2",
+      sejarah: t("budaya9SejarahSingkat"),
+    },
+    {
+      id: "komunitas-pohon",
+      title: t(
+        "budaya10Title",
+        "Komunitas POHON (Pedjoeang Heritage Pujokusuman)"
+      ),
+      image:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_500,c_fill/IMG_8593_r0h8vi",
+      sejarah: t("budaya10SejarahSingkat"),
+    },
   ];
 
   const getPlaceholderImage = (title) => {

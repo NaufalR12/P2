@@ -54,33 +54,6 @@ const Tentang = () => {
     },
   ];
 
-  const prestasi = [
-    {
-      icon: "🏆",
-      title: t("prestasi1Title"),
-      subtitle: t("prestasi1Subtitle"),
-      description: t("prestasi1Desc"),
-    },
-    {
-      icon: "🎨",
-      title: t("prestasi2Title"),
-      subtitle: t("prestasi2Subtitle"),
-      description: t("prestasi2Desc"),
-    },
-    {
-      icon: "🎭",
-      title: t("prestasi3Title"),
-      subtitle: t("prestasi3Subtitle"),
-      description: t("prestasi3Desc"),
-    },
-    {
-      icon: "🏹",
-      title: t("prestasi4Title"),
-      subtitle: t("prestasi4Subtitle"),
-      description: t("prestasi4Desc"),
-    },
-  ];
-
   const tokohMasyarakat = [
     {
       nama: t("tokoh1Nama"),
@@ -187,23 +160,6 @@ const Tentang = () => {
                   <li>{t("misi5")}</li>
                 </ul>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Prestasi */}
-        <section className="prestasi-section">
-          <div className="container">
-            <h2>{t("prestasiTitle")}</h2>
-            <div className="prestasi-grid">
-              {prestasi.map((item, index) => (
-                <div key={index} className="prestasi-card">
-                  <div className="prestasi-icon">{item.icon}</div>
-                  <h3>{item.title}</h3>
-                  <p className="prestasi-subtitle">{item.subtitle}</p>
-                  <p>{item.description}</p>
-                </div>
-              ))}
             </div>
           </div>
         </section>

@@ -15,19 +15,84 @@ const BudayaDetail = () => {
       heroImage:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/IMG_9508_fqelvn.jpg",
       gallery: [
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/DSC07541_gcmnuy",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/DSC07503_ysmria",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_0161_zojodk",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/DSC07518_bgcqsq",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20250723-WA0111_hzrbnj",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20250723-WA0006_jsfh7o",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20250723-WA0001_niid2c",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20250723-WA0005_mr2sbn",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20250723-WA0003_yitjed", //////////ed",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20250723-WA0109_qgl1om",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20250723-WA0110_k3hgbt",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20250723-WA0004_khtwjd",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20250723-WA0108_jxgfv0",
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/DSC07541_gcmnuy",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/DSC07541_gcmnuy",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/DSC07503_ysmria",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/DSC07503_ysmria",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_0161_zojodk",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_0161_zojodk",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/DSC07518_bgcqsq",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/DSC07518_bgcqsq",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20250723-WA0111_hzrbnj",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG-20250723-WA0111_hzrbnj",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20250723-WA0006_jsfh7o",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG-20250723-WA0006_jsfh7o",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20250723-WA0001_niid2c",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG-20250723-WA0001_niid2c",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20250723-WA0005_mr2sbn",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG-20250723-WA0005_mr2sbn",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20250723-WA0003_yitjed",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG-20250723-WA0003_yitjed",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20250723-WA0109_qgl1om",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG-20250723-WA0109_qgl1om",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20250723-WA0110_k3hgbt",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG-20250723-WA0110_k3hgbt",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20250723-WA0004_khtwjd",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG-20250723-WA0004_khtwjd",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20250723-WA0108_jxgfv0",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG-20250723-WA0108_jxgfv0",
+        },
       ],
       sejarah: [
         t("budaya1Sejarah1"),
@@ -63,11 +128,11 @@ const BudayaDetail = () => {
       ],
       tokoh: [
         {
-          nama: "Bu Sari Wulandari",
-          jabatan: "Pelatih Senior",
+          nama: "KRT Jati Hadiningrat",
+          jabatan: "Pemilik dan pengelola ndalem pujokusuman",
           deskripsi:
-            "Seniman tari dengan pengalaman 25 tahun, pendiri Sanggar Tari Pujokusuman",
-          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/tokoh1.jpg",
+            "KRT Jati Hadiningrat berperan aktif dalam melestarikan warisan budaya dengan menjaga fungsi dan nilai historis Ndalem Pujokusuman, sekaligus mempertahankan identitas budaya lokal sebagai bagian dari keluarga bangsawan.",
+          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/tokoh-ruwatan.jpg",
         },
         {
           nama: "Pak Sutarno",
@@ -83,15 +148,60 @@ const BudayaDetail = () => {
       heroImage:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/IMG_20220101_085413_hfoz4e",
       gallery: [
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20200308-WA0041_braskp",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_20210331_161935_rokjjw",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_20210322_162956_b7fqkw",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_20210324_161230_ediapj",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20200115-WA0037_ryo6sf",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_20220101_084932_ceidpt",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20211127-WA0006_xwggfs",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20240107-WA0007_skrfxy",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_20220101_085413_hfoz4e",
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20200308-WA0041_braskp",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG-20200308-WA0041_braskp",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_20210331_161935_rokjjw",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_20210331_161935_rokjjw",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_20210322_162956_b7fqkw",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_20210322_162956_b7fqkw",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_20210324_161230_ediapj",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_20210324_161230_ediapj",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20200115-WA0037_ryo6sf",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG-20200115-WA0037_ryo6sf",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_20220101_084932_ceidpt",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_20220101_084932_ceidpt",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_20211127-WA0006_xwggfs",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_20211127-WA0006_xwggfs",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_20240107-WA0007_skrfxy",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_20240107-WA0007_skrfxy",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_20220101_085413_hfoz4e",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_20220101_085413_hfoz4e",
+        },
       ],
       sejarah: [
         t("budaya2Sejarah1"),
@@ -138,10 +248,30 @@ const BudayaDetail = () => {
       heroImage:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/jatilan_qsmvtj",
       gallery: [
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/jatilan_qsmvtj",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/jathilan2.jpg",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/jathilan3.jpg",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/jathilan4.jpg",
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/jatilan_qsmvtj",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/jatilan_qsmvtj",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/jathilan2.jpg",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/jathilan2.jpg",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/jathilan3.jpg",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/jathilan3.jpg",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/jathilan4.jpg",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/jathilan4.jpg",
+        },
       ],
       sejarah: [t("budaya3Sejarah1"), t("budaya3Sejarah2")],
       deskripsi: t("budaya3Deskripsi"),
@@ -173,10 +303,30 @@ const BudayaDetail = () => {
       heroImage:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/Screenshot_2025-07-20_164214_a9vybk",
       gallery: [
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/Screenshot_2025-07-20_164214_a9vybk",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/DSC06929_xup9mq",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/pelukis3.jpg",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/pelukis4.jpg",
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/Screenshot_2025-07-20_164214_a9vybk",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/Screenshot_2025-07-20_164214_a9vybk",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/DSC06929_xup9mq",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/DSC06929_xup9mq",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/pelukis3.jpg",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/pelukis3.jpg",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/pelukis4.jpg",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/pelukis4.jpg",
+        },
       ],
       sejarah: [
         t("budaya4Sejarah1"),
@@ -212,13 +362,45 @@ const BudayaDetail = () => {
       heroImage:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/IMG_1381_1_fcfupy.jpg",
       gallery: [
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/ruwatan1.jpg",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/ruwatan2.jpg",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/ruwatan3.jpg",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/ruwatan4.jpg",
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_1402_o1kstj",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_1402_o1kstj",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_1363_zvjtnc",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_1363_zvjtnc",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_1373_nz7wrt.",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_1373_nz7wrt",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_1376_i9qnhl",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_1376_i9qnhl",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_1384_jahwco",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_1384_jahwco",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_1403_deuuoz",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_1403_deuuoz",
+        },
       ],
-      sejarah: [t("budaya5Sejarah")],
-      deskripsi: t("budaya5Deskripsi"),
+      sejarah: [t("budaya5Sejarah"), t("budaya5Sejarah1")],
+      deskripsi: [t("budaya5Deskripsi"), t("budaya5Deskripsi1")],
       kegiatan: [
         t("budaya5Kegiatan1"),
         t("budaya5Kegiatan2"),
@@ -234,10 +416,10 @@ const BudayaDetail = () => {
       ],
       tokoh: [
         {
-          nama: "Ki Dalang Sukoco",
-          jabatan: "Dalang Senior",
+          nama: "KRT Jati Hadiningrat",
+          jabatan: "Pemilik dan pengelola ndalem pujokusuman",
           deskripsi:
-            "Dalang wayang kulit yang sering memimpin upacara ruwatan dan pertunjukan wayang",
+            "KRT Jati Hadiningrat berperan aktif dalam melestarikan warisan budaya dengan menjaga fungsi dan nilai historis Ndalem Pujokusuman, sekaligus mempertahankan identitas budaya lokal sebagai bagian dari keluarga bangsawan.",
           foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/tokoh-ruwatan.jpg",
         },
       ],
@@ -247,10 +429,30 @@ const BudayaDetail = () => {
       heroImage:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/WhatsApp_Image_2025-07-10_at_19.13.54_0f817fc4_mwpwlp.jpg",
       gallery: [
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/creative1.jpg",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/creative2.jpg",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/creative3.jpg",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/creative4.jpg",
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/creative1.jpg",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/creative1.jpg",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/creative2.jpg",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/creative2.jpg",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/creative3.jpg",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/creative3.jpg",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/creative4.jpg",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/creative4.jpg",
+        },
       ],
       sejarah: [t("budaya6Sejarah")],
       deskripsi: t("budaya6Deskripsi"),
@@ -282,10 +484,30 @@ const BudayaDetail = () => {
       heroImage:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/IMG_9786_cdl0tt.jpg",
       gallery: [
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/pasar1.jpg",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/pasar2.jpg",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/pasar3.jpg",
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/pasar4.jpg",
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/pasar1.jpg",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/pasar1.jpg",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/pasar2.jpg",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/pasar2.jpg",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/pasar3.jpg",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/pasar3.jpg",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/pasar4.jpg",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/pasar4.jpg",
+        },
       ],
       sejarah: [
         t("budaya7Sejarah"),
@@ -298,7 +520,160 @@ const BudayaDetail = () => {
       jadwal: t("budaya7Jadwal"),
       // Tidak ada lagi: kegiatan, prestasi, tokoh
     },
-    
+    "komunitas-kringmen": {
+      title: t("budaya8Title", "Komunitas Kringmen"),
+      heroImage:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/IMG_20180304_102302_arsnaw",
+      gallery: [
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_20180304_111331_wjynfq",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_20180304_111331_wjynfq",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_20180304_102139_u6vemv",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_20180304_102139_u6vemv",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG-20240204-WA0021_l2gs9q",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG-20240204-WA0021_l2gs9q",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_20240204_082135_duszw6",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_20240204_082135_duszw6",
+        },
+      ],
+      sejarah: [t("budaya8Sejarah"), t("budaya8Sejarah1")],
+      deskripsi: t("budaya8Deskripsi"),
+      kegiatan: [
+        t("budaya8Kegiatan1"),
+        t("budaya8Kegiatan2"),
+        t("budaya8Kegiatan3"),
+        t("budaya8Kegiatan4"),
+      ],
+      jadwal: t("budaya8Jadwal"),
+      prestasi: [
+        "Penggerak Komunitas Sosial Pujokusuman 2023",
+        "Kolaborasi dengan berbagai komunitas lokal",
+        "Pelatihan dan Workshop untuk warga",
+        "Aksi sosial dan lingkungan berkelanjutan",
+      ],
+      tokoh: [
+        {
+          nama: "Bu Siti Aminah",
+          jabatan: "Ketua Komunitas Kringmen",
+          deskripsi:
+            "Aktivis sosial dan lingkungan, penggerak utama Komunitas Kringmen di Pujokusuman.",
+          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/kringmen_tokoh.jpg",
+        },
+      ],
+    },
+    "orkes-kentongan-sukarena": {
+      title: t("budaya9Title", "Orkes Kentongan SUKA RENA"),
+      heroImage:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/orkes_gypwn2",
+      gallery: [
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/orkes1.jpg",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/orkes1.jpg",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/orkes2.jpg",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/orkes2.jpg",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/orkes3.jpg",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/orkes3.jpg",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/orkes4.jpg",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/orkes4.jpg",
+        },
+      ],
+      sejarah: [
+        t("budaya9Sejarah"),
+        t("budaya9Sejarah1"),
+        t("budaya9Sejarah2"),
+        t("budaya9Sejarah3"),
+        t("budaya9Sejarah4"),
+      ],
+      deskripsi: t("budaya9Deskripsi"),
+      kegiatan: [
+        t("budaya9Kegiatan1"),
+        t("budaya9Kegiatan2"),
+        t("budaya9Kegiatan3"),
+        t("budaya9Kegiatan4"),
+      ],
+      jadwal: t("budaya9Jadwal"),
+      prestasi: [],
+      tokoh: [],
+    },
+    "komunitas-pohon": {
+      title: t(
+        "budaya10Title",
+        "Komunitas POHON (Pedjoeang Heritage Pujokusuman)"
+      ),
+      heroImage:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/IMG_8593_r0h8vi",
+      gallery: [
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_8593_r0h8vi",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_8593_r0h8vi",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/WhatsApp_Image_2025-07-28_at_11.40.19_152260bc_hkyxf7",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/WhatsApp_Image_2025-07-28_at_11.40.19_152260bc_hkyxf7",
+        },
+        {
+          type: "video",
+          url: "https://res.cloudinary.com/ddfcjabrm/video/upload/q_auto,w_800,h_600,c_fill/IMG_8588_lqfc8f",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/video/upload/q_auto,w_200,h_150,c_fill/Screenshot_2025-07-28_114710_a9donf",
+          poster:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/Screenshot_2025-07-28_114710_a9donf",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/pohon4.jpg",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/pohon4.jpg",
+        },
+      ],
+      sejarah: [
+        t("budaya10Sejarah"),
+        t("budaya10Sejarah1"),
+        t("budaya10Sejarah2"),
+      ],
+      deskripsi: t("budaya10Deskripsi"),
+      kegiatan: [
+        t("budaya10Kegiatan1"),
+        t("budaya10Kegiatan2"),
+        t("budaya10Kegiatan3"),
+        t("budaya10Kegiatan4"),
+      ],
+      jadwal: t("budaya10Jadwal"),
+      prestasi: [],
+      tokoh: [],
+    },
   };
 
   const budaya = budayaData[id];
@@ -591,17 +966,31 @@ const BudayaDetail = () => {
               <h2>📸 {t("galeriFoto", "Galeri Foto")}</h2>
               <div className="gallery-container">
                 <div className="main-image">
-                  <img
-                    src={budaya.gallery[currentImageIndex]}
-                    alt={`${budaya.title} - Foto ${currentImageIndex + 1}`}
-                    onError={(e) => {
-                      e.target.src = getPlaceholderImage(
-                        `Foto ${currentImageIndex + 1}`
-                      );
-                    }}
-                    style={{ cursor: "zoom-in" }}
-                    onClick={() => setIsModalOpen(true)}
-                  />
+                  {budaya.gallery[currentImageIndex].type === "image" ? (
+                    <img
+                      src={budaya.gallery[currentImageIndex].url}
+                      alt={`${budaya.title} - Foto ${currentImageIndex + 1}`}
+                      onError={(e) => {
+                        e.target.src = getPlaceholderImage(
+                          `Foto ${currentImageIndex + 1}`
+                        );
+                      }}
+                      style={{ cursor: "zoom-in" }}
+                      onClick={() => setIsModalOpen(true)}
+                    />
+                  ) : (
+                    <video
+                      src={budaya.gallery[currentImageIndex].url}
+                      controls
+                      onError={(e) => {
+                        e.target.src = getPlaceholderImage(
+                          `Video ${currentImageIndex + 1}`
+                        );
+                      }}
+                      style={{ cursor: "zoom-in" }}
+                      onClick={() => setIsModalOpen(true)}
+                    />
+                  )}
                   <button className="gallery-nav prev" onClick={prevImage}>
                     ‹
                   </button>
@@ -610,21 +999,25 @@ const BudayaDetail = () => {
                   </button>
                 </div>
                 <div className="thumbnail-grid">
-                  {budaya.gallery.map((image, index) => (
-                    <img
+                  {budaya.gallery.map((item, index) => (
+                    <div
                       key={index}
-                      src={image}
-                      alt={`${budaya.title} - Thumbnail ${index + 1}`}
-                      className={`thumbnail ${
+                      className={`thumbnail-item ${
                         index === currentImageIndex ? "active" : ""
                       }`}
+                      data-type={item.type}
                       onClick={() => setCurrentImageIndex(index)}
-                      onError={(e) => {
-                        e.target.src = getPlaceholderImage(
-                          `Thumbnail ${index + 1}`
-                        );
-                      }}
-                    />
+                    >
+                      <img
+                        src={item.thumbnail}
+                        alt={`${budaya.title} - Thumbnail ${index + 1}`}
+                        onError={(e) => {
+                          e.target.src = getPlaceholderImage(
+                            `Thumbnail ${index + 1}`
+                          );
+                        }}
+                      />
+                    </div>
                   ))}
                 </div>
                 {/* Modal for fullscreen image */}
@@ -644,18 +1037,33 @@ const BudayaDetail = () => {
                     }}
                     onClick={() => setIsModalOpen(false)}
                   >
-                    <img
-                      src={budaya.gallery[currentImageIndex]}
-                      alt="Fullsize"
-                      style={{
-                        maxWidth: "90vw",
-                        maxHeight: "90vh",
-                        borderRadius: "12px",
-                        boxShadow: "0 8px 32px rgba(0,0,0,0.5)",
-                        background: "#fff",
-                      }}
-                      onClick={(e) => e.stopPropagation()}
-                    />
+                    {budaya.gallery[currentImageIndex].type === "image" ? (
+                      <img
+                        src={budaya.gallery[currentImageIndex].url}
+                        alt="Fullsize"
+                        style={{
+                          maxWidth: "90vw",
+                          maxHeight: "90vh",
+                          borderRadius: "12px",
+                          boxShadow: "0 8px 32px rgba(0,0,0,0.5)",
+                          background: "#fff",
+                        }}
+                        onClick={(e) => e.stopPropagation()}
+                      />
+                    ) : (
+                      <video
+                        src={budaya.gallery[currentImageIndex].url}
+                        controls
+                        style={{
+                          maxWidth: "90vw",
+                          maxHeight: "90vh",
+                          borderRadius: "12px",
+                          boxShadow: "0 8px 32px rgba(0,0,0,0.5)",
+                          background: "#fff",
+                        }}
+                        onClick={(e) => e.stopPropagation()}
+                      />
+                    )}
                     <button
                       onClick={() => setIsModalOpen(false)}
                       style={{

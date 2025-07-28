@@ -198,10 +198,15 @@
   overflow: hidden;
 }
 
-.main-image img {
+.main-image img,
+.main-image video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.main-image video {
+  background: #000;
 }
 
 .gallery-nav {
@@ -240,50 +245,80 @@
   gap: 0.5rem;
 }
 
-.thumbnail {
+.thumbnail-item {
+  position: relative;
   width: 100%;
   height: 80px;
-  object-fit: cover;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
   border: 2px solid transparent;
+  overflow: hidden;
 }
 
-.thumbnail:hover {
-  transform: scale(1.05);
+.thumbnail-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.thumbnail.active {
+.thumbnail-item.active {
   border-color: var(--primary-color);
   transform: scale(1.05);
+}
+
+.thumbnail-item:hover {
+  transform: scale(1.05);
+}
+
+.thumbnail-item[data-type="video"]::after {
+  content: "▶";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
 }
 
 /* Tokoh Section */
 .tokoh-grid {
   display: grid;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .tokoh-card {
   display: flex;
-  gap: 1rem;
-  padding: 1rem;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
   background: var(--background-light);
-  border-radius: 10px;
-  transition: transform 0.3s ease;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .tokoh-card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
 .tokoh-image {
-  width: 80px;
-  height: 80px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   overflow: hidden;
-  flex-shrink: 0;
+  margin-bottom: 1.5rem;
+  border: 4px solid var(--primary-color);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .tokoh-image img {
@@ -295,20 +330,24 @@
 .tokoh-info h3 {
   color: var(--primary-color);
   margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
 .tokoh-jabatan {
   color: var(--secondary-color);
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .tokoh-deskripsi {
   color: var(--text-dark);
-  font-size: 0.9rem;
-  line-height: 1.5;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 400px;
 }
 
 /* CTA Section */
@@ -432,5 +471,3 @@
     height: 250px;
   }
 }
-
-

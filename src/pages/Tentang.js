@@ -89,21 +89,21 @@ const Tentang = () => {
       jabatan: t("tokoh5Jabatan"),
       deskripsi: t("tokoh5Deskripsi"),
       foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_300,h_300,c_fill/kampung-pujokusuman/siti-aminah.jpg",
-      publicId: "kampung-pujokusuman/siti-aminah",
+      publicId: "WhatsApp_Image_2025-07-28_at_13.20.05_94f905f5_hxhd8k",
     },
     {
       nama: t("tokoh6Nama"),
       jabatan: t("tokoh6Jabatan"),
       deskripsi: t("tokoh6Deskripsi"),
       foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_300,h_300,c_fill/kampung-pujokusuman/tokoh6.jpg",
-      publicId: "tokoh6",
+      publicId: "WhatsApp_Image_2025-07-24_at_20.33.18_1d1c9260_kddryt",
     },
     {
       nama: t("tokoh7Nama"),
       jabatan: t("tokoh7Jabatan"),
       deskripsi: t("tokoh7Deskripsi"),
       foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_300,h_300,c_fill/kampung-pujokusuman/tokoh7.jpg",
-      publicId: "tokoh7",
+      publicId: "IMG_1465_v0gdqh",
     },
     {
       nama: t("tokoh8Nama"),
@@ -117,14 +117,14 @@ const Tentang = () => {
       jabatan: t("tokoh9Jabatan"),
       deskripsi: t("tokoh9Deskripsi"),
       foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_300,h_300,c_fill/kampung-pujokusuman/tokoh9.jpg",
-      publicId: "tokoh9",
+      publicId: "WhatsApp_Image_2025-07-28_at_21.25.45_8a95e08f_vgy5l9",
     },
     {
       nama: t("tokoh10Nama"),
       jabatan: t("tokoh10Jabatan"),
       deskripsi: t("tokoh10Deskripsi"),
       foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_300,h_300,c_fill/kampung-pujokusuman/tokoh10.jpg",
-      publicId: "tokoh10",
+      publicId: "1I1A8396_ekty32",
     },
   ];
 
@@ -205,7 +205,15 @@ const Tentang = () => {
             <h2>{t("tokohTitle")}</h2>
             <div className="tokoh-grid">
               {tokohMasyarakat.map((tokoh, index) => (
-                <div key={index} className="tokoh-card">
+                <div
+                  key={index}
+                  className="tokoh-card"
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    height: "100%",
+                  }}
+                >
                   <div className="tokoh-foto">
                     <Image
                       publicId={tokoh.publicId}
@@ -217,16 +225,37 @@ const Tentang = () => {
                         borderRadius: "50%",
                         objectFit: "cover",
                         border: "4px solid #daa520",
+                        minHeight: "240px",
+                        maxHeight: "240px",
                       }}
                       onError={(e) => {
                         e.target.src = getPlaceholderImage(tokoh.nama);
                       }}
                     />
                   </div>
-                  <div className="tokoh-info">
-                    <h3>{tokoh.nama}</h3>
-                    <p className="tokoh-jabatan">{tokoh.jabatan}</p>
-                    <p>{tokoh.deskripsi}</p>
+                  <div
+                    className="tokoh-info"
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      flex: "1",
+                      justifyContent: "space-between",
+                      padding: "20px 0",
+                    }}
+                  >
+                    <div>
+                      <h3>{tokoh.nama}</h3>
+                      <p className="tokoh-jabatan">{tokoh.jabatan}</p>
+                    </div>
+                    <p
+                      className="tokoh-deskripsi"
+                      style={{
+                        flex: "1",
+                        marginTop: "10px",
+                      }}
+                    >
+                      {tokoh.deskripsi}
+                    </p>
                   </div>
                 </div>
               ))}

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { HelmetProvider } from "react-helmet-async";
 import {
   BrowserRouter as Router,
   Routes,
@@ -257,7 +258,9 @@ function App() {
                 {
                   publicId: "Screenshot_2025-07-20_164214_a9vybk",
                   title: t("Teater Sanggar Obah"),
-                  description: t("Deskripsi aktivitas budaya Teater tradisional"),
+                  description: t(
+                    "Deskripsi aktivitas budaya Teater tradisional"
+                  ),
                 },
                 {
                   publicId: "IMG-20250716-WA0048_zfueb5",
@@ -420,7 +423,11 @@ function App() {
                     placeholder={t("email")}
                     required
                   />
-                  <input type="tel" name="phone" placeholder={t("phoneNumber")} />
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder={t("phoneNumber")}
+                  />
                   <textarea
                     name="message"
                     placeholder={t("yourMessage")}
@@ -494,65 +501,68 @@ function App() {
   };
 
   return (
-    <CloudinaryContext cloudName="ddfcjabrm">
-      <Router>
-        <div className="App">
-          <MusicPlayer />
-          <Notification
-            message={notif.message}
-            type={notif.type}
-            onClose={() => setNotif({ ...notif, message: "" })}
-          />
-          <Navigation />
+    <HelmetProvider>
+      <CloudinaryContext cloudName="ddfcjabrm">
+        <Router>
+          <div className="App">
+            <MusicPlayer />
+            <Notification
+              message={notif.message}
+              type={notif.type}
+              onClose={() => setNotif({ ...notif, message: "" })}
+            />
+            <Navigation />
 
-          {/* Routes */}
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/tentang" element={<Tentang />} />
-            <Route path="/kebudayaan" element={<Kebudayaan />} />
-            <Route path="/kebudayaan/:id" element={<BudayaDetail />} />
-            <Route path="/galeri" element={<Galeri />} />
-          </Routes>
+            {/* Routes */}
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/tentang" element={<Tentang />} />
+              <Route path="/kebudayaan" element={<Kebudayaan />} />
+              <Route path="/kebudayaan/:id" element={<BudayaDetail />} />
+              <Route path="/galeri" element={<Galeri />} />
+            </Routes>
 
-          {/* Footer */}
-          <footer className="footer">
-            <div className="container">
-              <div className="footer-content">
-                <div className="footer-section">
-                  <h3>{t("siteName")}</h3>
-                  <p>{t("heroDescription")}</p>
+            {/* Footer */}
+            <footer className="footer">
+              <div className="container">
+                <div className="footer-content">
+                  <div className="footer-section">
+                    <h3>{t("siteName")}</h3>
+                    <p>{t("heroDescription")}</p>
+                  </div>
+                  <div className="footer-section">
+                    <h4>{t("footerMenu")}</h4>
+                    <ul>
+                      <li>
+                        <a href="#beranda">{t("navHome")}</a>
+                      </li>
+                      <li>
+                        <a href="#tentang">{t("navAbout")}</a>
+                      </li>
+                      <li>
+                        <a href="#kebudayaan">{t("navCulture")}</a>
+                      </li>
+                      <li>
+                        <a href="#galeri">{t("navGallery")}</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="footer-section">
+                    <h4>{t("footerContact")}</h4>
+                    <p>Yogyakarta, Indonesia</p>
+                    <p>✉️ djelajahpujoku@gmail.com</p>
+                  </div>
                 </div>
-                <div className="footer-section">
-                  <h4>{t("footerMenu")}</h4>
-                  <ul>
-                    <li>
-                      <a href="#beranda">{t("navHome")}</a>
-                    </li>
-                    <li>
-                      <a href="#tentang">{t("navAbout")}</a>
-                    </li>
-                    <li>
-                      <a href="#kebudayaan">{t("navCulture")}</a>
-                    </li>
-                    <li>
-                      <a href="#galeri">{t("navGallery")}</a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="footer-section">
-                  <h4>{t("footerContact")}</h4>
-                  <p>Yogyakarta, Indonesia</p>
-                  <p>✉️ djelajahpujoku@gmail.com</p>
+                <div className="footer-bottom">
+                  &copy; {new Date().getFullYear()} {t("siteName")}. All rights
+                  reserved.
                 </div>
               </div>
-              <div className="footer-bottom">
-                &copy; {new Date().getFullYear()} {t("siteName")}. All rights reserved.
-              </div>
-            </div>
-          </footer>
-        </div>
-      </Router>
-    </CloudinaryContext>
+            </footer>
+          </div>
+        </Router>
+      </CloudinaryContext>
+    </HelmetProvider>
   );
 }
 

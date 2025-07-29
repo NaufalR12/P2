@@ -1,6 +1,19 @@
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /private/
 
+# Sitemap
 Sitemap: https://djelajahpujoku.netlify.app/sitemap.xml
+
+# Disallow paths that shouldn't be indexed
+Disallow: /static/
+Disallow: /_next/
+Disallow: /api/
+Disallow: /admin/
+
+# Allow important assets
+Allow: /static/css/
+Allow: /static/js/
+Allow: /static/media/
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1

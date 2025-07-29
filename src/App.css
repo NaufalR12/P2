@@ -7,6 +7,18 @@ body {
   overflow-x: hidden;
 }
 
+/* CSS Variables */
+:root {
+  --primary-color: #8b4513;
+  --secondary-color: #d2691e;
+  --background-light: #fff8dc;
+  --text-dark: #333;
+  --gradient-primary: linear-gradient(135deg, #8b4513, #d2691e);
+  --gradient-secondary: linear-gradient(135deg, #d2691e, #f4a460);
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 15px 60px rgba(0, 0, 0, 0.2);
+}
+
 /* Navigation Styles */
 .navbar {
   position: fixed;
@@ -33,15 +45,28 @@ body {
   position: relative;
 }
 
-.nav-lang-switcher {
+.nav-lang-switcher-desktop {
   margin-left: 4px;
   display: flex;
   align-items: center;
 }
 
+.nav-lang-switcher-mobile {
+  display: none;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #e0e0e0;
+  justify-content: center;
+}
+
 .logo h2 {
   color: var(--primary-color);
   font-size: 1.5rem;
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .nav-menu {
@@ -97,6 +122,7 @@ body {
   align-items: center;
   position: relative;
   overflow: hidden;
+  padding-top: 0; /* Hilangkan padding atas */
 }
 
 .hero-bg {
@@ -115,13 +141,41 @@ body {
   margin: 0 auto;
   z-index: 2;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0; /* Hilangkan gap */
+  padding: 0; /* Hilangkan padding */
+  margin-top: -60px; /* Tarik ke atas untuk mendekatkan ke navbar */
+}
+
+/* Hero Logo Styling */
+.hero-logo {
+  text-align: center;
+  margin: 0;
+  animation: logoFloat 3s ease-in-out infinite;
+  padding: 0;
+}
+
+.hero-logo img {
+  transition: all 0.3s ease;
+  max-width: 300px;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+  margin: 0;
+}
+
+.hero-logo:hover img {
+  transform: scale(1.05);
 }
 
 .hero-title {
   font-size: 3.5rem;
   color: var(--primary-color);
-  margin-bottom: 20px;
+  margin: 0; /* Hilangkan margin */
   line-height: 1.2;
+  margin-top: -20px; /* Tarik teks lebih dekat ke logo */
 }
 
 .hero-subtitle {
@@ -179,6 +233,58 @@ body {
   width: 80px;
   height: 80px;
   animation-delay: 2s;
+}
+
+/* Common Section and Button Styles */
+.section {
+  padding: 80px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background: var(--gradient-primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-outline:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.btn-primary {
+  background: var(--gradient-primary);
+  color: white;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.6s ease;
 }
 
 /* Section Headers */
@@ -240,17 +346,20 @@ body {
   margin-bottom: 10px;
 }
 
+.vision ul,
 .mission ul {
   list-style: none;
   padding-left: 0;
 }
 
+.vision li,
 .mission li {
   padding: 5px 0;
   position: relative;
   padding-left: 20px;
 }
 
+.vision li::before,
 .mission li::before {
   content: "•";
   color: var(--primary-color);
@@ -260,19 +369,6 @@ body {
 
 .about-image {
   height: 400px;
-}
-
-.image-placeholder {
-  width: 100%;
-  height: 100%;
-  background: var(--gradient-secondary);
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  box-shadow: var(--shadow);
 }
 
 .image-content h4 {
@@ -321,15 +417,9 @@ body {
   opacity: 0.8;
 }
 
-/* Culture CTA */
 .culture-cta {
   text-align: center;
   margin-top: 50px;
-}
-
-.logo a {
-  text-decoration: none;
-  color: inherit;
 }
 
 /* Gallery Section */
@@ -389,11 +479,95 @@ body {
   opacity: 1;
 }
 
-/* Contact Section */
-.contact {
-  background: white;
+/* Social Media Section */
+.social-media-section {
+  background: var(--background-light);
 }
 
+.social-media-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.social-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+  width: 280px;
+  flex-shrink: 0;
+}
+
+.social-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+}
+
+.social-card.instagram:hover {
+  border-color: #e4405f;
+  color: #e4405f;
+}
+
+.social-card.youtube:hover {
+  border-color: #ff0000;
+  color: #ff0000;
+}
+
+.social-logo {
+  margin-bottom: 20px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.social-card:hover .social-logo {
+  opacity: 1;
+}
+
+.social-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+.social-card:hover h3 {
+  color: inherit;
+}
+
+.social-card p {
+  opacity: 0.7;
+  line-height: 1.5;
+}
+
+/* Maps Section */
+.maps-container {
+  margin-top: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.maps-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.maps-wrapper iframe {
+  display: block;
+  border-radius: 8px;
+}
+
+/* Contact Section */
 .contact-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -431,6 +605,7 @@ body {
   margin-bottom: 20px;
   font-family: inherit;
   transition: border-color 0.3s ease;
+  box-sizing: border-box;
 }
 
 .contact-form input:focus,
@@ -471,6 +646,7 @@ body {
 
 .footer-section ul {
   list-style: none;
+  padding: 0;
 }
 
 .footer-section ul li {
@@ -494,113 +670,7 @@ body {
   opacity: 0.7;
 }
 
-/* Social Media Section */
-.social-media-section {
-  background: var(--background-light);
-}
-
-.social-media-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.social-card {
-  background: white;
-  padding: 40px 30px;
-  border-radius: 20px;
-  text-align: center;
-  text-decoration: none;
-  color: inherit;
-  box-shadow: var(--shadow);
-  transition: all 0.3s ease;
-  border: 3px solid transparent;
-  width: 280px;
-  flex-shrink: 0;
-}
-
-.social-card:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--shadow-hover);
-}
-
-.social-card.facebook:hover {
-  border-color: #1877f2;
-  color: #1877f2;
-}
-
-.social-card.instagram:hover {
-  border-color: #e4405f;
-  color: #e4405f;
-}
-
-.social-card.youtube:hover {
-  border-color: #ff0000;
-  color: #ff0000;
-}
-
-.social-card.tiktok:hover {
-  border-color: #000000;
-  color: #000000;
-}
-
-.social-logo {
-  margin-bottom: 20px;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
-}
-
-.social-card:hover .social-logo {
-  opacity: 1;
-}
-
-.social-card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-  color: var(--primary-color);
-  transition: color 0.3s ease;
-}
-
-.social-card:hover h3 {
-  color: inherit;
-}
-
-.social-card p {
-  opacity: 0.7;
-  line-height: 1.5;
-}
-
-/* Remove old social media styles from footer */
-.social-media {
-  display: none;
-}
-
-/* Maps Section */
-.maps-section {
-  background-color: #f9f7f2;
-}
-
-.maps-container {
-  margin-top: 2rem;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.maps-wrapper {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.maps-wrapper iframe {
-  display: block;
-  border-radius: 8px;
-}
-
+/* Responsive Styles */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
@@ -627,17 +697,35 @@ body {
     visibility: visible;
   }
 
-  .nav-lang-switcher {
-    margin-left: 2px;
+  /* Sembunyikan language switcher desktop di mobile */
+  .nav-lang-switcher-desktop {
+    display: none;
+  }
+
+  /* Tampilkan language switcher mobile di dalam hamburger menu */
+  .nav-lang-switcher-mobile {
+    display: flex;
   }
 
   .hero-title {
     font-size: 2.5rem;
+    padding: 0 15px;
+  }
+
+  .hero-subtitle {
+    padding: 0 15px;
+    font-size: 1.1rem;
   }
 
   .hero-buttons {
     flex-direction: column;
     align-items: center;
+    padding: 0 15px;
+  }
+
+  .hero-logo img {
+    width: 100% !important;
+    height: 80% !important;
   }
 
   .about-content {
@@ -661,47 +749,282 @@ body {
 
   .culture-grid {
     grid-template-columns: 1fr;
+    padding: 0 10px;
   }
 
   .gallery-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 0 10px;
   }
 
   .social-media-grid {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    padding: 0 15px;
   }
 
   .social-card {
     padding: 30px 20px;
     width: 250px;
   }
+
+  .container {
+    padding: 0 15px; /* Margin yang cukup di tablet */
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-header {
+    padding: 0 15px;
+    margin-bottom: 40px;
+  }
+
+  .contact-form {
+    padding: 30px 20px;
+    margin: 0 10px;
+  }
+
+  .about-text {
+    padding: 0 15px;
+  }
+
+  .about-image {
+    padding: 0 15px;
+  }
 }
 
 @media (max-width: 480px) {
   .hero-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    padding: 0 20px;
+    line-height: 1.3;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    padding: 0 20px;
+    margin-bottom: 30px;
+  }
+
+  .hero-buttons {
+    padding: 0 20px;
+    gap: 15px;
+  }
+
+  .btn {
+    padding: 12px 25px;
+    font-size: 0.9rem;
   }
 
   .section-header h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .section-header p {
+    font-size: 1rem;
   }
 
   .contact-form {
-    padding: 20px;
+    padding: 20px 15px;
+    margin: 0 15px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 12px;
+    font-size: 0.9rem;
   }
 
   .logo h2 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .social-card {
-    width: 220px;
+    width: calc(100% - 40px);
+    max-width: 280px;
+    margin: 0 20px;
+    padding: 25px 15px;
   }
 
   .social-media-grid {
-    grid-template-columns: 1fr;
-    justify-items: center;
+    padding: 0 20px;
   }
+
+  .culture-card {
+    margin: 0 15px;
+    padding: 30px 20px;
+  }
+
+  .culture-grid {
+    padding: 0 15px;
+    gap: 20px;
+  }
+
+  .gallery-grid {
+    padding: 0 15px;
+    gap: 15px;
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item {
+    height: 200px;
+  }
+
+  .hero-logo img {
+    width: 100% !important;
+    height: 80% !important;
+  }
+
+  .hero-logo {
+    margin-bottom: 1rem;
+  }
+
+  .container {
+    padding: 0 15px; /* Margin yang cukup di mobile */
+  }
+
+  .section {
+    padding: 50px 0;
+  }
+
+  .section-header {
+    padding: 0 20px;
+    margin-bottom: 30px;
+  }
+
+  .about-text {
+    padding: 0 20px;
+  }
+
+  .about-image {
+    padding: 0 20px;
+  }
+
+  .contact-info {
+    padding: 0 20px;
+  }
+
+  .contact-item {
+    margin-bottom: 25px;
+  }
+
+  .footer-content {
+    padding: 0 20px;
+  }
+
+  .footer-section {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    padding: 20px;
+    font-size: 0.9rem;
+  }
+
+  .maps-container {
+    margin: 0 15px;
+    margin-top: 2rem;
+  }
+
+  .maps-wrapper iframe {
+    height: 400px;
+  }
+
+  /* Navbar mobile improvements */
+  .navbar {
+    padding: 12px 0;
+  }
+
+  .nav-content {
+    padding: 0 15px;
+  }
+
+  .nav-menu {
+    padding: 15px 20px;
+  }
+
+  .nav-menu a {
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .nav-menu a:last-child {
+    border-bottom: none;
+  }
+
+  /* Improve button spacing on mobile */
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+  }
+
+  /* Better spacing for culture and gallery CTAs */
+  .culture-cta {
+    padding: 0 20px;
+    margin-top: 30px;
+  }
+
+  .gallery-cta {
+    padding: 0 20px !important;
+  }
+}
+
+/* Logo Float Animation */
+@keyframes logoFloat {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive Logo */
+@media (max-width: 768px) {
+  .hero-content {
+    margin-top: -40px;
+    padding: 15px;
+  }
+
+  .hero-title {
+    margin-top: -15px;
+  }
+
+  .hero-logo {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    margin-top: -30px;
+    padding: 10px;
+  }
+
+  .hero-title {
+    margin-top: -10px;
+  }
+
+  .hero-logo {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Hero Content Spacing Adjustment */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0;
+  padding: 20px;
+  margin-top: -60px;
 }

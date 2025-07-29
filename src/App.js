@@ -96,6 +96,22 @@ function App() {
           <div className="hero-bg"></div>
           <div className="container">
             <div className="hero-content fade-in">
+              {/* Logo/Foto di atas tulisan - Versi Cloudinary */}
+              <div className="hero-logo">
+                <CloudinaryContext cloudName="ddfcjabrm">
+                  <Image
+                    publicId="logopujo_kk3ewl"
+                    width="300"
+                    height="300"
+                    style={{
+                      borderRadius: "50%",
+                      objectFit: "cover",
+                    }}
+                    alt="Logo Kampung Kebudayaan Pujokusuman"
+                  />
+                </CloudinaryContext>
+              </div>
+
               <h1 className="hero-title">
                 {t("heroTitle")}
                 <br />
@@ -453,10 +469,8 @@ function App() {
       setIsMenuOpen(false);
 
       if (sectionId && location.pathname === "/") {
-        // Jika di homepage dan ada sectionId, scroll ke section
         setTimeout(() => smoothScroll(sectionId), 100);
       }
-      // Jika path berbeda, React Router akan handle
     };
 
     return (
@@ -484,14 +498,18 @@ function App() {
               <Link to="/galeri" onClick={() => handleMenuClick("/galeri")}>
                 {t("navGallery")}
               </Link>
+              {/* Language Switcher untuk mobile - di dalam hamburger menu */}
+              <div className="nav-lang-switcher-mobile">
+                <LanguageSwitcher />
+              </div>
             </div>
             <div className="hamburger" onClick={toggleMenu}>
               <span></span>
               <span></span>
               <span></span>
             </div>
-            {/* Tambahkan LanguageSwitcher di pojok kanan navbar */}
-            <div className="nav-lang-switcher">
+            {/* Language Switcher untuk desktop - di luar hamburger menu */}
+            <div className="nav-lang-switcher-desktop">
               <LanguageSwitcher />
             </div>
           </div>

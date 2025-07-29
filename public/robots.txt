@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://namasitus.netlify.app/sitemap.xml
+Sitemap: https://djelajahpujoku.netlify.app/sitemap.xml

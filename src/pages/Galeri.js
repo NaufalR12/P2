@@ -137,84 +137,68 @@ const Galeri = () => {
     // Teater
     {
       id: 16,
-      title: "Pentas Teater 1",
+      title: "Pentas Teater Sanggar Obah 1",
       category: "teater",
       image:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-teater1.jpg",
-      description: "Pentas teater remaja kampung, sesi 1.",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/Screenshot_2025-07-20_164214_a9vybk",
+      description: "Pentas teater Sanggar Obah di kampung.",
     },
     {
       id: 17,
-      title: "Pentas Teater 2",
+      title: "Pentas Teater Sanggar Obah 2",
       category: "teater",
       image:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-teater2.jpg",
-      description: "Pentas teater remaja kampung, sesi 2.",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/DSC06929_xup9mq",
+      description: "Kegiatan teater remaja Sanggar Obah.",
     },
     {
       id: 18,
-      title: "Latihan Teater 1",
+      title: "Pentas Teater Sanggar Obah 3",
       category: "teater",
       image:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-teater3.jpg",
-      description: "Latihan teater di aula kampung, sesi 1.",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/DSC08741_eq0tjd",
+      description: "Pertunjukan teater Sanggar Obah.",
     },
     {
       id: 19,
-      title: "Latihan Teater 2",
+      title: "Pentas Teater Sanggar Obah 4",
       category: "teater",
       image:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-teater4.jpg",
-      description: "Latihan teater di aula kampung, sesi 2.",
-    },
-    {
-      id: 20,
-      title: "Latihan Teater 3",
-      category: "teater",
-      image:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-teater5.jpg",
-      description: "Latihan teater di aula kampung, sesi 3.",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/Screenshot_2025-07-25_135643_kjewzq",
+      description: "Aktivitas teater di Sanggar Obah kampung.",
     },
     // PCL
     {
       id: 21,
-      title: "Kegiatan PCL 1",
+      title: "Logo PCL",
       category: "pcl",
       image:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-pcl1.jpg",
-      description: "Workshop PCL, sesi 1.",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/WhatsApp_Image_2025-07-28_at_22.08.09_b843c2b3_kec36u",
+      description: "Logo PCL",
     },
     {
       id: 22,
-      title: "Kegiatan PCL 2",
+      title: "Sosial media PCL",
       category: "pcl",
       image:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-pcl2.jpg",
-      description: "Workshop PCL, sesi 2.",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/WhatsApp_Image_2025-07-28_at_21.25.44_f17ee83a_g8anzj",
+      description: "Sosial media PCL.",
     },
     {
       id: 23,
-      title: "PCL Digital 1",
+      title: "Kegiatan PCL 1",
       category: "pcl",
       image:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-pcl3.jpg",
-      description: "Kegiatan digitalisasi budaya oleh PCL, sesi 1.",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/WhatsApp_Image_2025-07-28_at_21.25.44_dafe0131_p3smuj",
+      description: "Kegiatan belajar aksara jawa",
     },
     {
       id: 24,
-      title: "PCL Digital 2",
+      title: "Workshop",
       category: "pcl",
       image:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-pcl4.jpg",
-      description: "Kegiatan digitalisasi budaya oleh PCL, sesi 2.",
-    },
-    {
-      id: 25,
-      title: "PCL Digital 3",
-      category: "pcl",
-      image:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-pcl5.jpg",
-      description: "Kegiatan digitalisasi budaya oleh PCL, sesi 3.",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/WhatsApp_Image_2025-07-28_at_21.25.45_984a5ba5_po4gjo",
+      description: "Kegiatan workshop yang diadakan oleh PCL.",
     },
     // Kringmen
     {
@@ -222,86 +206,86 @@ const Galeri = () => {
       title: "Kegiatan Kringmen 1",
       category: "kringmen",
       image:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-kringmen1.jpg",
-      description: "Kegiatan ronda malam kringmen, sesi 1.",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/IMG_20180304_102302_arsnaw",
+      description: "Foto bersama anggota kringmen.",
     },
     {
       id: 27,
       title: "Kegiatan Kringmen 2",
       category: "kringmen",
       image:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-kringmen2.jpg",
-      description: "Kegiatan ronda malam kringmen, sesi 2.",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/IMG_20180304_111331_wjynfq",
+      description: "Salah satu anggota kringmen.",
     },
     {
       id: 28,
-      title: "Rapat Kringmen 1",
+      title: "Kegiatan Kringmen 3",
       category: "kringmen",
       image:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-kringmen3.jpg",
-      description: "Rapat koordinasi kringmen kampung, sesi 1.",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/IMG_20240204_082135_duszw6",
+      description: "Sepeda yang digunakan.",
     },
     {
       id: 29,
-      title: "Rapat Kringmen 2",
+      title: "Kegiatan Kringmen 4",
       category: "kringmen",
       image:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-kringmen4.jpg",
-      description: "Rapat koordinasi kringmen kampung, sesi 2.",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/IMG-20240204-WA0021_l2gs9q",
+      description: "Anggota kringmen sedang menikmati keindahan alam.",
     },
     {
       id: 30,
-      title: "Rapat Kringmen 3",
+      title: "Kegiatan Kringmen 5",
       category: "kringmen",
       image:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-kringmen5.jpg",
-      description: "Rapat koordinasi kringmen kampung, sesi 3.",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG_20180304_102139_u6vemv",
+      description: "Momen saat melintasi sebuah jembatan.",
     },
     // Ndalem Pujokusuman
     {
       id: 31,
-      title: "Gedung Ndalem Pujokusuman",
+      title: "Pemilik dan pengelola ndalem pujokusuman",
       category: "ndalem-pujokusuman",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG_9508_fqelvn.jpg",
       description:
-        "Arsitektur Joglo tradisional Ndalem Pujokusuman yang bersejarah.",
+        "Wawancara dengan KRT Jati Hadiningrat",
     },
     {
       id: 32,
-      title: "Upacara Ruwatan di Ndalem",
+      title: "Ndalem Pujokusuman",
       category: "ndalem-pujokusuman",
       image:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG_1381_1_fcfupy.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/DSC07332_cjzicy",
       description:
-        "Upacara ruwatan tradisional yang diselenggarakan di Ndalem Pujokusuman.",
+        "Bagian dalam",
     },
     {
       id: 33,
-      title: "Latihan Tari di Ndalem",
+      title: "Tempat Latihan Tari di Ndalem",
       category: "ndalem-pujokusuman",
       image:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/DSC07541_gcmnuy",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/DSC07330_s54gvu",
       description:
         "Kegiatan latihan tari klasik di pendopo Ndalem Pujokusuman.",
     },
     {
       id: 34,
-      title: "Penataan Ndalem",
+      title: "Alat musik gamelan di Ndalem",
       category: "ndalem-pujokusuman",
       image:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG-20250723-WA0111_hzrbnj",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/DSC07350_ne5pgq",
       description:
-        "Penataan dan pemeliharaan bangunan bersejarah Ndalem Pujokusuman.",
+        "Alat musik gamelan di Ndalem Pujokusuman.",
     },
     {
       id: 35,
-      title: "Acara Budaya di Ndalem",
+      title: "Pusaka",
       category: "ndalem-pujokusuman",
       image:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/DSC07503_ysmria",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG_9599_jy20kg",
       description:
-        "Berbagai acara budaya yang diselenggarakan di Ndalem Pujokusuman.",
+        "Salah satu pusaka yang disimpan oleh KRT Jati Hadiningrat.",
     },
     // Pasar
     {
@@ -333,21 +317,21 @@ const Galeri = () => {
     },
     {
       id: 39,
-      title: "Warung Makanan Pasar",
+      title: "Makanan Pasar",
       category: "pasar",
       image:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-pasar3.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/IMG_9810_gpo1pp",
       description:
         "Warung makanan tradisional yang menyajikan kuliner khas Yogyakarta.",
     },
     {
       id: 40,
-      title: "Interaksi Sosial di Pasar",
+      title: "Kedai Poedjan",
       category: "pasar",
       image:
-        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/dummy-pasar4.jpg",
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/DSC07279_ksjh8y",
       description:
-        "Interaksi sosial dan budaya yang terjadi di area Pasar Pujokusuman.",
+        "Kedai Poedjan, sebuah kedai kopi yang menjadi tempat berkumpul anak muda Pujokusuman.",
     },
     // Ruwahan
     {
@@ -356,44 +340,59 @@ const Galeri = () => {
       category: "ruwahan",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG_1381_1_fcfupy.jpg",
-      description:
-        "Kegiatan ruwahan di ndalem pujokusuman.",
+      description: "Kegiatan ruwahan di ndalem pujokusuman.",
     },
     {
       id: 42,
-      title: "Ruwahan 2025",
+      title: "Kegiatan Ruwahan 1",
       category: "ruwahan",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG_1402_o1kstj",
-      description:
-        "Kegiatan ruwahan di ndalem pujokusuman.",
+      description: "Kegiatan ruwahan di ndalem pujokusuman.",
     },
     {
       id: 43,
-      title: "Ruwahan 2025",
+      title: "Kegiatan Ruwahan 2",
       category: "ruwahan",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG_1363_zvjtnc",
-      description:
-        "Kegiatan ruwahan di ndalem pujokusuman.",
+      description: "Kegiatan ruwahan di ndalem pujokusuman.",
     },
     {
       id: 44,
-      title: "Ruwahan 2025",
+      title: "Kegiatan Ruwahan 3",
       category: "ruwahan",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG_1376_i9qnhl",
-      description:
-        "Kegiatan ruwahan di ndalem pujokusuman.",
+      description: "Kegiatan ruwahan di ndalem pujokusuman.",
     },
     {
       id: 45,
-      title: "Ruwahan 2025",
+      title: "Kegiatan Ruwahan 4",
       category: "ruwahan",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG_1384_jahwco",
       description:
         "Para peserta yang mengikuti upacara ruwahan untuk mendapatkan keberkahan.",
+    },
+    // Komunitas Pohon
+    {
+      id: 46,
+      title: "Kegiatan Komunitas POHON",
+      category: "komunitas-pohon",
+      image:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG_8593_r0h8vi",
+      description:
+        "Kegiatan Komunitas POHON (Pedjoeang Heritage Pujokusuman) dalam melestarikan warisan budaya kampung.",
+    },
+    {
+      id: 47,
+      title: "Workshop Komunitas POHON",
+      category: "komunitas-pohon",
+      image:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/WhatsApp_Image_2025-07-28_at_11.40.19_152260bc_hkyxf7",
+      description:
+        "Workshop dan diskusi yang diselenggarakan oleh Komunitas POHON untuk mengembangkan potensi heritage Pujokusuman.",
     },
   ];
 
@@ -413,6 +412,7 @@ const Galeri = () => {
     { key: "ndalem-pujokusuman", label: "Ndalem Pujokusuman" },
     { key: "pasar", label: "Pasar" },
     { key: "ruwahan", label: "Ruwahan" },
+    { key: "komunitas-pohon", label: "Komunitas POHON" },
   ];
 
   const filteredItems =
@@ -673,5 +673,7 @@ const Galeri = () => {
     </div>
   );
 };
+
+
 
 export default Galeri;

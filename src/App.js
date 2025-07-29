@@ -458,7 +458,7 @@ function App() {
           <div className="nav-content">
             <div className="logo">
               <Link to="/">
-                <h2>Kampung Kebudayaan Pujokusuman</h2>
+                <h2>{t("siteName")}</h2>
               </Link>
             </div>
             <div className={`nav-menu ${isMenuOpen ? "nav-menu-open" : ""}`}>
@@ -519,12 +519,8 @@ function App() {
             <div className="container">
               <div className="footer-content">
                 <div className="footer-section">
-                  <h3>Kampung Kebudayaan Pujokusuman</h3>
-                  <p>
-                    "Dari jejak laskar Hantu Maut hingga geliat seni tradisi,
-                    Pujokusuman adalah ruang hidup budaya dan sejarah yang terus
-                    bernapas bersama warganya."
-                  </p>
+                  <h3>{t("siteName")}</h3>
+                  <p>{t("heroDescription")}</p>
                 </div>
                 <div className="footer-section">
                   <h4>{t("footerMenu")}</h4>
@@ -550,8 +546,7 @@ function App() {
                 </div>
               </div>
               <div className="footer-bottom">
-                &copy; {new Date().getFullYear()} Kampung Kebudayaan
-                Pujokusuman. All rights reserved.
+                &copy; {new Date().getFullYear()} {t("siteName")}. All rights reserved.
               </div>
             </div>
           </footer>

@@ -15,479 +15,468 @@ const Galeri = () => {
     // Sanggar Tari
     {
       id: 1,
-      title: "Latihan Tari di Ndalem",
+      title: t("galeri1Title"),
       category: "sanggar-tari",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/DSC07541_gcmnuy",
-      description: "Sesi latihan tari di ndalem pujokusuman.",
+      description: t("galeri1Desc"),
     },
     {
       id: 2,
-      title: "Acara Budaya di Ndalem",
+      title: t("galeri2Title"),
       category: "sanggar-tari",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/DSC07503_ysmria",
-      description: "Sesi latihan tari di ndalem pujokusuman.",
+      description: t("galeri2Desc"),
     },
     {
       id: 3,
-      title: "Penari Sanggar Tari",
+      title: t("galeri3Title"),
       category: "sanggar-tari",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG_0161_zojodk",
-      description: "Papan nama yayasan tari.",
+      description: t("galeri3Desc"),
     },
     {
       id: 4,
-      title: "Latihan Tari Klasik",
+      title: t("galeri4Title"),
       category: "sanggar-tari",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/DSC07518_bgcqsq",
-      description: "Sesi latihan tari di ndalem pujokusuman.",
+      description: t("galeri4Desc"),
     },
     {
       id: 5,
-      title: "Penataan Ndalem",
+      title: t("galeri5Title"),
       category: "sanggar-tari",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG-20250723-WA0111_hzrbnj",
-      description: "Para penari sedang berpose menari.",
+      description: t("galeri5Desc"),
     },
     {
       id: 105,
-      title: "Kegiatan Sanggar Tari 1",
+      title: t("galeri105Title"),
       category: "sanggar-tari",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG-20250723-WA0006_jsfh7o",
-      description: "Pertunjukan tari di Ndalem Pujokusuman.",
+      description: t("galeri105Desc"),
     },
     {
       id: 106,
-      title: "Kegiatan Sanggar Tari 2",
+      title: t("galeri106Title"),
       category: "sanggar-tari",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG-20250723-WA0001_niid2c",
-      description: "Pertunjukan tari di Ndalem Pujokusuman.",
+      description: t("galeri106Desc"),
     },
     {
       id: 107,
-      title: "Kegiatan Sanggar Tari 3",
+      title: t("galeri107Title"),
       category: "sanggar-tari",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG-20250723-WA0005_mr2sbn",
-      description:
-        "Pertunjukan tari saat peringatan hari ulang tahun paguyuban pecinta batik indonesia sekar jagad.",
+      description: t("galeri107Desc"),
     },
     {
       id: 108,
-      title: "Kegiatan Sanggar Tari 4",
+      title: t("galeri108Title"),
       category: "sanggar-tari",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG-20250723-WA0003_yitjed",
-      description: "Gerakan tari oleh penari anak laki-laki.",
+      description: t("galeri108Desc"),
     },
     {
       id: 109,
-      title: "Kegiatan Sanggar Tari 5",
+      title: t("galeri109Title"),
       category: "sanggar-tari",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG-20250723-WA0109_qgl1om",
-      description: "Dokumentasi kegiatan sanggar tari.",
+      description: t("galeri109Desc"),
     },
     {
       id: 110,
-      title: "Kegiatan Sanggar Tari 6",
+      title: t("galeri110Title"),
       category: "sanggar-tari",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG-20250723-WA0110_k3hgbt",
-      description: "Aktivitas pertunjukan tari di Ndalem Pujokusuman.",
+      description: t("galeri110Desc"),
     },
     {
       id: 111,
-      title: "Kegiatan Sanggar Tari 7",
+      title: t("galeri111Title"),
       category: "sanggar-tari",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG-20250723-WA0004_khtwjd",
-      description: "Suasana pertunjukan tari di sanggar Ndalem Pujokusuman.",
+      description: t("galeri111Desc"),
     },
     {
       id: 112,
-      title: "Kegiatan Sanggar Tari 8",
+      title: t("galeri112Title"),
       category: "sanggar-tari",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG-20250723-WA0108_jxgfv0",
-      description: "Dokumentasi kegiatan tari klasik di sanggar.",
+      description: t("galeri112Desc"),
     },
     // Jemparingan
     {
       id: 6,
-      title: "Aktifitas Jemparingan 1",
+      title: t("galeri6Title"),
       category: "jemparingan",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG-20200308-WA0041_braskp",
-      description: "Anak-anak dan hasil tembakan mereka.",
+      description: t("galeri6Desc"),
     },
     {
       id: 7,
-      title: "Aktifitas Jemparingan 2",
+      title: t("galeri7Title"),
       category: "jemparingan",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG_20210331_161935_rokjjw",
-      description: "Foto anak-anak yang menjadi anggota jemparingan.",
+      description: t("galeri7Desc"),
     },
     {
       id: 8,
-      title: "Aktifitas Jemparingan 3",
+      title: t("galeri8Title"),
       category: "jemparingan",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG_20210322_162956_b7fqkw",
-      description: "Anak-anak sedang bersiap membidik sasaran.",
+      description: t("galeri8Desc"),
     },
     {
       id: 9,
-      title: "Aktifitas Jemparingan 4",
+      title: t("galeri9Title"),
       category: "jemparingan",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG_20210324_161230_ediapj",
-      description: "Anak-anak berlatih jemparingan dengan penuh semangat.",
+      description: t("galeri9Desc"),
     },
     {
       id: 10,
-      title: "Aktifitas Jemparingan 5",
+      title: t("galeri10Title"),
       category: "jemparingan",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG-20200115-WA0037_ryo6sf",
-      description:
-        "Foto bersama para tamu dari luar negeri setelah berlatih jemparingan.",
+      description: t("galeri10Desc"),
     },
     {
       id: 101,
-      title: "Aktifitas Jemparingan 6",
+      title: t("galeri101Title"),
       category: "jemparingan",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG_20220101_084932_ceidpt",
-      description: "Pemanah sedang membidik ke arah target.",
+      description: t("galeri101Desc"),
     },
     {
       id: 102,
-      title: "Aktifitas Jemparingan 7",
+      title: t("galeri102Title"),
       category: "jemparingan",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG-20200115-WA0042_yfpdnf",
-      description: "Para tamu asing sedang berlatih jemparingan.",
+      description: t("galeri102Desc"),
     },
     {
       id: 103,
-      title: "Aktifitas Jemparingan 8",
+      title: t("galeri103Title"),
       category: "jemparingan",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG-20200115-WA0040_wk1og9",
-      description: "Para tamu asing sedang berlatih jemparingan.",
+      description: t("galeri103Desc"),
     },
     {
       id: 104,
-      title: "Aktifitas Jemparingan 9",
+      title: t("galeri104Title"),
       category: "jemparingan",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG_20220101_085413_hfoz4e",
-      description: "Foto bersama para anggota jemparingan.",
+      description: t("galeri104Desc"),
     },
     // Ketoprak
     {
       id: 11,
-      title: "Pentas Ketoprak 1",
+      title: t("galeri11Title"),
       category: "ketoprak",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/WhatsApp_Image_2025-07-16_at_16.22.53_c5f2ce4c_lap9lo",
-      description: "Pertunjukan ketoprak.",
+      description: t("galeri11Desc"),
     },
     {
       id: 12,
-      title: "Pentas Ketoprak 2",
+      title: t("galeri12Title"),
       category: "ketoprak",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/WhatsApp_Image_2025-07-16_at_16.22.53_69bf7fc2_xxzjzu",
-      description: "Pertunjukan ketoprak.",
+      description: t("galeri12Desc"),
     },
     {
       id: 13,
-      title: "Pentas Ketoprak 3",
+      title: t("galeri13Title"),
       category: "ketoprak",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/WhatsApp_Image_2025-07-16_at_16.22.54_d07b9988_fqu0da",
-      description: "Pertunjukan ketoprak.",
+      description: t("galeri13Desc"),
     },
     {
       id: 14,
-      title: "Pentas Ketoprak 4",
+      title: t("galeri14Title"),
       category: "ketoprak",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/WhatsApp_Image_2025-07-16_at_16.22.54_a3bd186d_vig8hw",
-      description: "Pertunjukan ketoprak.",
+      description: t("galeri14Desc"),
     },
     {
       id: 15,
-      title: "Pentas Ketoprak 5",
+      title: t("galeri15Title"),
       category: "ketoprak",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/WhatsApp_Image_2025-07-16_at_16.22.53_f5d2d1c8_qlvf2q",
-      description: "Pertunjukan ketoprak.",
+      description: t("galeri15Desc"),
     },
     // Teater
     {
       id: 16,
-      title: "Pentas Teater Sanggar Obah 1",
+      title: t("galeri16Title"),
       category: "teater",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/Screenshot_2025-07-20_164214_a9vybk",
-      description: "Pentas teater Sanggar Obah.",
+      description: t("galeri16Desc"),
     },
     {
       id: 17,
-      title: "Pentas Teater Sanggar Obah 2",
+      title: t("galeri17Title"),
       category: "teater",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/DSC06929_xup9mq",
-      description: "Kegiatan pentas teater di pasar pujokusuman.",
+      description: t("galeri17Desc"),
     },
     {
       id: 18,
-      title: "Pentas Teater Sanggar Obah 3",
+      title: t("galeri18Title"),
       category: "teater",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/DSC08741_eq0tjd",
-      description: "Persiapan dan brainstorming pementasan teater.",
+      description: t("galeri18Desc"),
     },
     {
       id: 19,
-      title: "Pentas Teater Sanggar Obah 4",
+      title: t("galeri19Title"),
       category: "teater",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/Screenshot_2025-07-25_135643_kjewzq",
-      description: "Aktivitas teater di atas panggung.",
+      description: t("galeri19Desc"),
     },
     // PCL
     {
       id: 21,
-      title: "Logo PCL",
+      title: t("galeri21Title"),
       category: "pcl",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/WhatsApp_Image_2025-07-28_at_22.08.09_b843c2b3_kec36u",
-      description: "Logo PCL",
+      description: t("galeri21Desc"),
     },
     {
       id: 22,
-      title: "Sosial media PCL",
+      title: t("galeri22Title"),
       category: "pcl",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/WhatsApp_Image_2025-07-28_at_21.25.44_f17ee83a_g8anzj",
-      description: "Sosial media PCL.",
+      description: t("galeri22Desc"),
     },
     {
       id: 23,
-      title: "Kegiatan PCL 1",
+      title: t("galeri23Title"),
       category: "pcl",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/WhatsApp_Image_2025-07-28_at_21.25.44_dafe0131_p3smuj",
-      description: "Kegiatan belajar aksara jawa",
+      description: t("galeri23Desc"),
     },
     {
       id: 24,
-      title: "Workshop",
+      title: t("galeri24Title"),
       category: "pcl",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/WhatsApp_Image_2025-07-28_at_21.25.45_984a5ba5_po4gjo",
-      description: "Kegiatan workshop yang diadakan oleh PCL.",
+      description: t("galeri24Desc"),
     },
     // Kringmen
     {
       id: 26,
-      title: "Kegiatan Kringmen 1",
+      title: t("galeri26Title"),
       category: "kringmen",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/IMG_20180304_102302_arsnaw",
-      description: "Foto bersama anggota kringmen.",
+      description: t("galeri26Desc"),
     },
     {
       id: 27,
-      title: "Kegiatan Kringmen 2",
+      title: t("galeri27Title"),
       category: "kringmen",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/IMG_20180304_111331_wjynfq",
-      description: "Salah satu anggota kringmen.",
+      description: t("galeri27Desc"),
     },
     {
       id: 28,
-      title: "Kegiatan Kringmen 3",
+      title: t("galeri28Title"),
       category: "kringmen",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/IMG_20240204_082135_duszw6",
-      description: "Sepeda yang digunakan.",
+      description: t("galeri28Desc"),
     },
     {
       id: 29,
-      title: "Kegiatan Kringmen 4",
+      title: t("galeri29Title"),
       category: "kringmen",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/IMG-20240204-WA0021_l2gs9q",
-      description: "Anggota kringmen sedang menikmati keindahan alam.",
+      description: t("galeri29Desc"),
     },
     {
       id: 30,
-      title: "Kegiatan Kringmen 5",
+      title: t("galeri30Title"),
       category: "kringmen",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG_20180304_102139_u6vemv",
-      description: "Momen saat melintasi sebuah jembatan.",
+      description: t("galeri30Desc"),
     },
     // Ndalem Pujokusuman
     {
       id: 31,
-      title: "Pemilik dan pengelola ndalem pujokusuman",
+      title: t("galeri31Title"),
       category: "ndalem-pujokusuman",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG_9508_fqelvn.jpg",
-      description: "Wawancara dengan KRT Jati Hadiningrat",
+      description: t("galeri31Desc"),
     },
     {
       id: 32,
-      title: "Ndalem Pujokusuman",
+      title: t("galeri32Title"),
       category: "ndalem-pujokusuman",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/DSC07332_cjzicy",
-      description: "Bagian dalam",
+      description: t("galeri32Desc"),
     },
     {
       id: 33,
-      title: "Tempat Latihan Tari di Ndalem",
+      title: t("galeri33Title"),
       category: "ndalem-pujokusuman",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/DSC07330_s54gvu",
-      description:
-        "Kegiatan latihan tari klasik di pendopo Ndalem Pujokusuman.",
+      description: t("galeri33Desc"),
     },
     {
       id: 34,
-      title: "Alat musik gamelan di Ndalem",
+      title: t("galeri34Title"),
       category: "ndalem-pujokusuman",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/DSC07350_ne5pgq",
-      description: "Alat musik gamelan di Ndalem Pujokusuman.",
+      description: t("galeri34Desc"),
     },
     {
       id: 35,
-      title: "Pusaka",
+      title: t("galeri35Title"),
       category: "ndalem-pujokusuman",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG_9599_jy20kg",
-      description: "Salah satu pusaka yang disimpan oleh KRT Jati Hadiningrat.",
+      description: t("galeri35Desc"),
     },
     // Pasar
     {
       id: 36,
-      title: "Pasar Pujokusuman Pagi",
+      title: t("galeri36Title"),
       category: "pasar",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG_9786_cdl0tt",
-      description:
-        "Suasana pasar Pujokusuman di pagi hari yang ramai dengan pedagang dan pembeli.",
+      description: t("galeri36Desc"),
     },
     {
       id: 37,
-      title: "Prasasti HUT RI ke-2",
+      title: t("galeri37Title"),
       category: "pasar",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/DSC09321_axby6x",
-      description:
-        "tugu peringatan Hari Ulang Tahun Kemerdekaan Republik Indonesia ke-2, yang dibangun pada Juli 1947, tepat saat pecahnya Agresi Militer Belanda I. Tugu ini menjadi simbol semangat patriotik para pemuda Pujokusuman yang aktif dalam perjuangan mempertahankan kemerdekaan. Namun pada Agresi Militer Belanda II, 19 Desember 1948, pasukan pemuda Pujokusuman mengalami kekalahan. Meski begitu, tugu tersebut tetap berdiri kokoh, menjadi penanda sejarah di tengah keramaian pasar.",
+      description: t("galeri37Desc"),
     },
     {
       id: 38,
-      title: "Pemakaman",
+      title: t("galeri38Title"),
       category: "pasar",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/DSC09350_qrukym",
-      description:
-        "Di area pasar ini juga terdapat sebuah makam tua, yang keberadaannya masih menyimpan tanda tanya besar hingga hari ini. Tidak ada penanda nama yang jelas, dan belum ada catatan pasti siapa yang dimakamkan di sana. Makam tersebut menjadi bagian dari wajah otentik Pasar Pujokusuman yang menyatukan aktivitas harian dengan lapisan memori masa lampau.",
+      description: t("galeri38Desc"),
     },
     {
       id: 39,
-      title: "Makanan Pasar",
+      title: t("galeri39Title"),
       category: "pasar",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/IMG_9810_gpo1pp",
-      description:
-        "Warung makanan tradisional yang menyajikan kuliner khas Yogyakarta.",
+      description: t("galeri39Desc"),
     },
     {
       id: 40,
-      title: "Kedai Poedjan",
+      title: t("galeri40Title"),
       category: "pasar",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/v1710000000/DSC07279_ksjh8y",
-      description:
-        "Kedai Poedjan, sebuah kedai kopi yang menjadi tempat berkumpul anak muda Pujokusuman.",
+      description: t("galeri40Desc"),
     },
     // Ruwahan
     {
       id: 41,
-      title: "Ruwahan 2025",
+      title: t("galeri41Title"),
       category: "ruwahan",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG_1381_1_fcfupy.jpg",
-      description: "Kegiatan ruwahan di ndalem pujokusuman.",
+      description: t("galeri41Desc"),
     },
     {
       id: 42,
-      title: "Kegiatan Ruwahan 1",
+      title: t("galeri42Title"),
       category: "ruwahan",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG_1402_o1kstj",
-      description: "Kegiatan ruwahan di ndalem pujokusuman.",
+      description: t("galeri42Desc"),
     },
     {
       id: 43,
-      title: "Kegiatan Ruwahan 2",
+      title: t("galeri43Title"),
       category: "ruwahan",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG_1363_zvjtnc",
-      description: "Kegiatan ruwahan di ndalem pujokusuman.",
+      description: t("galeri43Desc"),
     },
     {
       id: 44,
-      title: "Kegiatan Ruwahan 3",
+      title: t("galeri44Title"),
       category: "ruwahan",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG_1376_i9qnhl",
-      description: "Kegiatan ruwahan di ndalem pujokusuman.",
+      description: t("galeri44Desc"),
     },
     {
       id: 45,
-      title: "Kegiatan Ruwahan 4",
+      title: t("galeri45Title"),
       category: "ruwahan",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG_1384_jahwco",
-      description:
-        "Para peserta yang mengikuti upacara ruwahan untuk mendapatkan keberkahan.",
+      description: t("galeri45Desc"),
     },
     // Komunitas Pohon
     {
       id: 46,
-      title: "Kegiatan Komunitas POHON",
+      title: t("galeri46Title"),
       category: "komunitas-pohon",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG_8593_r0h8vi",
-      description:
-        "Kegiatan Komunitas POHON (Pedjoeang Heritage Pujokusuman) dalam melestarikan warisan budaya kampung.",
+      description: t("galeri46Desc"),
     },
     {
       id: 47,
-      title: "Workshop Komunitas POHON",
+      title: t("galeri47Title"),
       category: "komunitas-pohon",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/WhatsApp_Image_2025-07-28_at_11.40.19_152260bc_hkyxf7",
-      description:
-        "Workshop dan diskusi yang diselenggarakan oleh Komunitas POHON untuk mengembangkan potensi heritage Pujokusuman.",
+      description: t("galeri47Desc"),
     },
   ];
 
@@ -497,17 +486,17 @@ const Galeri = () => {
   ];
 
   const categories = [
-    { key: "semua", label: "Semua" },
-    { key: "sanggar-tari", label: "Sanggar Tari" },
-    { key: "jemparingan", label: "Jemparingan" },
-    { key: "ketoprak", label: "Ketoprak" },
-    { key: "teater", label: "Teater" },
-    { key: "pcl", label: "PCL" },
-    { key: "kringmen", label: "Kringmen" },
-    { key: "ndalem-pujokusuman", label: "Ndalem Pujokusuman" },
-    { key: "pasar", label: "Pasar" },
-    { key: "ruwahan", label: "Ruwahan" },
-    { key: "komunitas-pohon", label: "Komunitas POHON" },
+    { key: "semua", label: t("galeriCatSemua") },
+    { key: "sanggar-tari", label: t("galeriCatSanggartari") },
+    { key: "jemparingan", label: t("galeriCatJemparingan") },
+    { key: "ketoprak", label: t("galeriCatKetoprak") },
+    { key: "teater", label: t("galeriCatTeater") },
+    { key: "pcl", label: t("galeriCatPcl") },
+    { key: "kringmen", label: t("galeriCatKringmen") },
+    { key: "ndalem-pujokusuman", label: t("galeriCatNdalemPujokusuman") },
+    { key: "pasar", label: t("galeriCatPasar") },
+    { key: "ruwahan", label: t("galeriCatRuwahan") },
+    { key: "komunitas-pohon", label: t("galeriCatKomunitasPohon") },
   ];
 
   const filteredItems =
@@ -537,11 +526,11 @@ const Galeri = () => {
 
   // SEO Data
   const seoData = {
-    title: "Galeri Kegiatan Pujokusuman - Dokumentasi Budaya dan Tradisi",
-    description:
-      "Lihat dokumentasi visual kegiatan budaya, seni tradisional, dan kehidupan sehari-hari di Kampung Pujokusuman. Galeri foto sanggar tari, jemparingan, dan berbagai acara budaya.",
+    title: t("galeriHeader") + " - " + t("heroSubtitle"),
+    description: t("galeriSubheader"),
     keywords:
-      "galeri pujokusuman, foto kegiatan, dokumentasi budaya, sanggar tari foto, jemparingan dokumentasi, galeri budaya yogyakarta",
+      t("galeriHeader").toLowerCase() +
+      ", foto kegiatan, dokumentasi budaya, sanggar tari foto, jemparingan dokumentasi, galeri budaya yogyakarta",
     url: "https://djelajahpujoku.netlify.app/galeri",
     image:
       "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_630,c_fill/DSC07541_gcmnuy",
@@ -550,13 +539,13 @@ const Galeri = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "ImageGallery",
-    name: "Galeri Kegiatan Kampung Pujokusuman",
+    name: t("galeriHeader"),
     description: seoData.description,
     url: seoData.url,
     image: seoData.image,
     publisher: {
       "@type": "Organization",
-      name: "Kampung Kebudayaan Pujokusuman",
+      name: t("heroSubtitle"),
     },
   };
 
@@ -805,5 +794,6 @@ const Galeri = () => {
     </>
   );
 };
+
 
 export default Galeri;

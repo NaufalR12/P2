@@ -12,7 +12,7 @@ const BudayaDetail = () => {
 
   const budayaData = {
     "sanggar-tari-tradisional": {
-      title: t("budaya1Title", "Sanggar Tari Tradisional"),
+      title: t("budaya1Title"),
       heroImage:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/IMG_9508_fqelvn.jpg",
       gallery: [
@@ -143,23 +143,21 @@ const BudayaDetail = () => {
       jadwal: t("budaya1Jadwal"),
       tokoh: [
         {
-          nama: "KRT Jati Hadiningrat",
-          jabatan: "Pemilik dan pengelola ndalem pujokusuman",
-          deskripsi:
-            "KRT Jati Hadiningrat berperan aktif dalam melestarikan warisan budaya dengan menjaga fungsi dan nilai historis Ndalem Pujokusuman, sekaligus mempertahankan identitas budaya lokal sebagai bagian dari keluarga bangsawan.",
+          nama: t("tokoh1Nama"),
+          jabatan: t("tokoh1Jabatan"),
+          deskripsi: t("tokoh1Deskripsi"),
           foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/IMG_9429_zfk3p7",
         },
         {
-          nama: "Ali Nursotya Nugraha, M.Sn",
-          jabatan: "Pemilik Yayasan Tari",
-          deskripsi:
-            "Generasi muda yang kini memimpin Yayasan Pamulangan Beksa Sasminta Mardawa (YPBSM), melanjutkan estafet kepemimpinan dalam pelestarian tari klasik gaya Yogyakarta. Dengan pendekatan yang terbuka dan adaptif, Alin aktif menjembatani nilai-nilai tradisi dengan dinamika zaman, menjadikan sanggar tidak hanya sebagai ruang latihan tari, tetapi juga tempat tumbuhnya generasi muda yang mencintai budaya.",
+          nama: t("tokoh3Nama"),
+          jabatan: t("tokoh3Jabatan"),
+          deskripsi: t("tokoh3Deskripsi"),
           foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/IMG_9425_12_czck3l",
         },
       ],
     },
     jemparingan: {
-      title: t("budaya2Title", "Jemparingan (Panahan Tradisional)"),
+      title: t("budaya2Title"),
       heroImage:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/IMG_20220101_085413_hfoz4e",
       gallery: [
@@ -237,16 +235,15 @@ const BudayaDetail = () => {
       deskripsi: t("budaya2Deskripsi"),
       tokoh: [
         {
-          nama: "Agung Budi Santoso",
-          jabatan: "Ketua Jemparingan",
-          deskripsi:
-            "Memimpin kegiatan Jemparingan di Kampung Pujokusuman, termasuk latihan rutin, pengenalan tradisi panahan gaya Mataram, serta pelibatan generasi muda dalam pelestarian nilai-nilai kemataraman.",
+          nama: t("tokoh7Nama"),
+          jabatan: t("tokoh7Jabatan"),
+          deskripsi: t("tokoh7Deskripsi"),
           foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/WhatsApp_Image_2025-07-29_at_12.15.18_50691f86_ktfghi",
         },
       ],
     },
     jatilan: {
-      title: t("budaya3Title", "Jathilan (Tari Kuda Lumping)"),
+      title: t("budaya3Title"),
       heroImage:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/jatilan_qsmvtj",
       gallery: [
@@ -275,20 +272,19 @@ const BudayaDetail = () => {
             "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/jathilan4.jpg",
         },
       ],
-      sejarah: [t("budaya3Sejarah1"), t("budaya3Sejarah2")],
+      sejarah: [t("budaya3Sejarah"), t("budaya3Sejarah1")],
       deskripsi: t("budaya3Deskripsi"),
       tokoh: [
         {
-          nama: "Sugiarto",
-          jabatan: "Ketua kelompok Jathilan",
-          deskripsi:
-            "Ketua kelompok Jathilan di Kampung Pujokusuman yang memimpin jalannya latihan dan pertunjukan dalam berbagai acara kampung. Mengoordinasi para pemain, penabuh, dan kebutuhan teknis lainnya untuk memastikan keberlangsungan kesenian ini secara mandiri dan rutin.",
+          nama: t("tokoh6Nama"),
+          jabatan: t("tokoh6Jabatan"),
+          deskripsi: t("tokoh6Deskripsi"),
           foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/WhatsApp_Image_2025-07-24_at_20.33.18_1d1c9260_kddryt",
         },
       ],
     },
     teater: {
-      title: t("budaya4Title", "Teater – Sanggar Obah"),
+      title: t("budaya4Title"),
       heroImage:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/Screenshot_2025-07-20_164214_a9vybk",
       gallery: [
@@ -325,23 +321,21 @@ const BudayaDetail = () => {
       deskripsi: t("budaya4Deskripsi"),
       tokoh: [
         {
-          nama: "Danang Rusmandoko",
-          jabatan: "Penggerak Teater Sanggar Obah",
-          deskripsi:
-            "Salah satu tokoh sentral dalam kegiatan kebudayaan di Kampung Pujokusuman. Ia kerap menjadi pengarah, penghubung, sekaligus penggerak berbagai kegiatan seni dan tradisi lokal. Perannya penting dalam menjaga kesinambungan antar generasi, menjembatani inisiatif warga dengan program kampung budaya secara konsisten dan penuh dedikasi.",
+          nama: t("tokoh4Nama"),
+          jabatan: t("tokoh4Jabatan"),
+          deskripsi: t("tokoh4Deskripsi"),
           foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/WhatsApp_Image_2025-07-21_at_21.01.55_3ce33573_pytrtx",
         },
         {
-          nama: "Nurdiana",
-          jabatan: "Penggerak Teater Sanggar Obah",
-          deskripsi:
-            "Menginisiasi dan mengelola kegiatan Teater Obah sebagai ruang ekspresi warga, khususnya anak muda. Berperan dalam pengembangan naskah, proses latihan, dan kolaborasi lintas komunitas dalam pertunjukan teater berbasis isu sosial kampung.",
+          nama: t("tokoh8Nama"),
+          jabatan: t("tokoh8Jabatan"),
+          deskripsi: t("tokoh8Deskripsi"),
           foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/WhatsApp_Image_2025-07-29_at_11.27.23_39ff2d10_pcnw8z",
         },
       ],
     },
     ruwatan: {
-      title: t("budaya5Title", "Upacara Ruwatan"),
+      title: t("budaya5Title"),
       heroImage:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/IMG_1381_1_fcfupy.jpg",
       gallery: [
@@ -386,7 +380,7 @@ const BudayaDetail = () => {
       deskripsi: [t("budaya5Deskripsi"), t("budaya5Deskripsi1")],
     },
     "pujokusuman-creative-lab": {
-      title: t("budaya6Title", "Pujokusuman Creative Lab"),
+      title: t("budaya6Title"),
       heroImage:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/WhatsApp_Image_2025-07-10_at_19.13.54_0f817fc4_mwpwlp.jpg",
       gallery: [
@@ -428,16 +422,15 @@ const BudayaDetail = () => {
       deskripsi: t("budaya6Deskripsi"),
       tokoh: [
         {
-          nama: "Farhan",
-          jabatan: "Pendiri Pujokusuman Creative Lab",
-          deskripsi:
-            "Mengelola dan mengembangkan Pujokusuman Creative Lab sebagai ruang bertemu, belajar, dan berkreasi bagi warga. Menyusun program-program warga seperti Sekolah Kampung dan kegiatan kolektif lainnya yang berbasis isu sosial, budaya, dan kewirausahaan lokal.",
+          nama: t("tokoh9Nama"),
+          jabatan: t("tokoh9Jabatan"),
+          deskripsi: t("tokoh9Deskripsi"),
           foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/WhatsApp_Image_2025-07-28_at_21.25.45_8a95e08f_vgy5l9",
         },
       ],
     },
     "pasar-pujokusuman": {
-      title: t("budaya7Title", "Pasar Pujokusuman"),
+      title: t("budaya7Title"),
       heroImage:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/IMG_9786_cdl0tt.jpg",
       gallery: [
@@ -556,7 +549,7 @@ const BudayaDetail = () => {
       // Tidak ada lagi: kegiatan, prestasi, tokoh
     },
     "komunitas-kringmen": {
-      title: t("budaya8Title", "Komunitas Kringmen"),
+      title: t("budaya8Title"),
       heroImage:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/IMG_20180304_102302_arsnaw",
       gallery: [
@@ -602,16 +595,15 @@ const BudayaDetail = () => {
       ],
       tokoh: [
         {
-          nama: "Danang Rusmandoko",
-          jabatan: "Penggerak Kebudayaan Pujokusuman & Ketua KringMan",
-          deskripsi:
-            "Selain aktif di bidang budaya, Danang juga merupakan salah satu penggerak komunitas sepeda “Kring Man” di Kampung Pujokusuman. Komunitas ini tumbuh dari kebiasaan warga bersepeda bersama tanpa jadwal khusus, sebagai ruang silaturahmi dan olahraga ringan yang merawat kebersamaan. Di dalamnya, Danang mendorong semangat kebugaran, kebersamaan, dan kecintaan pada kampung sendiri melalui kegiatan yang sederhana namun bermakna.",
+          nama: t("tokoh4Nama"),
+          jabatan: t("tokoh4Jabatan"),
+          deskripsi: t("tokoh4Deskripsi"),
           foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/WhatsApp_Image_2025-07-21_at_21.01.55_3ce33573_pytrtx",
         },
       ],
     },
     "orkes-kentongan-sukarena": {
-      title: t("budaya9Title", "Orkes Kentongan SUKA RENA"),
+      title: t("budaya9Title"),
       heroImage:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/orkes_gypwn2",
       gallery: [
@@ -650,10 +642,7 @@ const BudayaDetail = () => {
       deskripsi: t("budaya9Deskripsi"),
     },
     "komunitas-pohon": {
-      title: t(
-        "budaya10Title",
-        "Komunitas POHON (Pedjoeang Heritage Pujokusuman)"
-      ),
+      title: t("budaya10Title"),
       heroImage:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/IMG_8593_r0h8vi",
       gallery: [
@@ -692,24 +681,21 @@ const BudayaDetail = () => {
       deskripsi: t("budaya10Deskripsi"),
       tokoh: [
         {
-          nama: "Danang Rusmandoko",
-          jabatan:
-            "Penggerak Kebudayaan Pujokusuman & Pengagas Komunitas POHON",
-          deskripsi:
-            "Salah satu tokoh sentral dalam kegiatan kebudayaan di Kampung Pujokusuman. Ia kerap menjadi pengarah, penghubung, sekaligus penggerak berbagai kegiatan seni dan tradisi lokal. Perannya penting dalam menjaga kesinambungan antar generasi, menjembatani inisiatif warga dengan program kampung budaya secara konsisten dan penuh dedikasi.",
+          nama: t("tokoh4Nama"),
+          jabatan: t("tokoh4Jabatan"),
+          deskripsi: t("tokoh4Deskripsi"),
           foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/WhatsApp_Image_2025-07-21_at_21.01.55_3ce33573_pytrtx",
         },
         {
-          nama: "Wili Lumintang",
-          jabatan: "Editor dan director of photography POHON",
-          deskripsi:
-            "Editor dan director of photography di Komunitas POHON yang merangkai kisah sejarah kampung menjadi dokumenter visual yang kuat dan menyentuh. Lewat bidikan kamera dan penyuntingan yang cermat, cerita-cerita lama dari warga dihidupkan kembali sebagai bagian dari ingatan kolektif Pujokusuman.",
+          nama: t("tokoh10Nama"),
+          jabatan: t("tokoh10Jabatan"),
+          deskripsi: t("tokoh10Deskripsi"),
           foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/1I1A8396_ekty32",
         },
       ],
     },
     ketoprak: {
-      title: t("budaya11Title", "Ketoprak"),
+      title: t("budaya11Title"),
       heroImage:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/v1710000000/WhatsApp_Image_2025-07-16_at_16.22.53_69bf7fc2_xxzjzu",
       gallery: [
@@ -752,10 +738,9 @@ const BudayaDetail = () => {
       deskripsi: [t("budaya11Deskripsi1")],
       tokoh: [
         {
-          nama: "Budi Triono",
-          jabatan: "Pencetus dan Pelatih Ketoprak",
-          deskripsi:
-            "Sosok di balik lahirnya Ketoprak Kampung Pujokusuman yang kini berkembang menjadi Paguyuban Catur Manunggal Budoyo. Berawal dari semangat gotong royong dan kecintaan pada seni tradisi, ia berhasil menggerakkan warga lintas usia untuk terlibat dalam pertunjukan ketoprak sejak 2017.",
+          nama: t("tokoh2Nama"),
+          jabatan: t("tokoh2Jabatan"),
+          deskripsi: t("tokoh2Deskripsi"),
           foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/WhatsApp_Image_2025-07-16_at_17.13.21_3c9f3f95_hadppt",
         },
       ],

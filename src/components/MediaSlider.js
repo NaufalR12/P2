@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
+import { useTranslation } from "react-i18next";
 import "./MediaSlider.css";
 
 // Custom Arrow Components
@@ -16,47 +17,45 @@ const NextArrow = ({ onClick }) => (
 );
 
 const MediaSlider = () => {
+  const { t } = useTranslation();
   const CLOUDINARY_BASE_URL = "https://res.cloudinary.com/ddfcjabrm/";
 
   const mediaItems = [
     {
       type: "image",
       publicId: "gerbang3_l9dtyi",
-      title: "Sugeng Rawuh",
-      description:
-        "Pemandangan indah kampung dengan arsitektur tradisional Jawa yang memukau",
+      title: t("mediaSlider1Title"),
+      description: t("mediaSlider1Description"),
     },
     {
       type: "youtube",
-      videoId: "VclwyI3bcFI", // Ganti dengan ID video YouTube
-      title: "Profil Kampung",
-      description: "Dokumentasi Kampung Pujokusuman",
+      videoId: "VclwyI3bcFI",
+      title: t("mediaSlider2Title"),
+      description: t("mediaSlider2Description"),
     },
     {
       type: "image",
-      publicId: "DSC07541_gcmnuy", // Ganti dengan public ID gambar Anda
-      title: "Kesenian Sendratari",
-      description: "Pertunjukan tari klasik Jawa oleh para penari muda",
+      publicId: "DSC07541_gcmnuy",
+      title: t("mediaSlider3Title"),
+      description: t("mediaSlider3Description"),
     },
     {
       type: "image",
-      publicId: "IMG_9786_cdl0tt", // Ganti dengan public ID gambar Anda
-      title: "Pasar Tradisional Pujokusuman",
-      description:
-        "Pusat aktivitas warga yang menghadirkan kesegaran sayur-mayur dan cita rasa kuliner tradisional dalam suasana kampung yang ramah.",
+      publicId: "IMG_9786_cdl0tt",
+      title: t("mediaSlider4Title"),
+      description: t("mediaSlider4Description"),
     },
     {
       type: "image",
-      publicId: "IMG_7033_ygheg4", // Tambah gambar baru
-      title: "Sejarah Kebudayaan",
-      description:
-        "Kisah-kisah budaya dan sejarah yang tumbuh di tanah Pujokusuman",
+      publicId: "IMG_7033_ygheg4",
+      title: t("mediaSlider5Title"),
+      description: t("mediaSlider5Description"),
     },
     {
       type: "image",
-      publicId: "WhatsApp_Image_2025-07-17_at_22.59.46_e01f73d5_ohbsdn", // Tambah gambar baru
-      title: "Founder Web",
-      description: "KKN AB 83 228 UPN VETERAN YOGYAKARTA",
+      publicId: "WhatsApp_Image_2025-07-17_at_22.59.46_e01f73d5_ohbsdn",
+      title: t("mediaSlider6Title"),
+      description: t("mediaSlider6Description"),
     },
   ];
 
@@ -170,7 +169,7 @@ const MediaSlider = () => {
         <div className="hero-slider-indicator">
           <div className="container">
             <p className="cloudinary-credit">
-              Media berkualitas tinggi disimpan dengan <span>Cloudinary</span>
+              {t("mediaSliderCredit")} <span>Cloudinary</span>
             </p>
           </div>
         </div>
@@ -180,3 +179,4 @@ const MediaSlider = () => {
 };
 
 export default MediaSlider;
+

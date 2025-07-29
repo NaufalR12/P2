@@ -35,6 +35,13 @@ const Kebudayaan = () => {
       sejarah: t("budaya4SejarahSingkat"),
     },
     {
+      id: "ketoprak",
+      title: t("budayaKetoprakTitle", "Ketoprak"),
+      image:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_500,c_fill/v1710000000/IMG-20250716-WA0048_zfueb5",
+      sejarah: t("budayaKetoprakSejarahSingkat"),
+    },
+    {
       id: "ruwatan",
       title: t("budaya5Title", "Upacara Ruwatan"),
       image:

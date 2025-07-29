@@ -138,10 +138,7 @@ const BudayaDetail = () => {
         t("budaya1Sejarah11"),
         t("budaya1Sejarah12"),
       ],
-      deskripsi: [
-        t("budaya1Deskripsi"),
-       
-      ],
+      deskripsi: [t("budaya1Deskripsi")],
       jadwal: t("budaya1Jadwal"),
       tokoh: [
         {
@@ -243,7 +240,7 @@ const BudayaDetail = () => {
           jabatan: "Ketua Jemparingan",
           deskripsi:
             "Memimpin kegiatan Jemparingan di Kampung Pujokusuman, termasuk latihan rutin, pengenalan tradisi panahan gaya Mataram, serta pelibatan generasi muda dalam pelestarian nilai-nilai kemataraman.",
-          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/IMG_1465_v0gdqh",
+          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/WhatsApp_Image_2025-07-29_at_12.15.18_50691f86_ktfghi",
         },
       ],
     },
@@ -334,11 +331,11 @@ const BudayaDetail = () => {
           foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/WhatsApp_Image_2025-07-21_at_21.01.55_3ce33573_pytrtx",
         },
         {
-          nama: "Nana",
+          nama: "Nurdiana",
           jabatan: "Penggerak Teater Sanggar Obah",
           deskripsi:
             "Menginisiasi dan mengelola kegiatan Teater Obah sebagai ruang ekspresi warga, khususnya anak muda. Berperan dalam pengembangan naskah, proses latihan, dan kolaborasi lintas komunitas dalam pertunjukan teater berbasis isu sosial kampung.",
-          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/nana",
+          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/WhatsApp_Image_2025-07-29_at_11.27.23_39ff2d10_pcnw8z",
         },
       ],
     },
@@ -695,7 +692,8 @@ const BudayaDetail = () => {
       tokoh: [
         {
           nama: "Danang Rusmandoko",
-          jabatan: "Penggerak Kebudayaan Pujokusuman & Pengagas Komunitas POHON",
+          jabatan:
+            "Penggerak Kebudayaan Pujokusuman & Pengagas Komunitas POHON",
           deskripsi:
             "Salah satu tokoh sentral dalam kegiatan kebudayaan di Kampung Pujokusuman. Ia kerap menjadi pengarah, penghubung, sekaligus penggerak berbagai kegiatan seni dan tradisi lokal. Perannya penting dalam menjaga kesinambungan antar generasi, menjembatani inisiatif warga dengan program kampung budaya secara konsisten dan penuh dedikasi.",
           foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/WhatsApp_Image_2025-07-21_at_21.01.55_3ce33573_pytrtx",
@@ -706,6 +704,58 @@ const BudayaDetail = () => {
           deskripsi:
             "Editor dan director of photography di Komunitas POHON yang merangkai kisah sejarah kampung menjadi dokumenter visual yang kuat dan menyentuh. Lewat bidikan kamera dan penyuntingan yang cermat, cerita-cerita lama dari warga dihidupkan kembali sebagai bagian dari ingatan kolektif Pujokusuman.",
           foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/1I1A8396_ekty32",
+        },
+      ],
+    },
+    ketoprak: {
+      title: t("budaya11Title", "Ketoprak"),
+      heroImage:
+        "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_600,c_fill/v1710000000/WhatsApp_Image_2025-07-16_at_16.22.53_69bf7fc2_xxzjzu",
+      gallery: [
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/v1710000000/WhatsApp_Image_2025-07-16_at_16.22.53_69bf7fc2_xxzjzu",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/v1710000000/WhatsApp_Image_2025-07-16_at_16.22.53_69bf7fc2_xxzjzu",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/v1710000000/WhatsApp_Image_2025-07-16_at_16.22.53_c5f2ce4c_lap9lo",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/v1710000000/WhatsApp_Image_2025-07-16_at_16.22.53_c5f2ce4c_lap9lo",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/v1710000000/WhatsApp_Image_2025-07-16_at_16.22.54_d07b9988_fqu0da",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/v1710000000/WhatsApp_Image_2025-07-16_at_16.22.54_d07b9988_fqu0da",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/v1710000000/WhatsApp_Image_2025-07-16_at_16.22.54_a3bd186d_vig8hw",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/v1710000000/WhatsApp_Image_2025-07-16_at_16.22.54_a3bd186d_vig8hw",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/v1710000000/WhatsApp_Image_2025-07-16_at_16.22.53_f5d2d1c8_qlvf2q",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/v1710000000/WhatsApp_Image_2025-07-16_at_16.22.53_f5d2d1c8_qlvf2q",
+        },
+      ],
+      sejarah: [
+        t("budaya11Sejarah1"),
+        t("budaya11Sejarah2"),
+        t("budaya11Sejarah3"),
+      ],
+      deskripsi: [t("budaya11Deskripsi1")],
+      tokoh: [
+        {
+          nama: "Budi Triono",
+          jabatan: "Pencetus dan Pelatih Ketoprak",
+          deskripsi:
+            "Sosok di balik lahirnya Ketoprak Kampung Pujokusuman yang kini berkembang menjadi Paguyuban Catur Manunggal Budoyo. Berawal dari semangat gotong royong dan kecintaan pada seni tradisi, ia berhasil menggerakkan warga lintas usia untuk terlibat dalam pertunjukan ketoprak sejak 2017.",
+          foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_400,h_400,c_fill/WhatsApp_Image_2025-07-16_at_17.13.21_3c9f3f95_hadppt",
         },
       ],
     },
@@ -973,89 +1023,63 @@ const BudayaDetail = () => {
               </div>
 
               {/* Kegiatan Section */}
-              {id !== "pasar-pujokusuman" &&
-                id !== "sanggar-tari-tradisional" &&
-                id !== "jemparingan" &&
-                id !== "jatilan" &&
-                id !== "teater" &&
-                id !== "ruwatan" &&
-                id !== "pujokusuman-creative-lab" &&
-                id !== "orkes-kentongan-sukarena" &&
-                id !== "komunitas-pohon" && (
-                  <div className="content-section">
-                    <h2>🎯 {t("labelKegiatan", "Kegiatan")}</h2>
-                    <ul>
-                      {budaya.kegiatan.map((kegiatan, index) => (
-                        <li key={index}>{kegiatan}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
+              {budaya.kegiatan && budaya.kegiatan.length > 0 && (
+                <div className="content-section">
+                  <h2>🎯 {t("labelKegiatan", "Kegiatan")}</h2>
+                  <ul>
+                    {budaya.kegiatan.map((kegiatan, index) => (
+                      <li key={index}>{kegiatan}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
               {/* Jadwal Section */}
-              {id !== "jemparingan" &&
-                id !== "jatilan" &&
-                id !== "teater" &&
-                id !== "ruwatan" &&
-                id !== "pujokusuman-creative-lab" &&
-                id !== "orkes-kentongan-sukarena" &&
-                id !== "komunitas-pohon" && (
-                  <div className="content-section">
-                    <h2>⏰ {t("labelJadwal", "Jadwal")}</h2>
-                    <p className="jadwal-text">{budaya.jadwal}</p>
-                  </div>
-                )}
+              {budaya.jadwal && (
+                <div className="content-section">
+                  <h2>⏰ {t("labelJadwal", "Jadwal")}</h2>
+                  <p className="jadwal-text">{budaya.jadwal}</p>
+                </div>
+              )}
 
               {/* Prestasi Section */}
-              {id !== "pasar-pujokusuman" &&
-                id !== "sanggar-tari-tradisional" &&
-                id !== "jemparingan" &&
-                id !== "jatilan" &&
-                id !== "teater" &&
-                id !== "ruwatan" &&
-                id !== "pujokusuman-creative-lab" &&
-                id !== "orkes-kentongan-sukarena" &&
-                id !== "komunitas-pohon" && (
-                  <div className="content-section">
-                    <h2>
-                      🏆 {t("prestasiPencapaian", "Prestasi & Pencapaian")}
-                    </h2>
-                    <ul>
-                      {budaya.prestasi.map((prestasi, index) => (
-                        <li key={index}>{prestasi}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
+              {budaya.prestasi && budaya.prestasi.length > 0 && (
+                <div className="content-section">
+                  <h2>🏆 {t("prestasiPencapaian", "Prestasi & Pencapaian")}</h2>
+                  <ul>
+                    {budaya.prestasi.map((prestasi, index) => (
+                      <li key={index}>{prestasi}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
               {/* Tokoh Section */}
-              {id !== "pasar-pujokusuman" &&
-                id !== "ruwatan" &&
-                id !== "orkes-kentongan-sukarena" && (
-                  <div className="content-section">
-                    <h2>👥 {t("tokohUtama", "Tokoh Utama")}</h2>
-                    <div className="tokoh-grid">
-                      {budaya.tokoh.map((tokoh, index) => (
-                        <div key={index} className="tokoh-card">
-                          <div className="tokoh-image">
-                            <img
-                              src={tokoh.foto}
-                              alt={tokoh.nama}
-                              onError={(e) => {
-                                e.target.src = getPlaceholderImage(tokoh.nama);
-                              }}
-                            />
-                          </div>
-                          <div className="tokoh-info">
-                            <h3>{tokoh.nama}</h3>
-                            <p className="tokoh-jabatan">{tokoh.jabatan}</p>
-                            <p className="tokoh-deskripsi">{tokoh.deskripsi}</p>
-                          </div>
+              {budaya.tokoh && budaya.tokoh.length > 0 && (
+                <div className="content-section">
+                  <h2>👥 {t("tokohUtama", "Tokoh Utama")}</h2>
+                  <div className="tokoh-grid">
+                    {budaya.tokoh.map((tokoh, index) => (
+                      <div key={index} className="tokoh-card">
+                        <div className="tokoh-image">
+                          <img
+                            src={tokoh.foto}
+                            alt={tokoh.nama}
+                            onError={(e) => {
+                              e.target.src = getPlaceholderImage(tokoh.nama);
+                            }}
+                          />
                         </div>
-                      ))}
-                    </div>
+                        <div className="tokoh-info">
+                          <h3>{tokoh.nama}</h3>
+                          <p className="tokoh-jabatan">{tokoh.jabatan}</p>
+                          <p className="tokoh-deskripsi">{tokoh.deskripsi}</p>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                )}
+                </div>
+              )}
             </div>
 
             {/* Right Column - Gallery */}
@@ -1218,7 +1242,5 @@ const BudayaDetail = () => {
     </div>
   );
 };
-
-
 
 export default BudayaDetail;

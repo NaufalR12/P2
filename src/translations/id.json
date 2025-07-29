@@ -296,7 +296,7 @@
   "tokoh7Nama": "Agung Budi Santoso",
   "tokoh7Jabatan": "Ketua Jemparingan",
   "tokoh7Deskripsi": "Memimpin kegiatan Jemparingan di Kampung Pujokusuman, termasuk latihan rutin, pengenalan tradisi panahan gaya Mataram, serta pelibatan generasi muda dalam pelestarian nilai-nilai kemataraman.",
-  "tokoh8Nama": "Nana",
+  "tokoh8Nama": "Nurdiana",
   "tokoh8Jabatan": "Penggerak Teater Sanggar Obah",
   "tokoh8Deskripsi": "Menginisiasi dan mengelola kegiatan Teater Obah sebagai ruang ekspresi warga, khususnya anak muda. Berperan dalam pengembangan naskah, proses latihan, dan kolaborasi lintas komunitas dalam pertunjukan teater berbasis isu sosial kampung.",
   "tokoh9Nama": "Farhan",
@@ -338,5 +338,13 @@
   "budaya10Kegiatan3": "Kolaborasi edukasi sejarah dengan sekolah",
   "budaya10Kegiatan4": "Pengarsipan dan digitalisasi dokumen lama",
   "budaya10Jadwal": "Setiap Sabtu minggu ke-2: 16.00-18.00 WIB",
-  "budaya10SejarahSingkat": "Komunitas POHON, singkatan dari Pedjoeang Heritage Pujokusuman, lahir dari semangat untuk menelusuri dan menjaga akar sejarah kampung. Kata 'pohon' dipilih bukan tanpa makna—dalam bahasa Arab, pohon adalah simbol sejarah, tempat di mana segala hal berakar dan tumbuh."
+  "budaya10SejarahSingkat": "Komunitas POHON, singkatan dari Pedjoeang Heritage Pujokusuman, lahir dari semangat untuk menelusuri dan menjaga akar sejarah kampung. Kata 'pohon' dipilih bukan tanpa makna—dalam bahasa Arab, pohon adalah simbol sejarah, tempat di mana segala hal berakar dan tumbuh.",
+  "budayaKetoprakSejarahSingkat": "Ketoprak Kampung Pujokusuman lahir dari semangat gotong royong warga yang bermula dari ajang lomba kesenian antar pasar se-Kota Yogyakarta pada tahun 2017. Saat itu, Pasar Pujokusuman mengusung pertunjukan fragmen ala ketoprak dengan melibatkan para pedagang sebagai pemain dan warga sekitar sebagai pengrawit.",
+
+  "budaya11Title": "Ketoprak",
+  "budaya11Sejarah1": "Ketoprak Kampung Pujokusuman lahir dari semangat gotong royong warga yang bermula dari ajang lomba kesenian antar pasar se-Kota Yogyakarta pada tahun 2017. Saat itu, Pasar Pujokusuman mengusung pertunjukan fragmen ala ketoprak dengan melibatkan para pedagang sebagai pemain dan warga sekitar sebagai pengrawit. ",
+  "budaya11Sejarah2": "Keikutsertaan ini berhasil mengantarkan mereka meraih gelar Juara Umum, sekaligus menjadi titik awal terbentuknya Ketoprak Kampung. Inisiatif ini berkembang menjadi “Paguyuban Catur Manunggal Budoyo”, yang kemudian bergabung secara resmi ke dalam program Kelurahan Budaya Keparakan pada 2018, menyatukan empat kampung dalam satu kelompok seni. Di bawah kepemimpinan Budi Triwono, paguyuban ini terus aktif tampil dalam berbagai acara budaya, termasuk Ireda Fest, di mana mereka mengangkat cerita rakyat lokal “Hantu Maut” yang berasal dari Pujokusuman. ",
+  "budaya11Sejarah3": "Ketoprak Kampung ini terbuka untuk semua kalangan usia, dengan prinsip siapa pun bisa ikut asal ada kemauan—belajar bisa bersama. Anggotanya biasanya terdiri dari 15–20 orang pemain dan kru, serta 10 orang pengrawit karawitan. Walaupun belum pernah tampil di luar Yogyakarta, kelompok ini konsisten menjaga nilai budaya, dengan orientasi non-komersial dan semangat pelestarian. Latihan rutin didukung oleh swadaya warga, sementara pementasan disesuaikan dengan dukungan dari pihak kelurahan dan kedinasan.",
+  "budaya11Deskripsi1": "Ketoprak Paguyuban Catur Manunggal Budoyo adalah bentuk seni pertunjukan tradisional Jawa yang menggabungkan drama, musik gamelan, tari, dan nyanyian. Pertunjukan ini mengisahkan cerita-cerita klasik maupun kontemporer dengan dialog dalam bahasa Jawa, diiringi musik gamelan yang dimainkan langsung oleh warga kampung.",
+   "budaya11Jadwal": "Latihan setiap Kamis malam, pertunjukan sesuai undangan acara kampung atau festival budaya"
 }

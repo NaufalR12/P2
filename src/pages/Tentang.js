@@ -103,14 +103,14 @@ const Tentang = () => {
       jabatan: t("tokoh7Jabatan"),
       deskripsi: t("tokoh7Deskripsi"),
       foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_300,h_300,c_fill/kampung-pujokusuman/tokoh7.jpg",
-      publicId: "IMG_1465_v0gdqh",
+      publicId: "WhatsApp_Image_2025-07-29_at_12.15.18_50691f86_ktfghi",
     },
     {
       nama: t("tokoh8Nama"),
       jabatan: t("tokoh8Jabatan"),
       deskripsi: t("tokoh8Deskripsi"),
       foto: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_300,h_300,c_fill/kampung-pujokusuman/tokoh8.jpg",
-      publicId: "tokoh8",
+      publicId: "WhatsApp_Image_2025-07-29_at_11.27.23_39ff2d10_pcnw8z",
     },
     {
       nama: t("tokoh9Nama"),

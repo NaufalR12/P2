@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import "./Kebudayaan.css";
+import SEOHead from "../components/SEOHead";
 
 const Kebudayaan = () => {
   const { t } = useTranslation();
@@ -108,98 +109,142 @@ const Kebudayaan = () => {
     return canvas.toDataURL();
   };
 
+  // SEO Data
+  const seoData = {
+    title: "Kebudayaan Pujokusuman - Seni Tradisional dan Warisan Budaya",
+    description:
+      "Jelajahi kekayaan budaya Kampung Pujokusuman: sanggar tari, jemparingan, ketoprak, teater, dan berbagai kesenian tradisional yang masih hidup dan berkembang.",
+    keywords:
+      "kebudayaan pujokusuman, seni tradisional, sanggar tari, jemparingan, ketoprak, teater, budaya yogyakarta, warisan budaya",
+    url: "https://djelajahpujoku.netlify.app/kebudayaan",
+    image:
+      "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_630,c_fill/IMG_9508_fqelvn.jpg",
+  };
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    name: "Kebudayaan Kampung Pujokusuman",
+    description: seoData.description,
+    url: seoData.url,
+    image: seoData.image,
+    creator: {
+      "@type": "Organization",
+      name: "Kampung Kebudayaan Pujokusuman",
+    },
+    about: [
+      "Seni Tari Tradisional",
+      "Jemparingan",
+      "Ketoprak",
+      "Teater",
+      "Budaya Jawa",
+    ],
+  };
+
   return (
-    <div className="kebudayaan-page">
-      {/* Header */}
-      <section className="kebudayaan-header">
-        <div className="container">
-          <h1>
-            {t("kebudayaanHeader", "Kebudayaan & Sosial Kampung Pujokusuman")}
-          </h1>
-          <p>
-            {t(
-              "kebudayaanSubheader",
-              "Warisan budaya yang hidup dan berkembang di tengah masyarakat"
-            )}
-          </p>
-        </div>
-      </section>
-
-      {/* Budaya Items */}
-      <section className="budaya-content">
-        <div className="container">
-          {budayaItems.map((item, index) => (
-            <div
-              key={item.id}
-              className={`budaya-item ${index % 2 === 1 ? "reverse" : ""}`}
-            >
-              <div className="budaya-image">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  onError={(e) => {
-                    e.target.src = getPlaceholderImage(item.title);
-                  }}
-                />
-                {item.gallery && (
-                  <div className="photo-gallery">
-                    {item.gallery.map((photo, idx) => (
-                      <img
-                        key={idx}
-                        src={photo}
-                        alt={`${item.title} foto ${idx + 1}`}
-                        className="gallery-photo"
-                        onError={(e) => {
-                          e.target.src = getPlaceholderImage(`Foto ${idx + 1}`);
-                        }}
-                      />
-                    ))}
-                  </div>
-                )}
-              </div>
-              <div className="budaya-content-text">
-                <h2>{item.title}</h2>
-
-                <div className="content-section">
-                  <h3>📜 {t("labelSejarah", "Sejarah")}</h3>
-                  <p>{item.sejarah}</p>
-                </div>
-
-                <div className="content-section">
-                  <Link
-                    to={`/kebudayaan/${item.id}`}
-                    className="btn btn-primary"
-                  >
-                    {t("selengkapnya", "Selengkapnya")}
-                  </Link>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="cta-section">
-        <div className="container">
-          <h2>{t("ctaTitleKebudayaan", "Tertarik Bergabung?")}</h2>
-          <p>
-            {t(
-              "ctaDescKebudayaan",
-              "Ayo lestarikan budaya bersama kami! Hubungi kontak di bawah untuk informasi lebih lanjut."
-            )}
-          </p>
-          <div className="cta-buttons">
-            <a href="/#kontak" className="btn btn-primary">
-              {t("ctaContactKebudayaan", "Hubungi Kami")}
-            </a>
-            <a href="/" className="btn btn-outline">
-              {t("ctaBackHome", "Kembali ke Beranda")}
-            </a>
+    <>
+      <SEOHead
+        title={seoData.title}
+        description={seoData.description}
+        keywords={seoData.keywords}
+        url={seoData.url}
+        image={seoData.image}
+        structuredData={structuredData}
+      />
+      <div className="kebudayaan-page">
+        {/* Header */}
+        <section className="kebudayaan-header">
+          <div className="container">
+            <h1>
+              {t("kebudayaanHeader", "Kebudayaan & Sosial Kampung Pujokusuman")}
+            </h1>
+            <p>
+              {t(
+                "kebudayaanSubheader",
+                "Warisan budaya yang hidup dan berkembang di tengah masyarakat"
+              )}
+            </p>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+
+        {/* Budaya Items */}
+        <section className="budaya-content">
+          <div className="container">
+            {budayaItems.map((item, index) => (
+              <div
+                key={item.id}
+                className={`budaya-item ${index % 2 === 1 ? "reverse" : ""}`}
+              >
+                <div className="budaya-image">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    onError={(e) => {
+                      e.target.src = getPlaceholderImage(item.title);
+                    }}
+                  />
+                  {item.gallery && (
+                    <div className="photo-gallery">
+                      {item.gallery.map((photo, idx) => (
+                        <img
+                          key={idx}
+                          src={photo}
+                          alt={`${item.title} foto ${idx + 1}`}
+                          className="gallery-photo"
+                          onError={(e) => {
+                            e.target.src = getPlaceholderImage(
+                              `Foto ${idx + 1}`
+                            );
+                          }}
+                        />
+                      ))}
+                    </div>
+                  )}
+                </div>
+                <div className="budaya-content-text">
+                  <h2>{item.title}</h2>
+
+                  <div className="content-section">
+                    <h3>📜 {t("labelSejarah", "Sejarah")}</h3>
+                    <p>{item.sejarah}</p>
+                  </div>
+
+                  <div className="content-section">
+                    <Link
+                      to={`/kebudayaan/${item.id}`}
+                      className="btn btn-primary"
+                    >
+                      {t("selengkapnya", "Selengkapnya")}
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Call to Action */}
+        <section className="cta-section">
+          <div className="container">
+            <h2>{t("ctaTitleKebudayaan", "Tertarik Bergabung?")}</h2>
+            <p>
+              {t(
+                "ctaDescKebudayaan",
+                "Ayo lestarikan budaya bersama kami! Hubungi kontak di bawah untuk informasi lebih lanjut."
+              )}
+            </p>
+            <div className="cta-buttons">
+              <a href="/#kontak" className="btn btn-primary">
+                {t("ctaContactKebudayaan", "Hubungi Kami")}
+              </a>
+              <a href="/" className="btn btn-outline">
+                {t("ctaBackHome", "Kembali ke Beranda")}
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 };
 

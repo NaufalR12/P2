@@ -7,51 +7,81 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://djelajahpujoku.netlify.app/profil</loc>
+    <loc>https://djelajahpujoku.netlify.app/tentang</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://djelajahpujoku.netlify.app/sejarah</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://djelajahpujoku.netlify.app/pemerintahan</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://djelajahpujoku.netlify.app/berita</loc>
+    <loc>https://djelajahpujoku.netlify.app/kebudayaan</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://djelajahpujoku.netlify.app/wisata</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://djelajahpujoku.netlify.app/umkm</loc>
+    <loc>https://djelajahpujoku.netlify.app/galeri</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://djelajahpujoku.netlify.app/galeri</loc>
+    <loc>https://djelajahpujoku.netlify.app/kebudayaan/sanggar-tari-tradisional</loc>
     <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://djelajahpujoku.netlify.app/kebudayaan/jemparingan</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://djelajahpujoku.netlify.app/kebudayaan/ketoprak</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://djelajahpujoku.netlify.app/kebudayaan/teater</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://djelajahpujoku.netlify.app/kebudayaan/jatilan</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://djelajahpujoku.netlify.app/kebudayaan/ruwatan</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://djelajahpujoku.netlify.app/kebudayaan/pujokusuman-creative-lab</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://djelajahpujoku.netlify.app/kebudayaan/pasar-pujokusuman</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://djelajahpujoku.netlify.app/kebudayaan/komunitas-kringmen</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://djelajahpujoku.netlify.app/kontak</loc>
+    <loc>https://djelajahpujoku.netlify.app/kebudayaan/komunitas-pohon</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
   </url>
 </urlset>

@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import "./Tentang.css";
 import { CloudinaryContext, Image } from "cloudinary-react";
+import SEOHead from "../components/SEOHead";
 
 const Tentang = () => {
   const { t } = useTranslation();
@@ -148,138 +149,180 @@ const Tentang = () => {
     return canvas.toDataURL();
   };
 
+  // SEO Data
+  const seoData = {
+    title: "Tentang Kampung Pujokusuman - Sejarah dan Profil Lengkap",
+    description:
+      "Pelajari sejarah, visi misi, dan profil lengkap Kampung Kebudayaan Pujokusuman. Temukan tokoh-tokoh penting dan perkembangan budaya tradisional dari masa ke masa.",
+    keywords:
+      "tentang pujokusuman, sejarah pujokusuman, profil kampung, visi misi, tokoh masyarakat, kampung budaya yogyakarta",
+    url: "https://djelajahpujoku.netlify.app/tentang",
+    image:
+      "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_630,c_fill/IMG_9508_fqelvn.jpg",
+  };
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    name: "Kampung Kebudayaan Pujokusuman",
+    description: seoData.description,
+    url: seoData.url,
+    image: seoData.image,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Yogyakarta",
+      addressRegion: "Daerah Istimewa Yogyakarta",
+      addressCountry: "ID",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "-7.7956",
+      longitude: "110.3695",
+    },
+  };
+
   return (
-    <CloudinaryContext cloudName="ddfcjabrm">
-      <div className="tentang-page">
-        {/* Header */}
-        <section className="tentang-header">
-          <div className="container">
-            <h1>{t("aboutHeader")}</h1>
-            <p>{t("aboutHeaderDesc")}</p>
-          </div>
-        </section>
+    <>
+      <SEOHead
+        title={seoData.title}
+        description={seoData.description}
+        keywords={seoData.keywords}
+        url={seoData.url}
+        image={seoData.image}
+        structuredData={structuredData}
+      />
+      <CloudinaryContext cloudName="ddfcjabrm">
+        <div className="tentang-page">
+          {/* Header */}
+          <section className="tentang-header">
+            <div className="container">
+              <h1>{t("aboutHeader")}</h1>
+              <p>{t("aboutHeaderDesc")}</p>
+            </div>
+          </section>
 
-        {/* Sejarah Timeline */}
-        <section className="sejarah-section">
-          <div className="container">
-            <h2>{t("timelineTitle")}</h2>
-            <div className="timeline">
-              {timelineData.map((item, index) => (
-                <div key={index} className="timeline-item">
-                  <div className="timeline-year">{item.year}</div>
-                  <div className="timeline-content">
-                    <h3>{item.title}</h3>
-                    <div>{item.description}</div>
+          {/* Sejarah Timeline */}
+          <section className="sejarah-section">
+            <div className="container">
+              <h2>{t("timelineTitle")}</h2>
+              <div className="timeline">
+                {timelineData.map((item, index) => (
+                  <div key={index} className="timeline-item">
+                    <div className="timeline-year">{item.year}</div>
+                    <div className="timeline-content">
+                      <h3>{item.title}</h3>
+                      <div>{item.description}</div>
+                    </div>
                   </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Visi Misi */}
+          <section className="visi-misi-section">
+            <div className="container">
+              <div className="visi-misi-grid">
+                <div className="visi-card">
+                  <h2>🎯 {t("visiTitle")}</h2>
+                  <p>{t("visiDesc")}</p>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Visi Misi */}
-        <section className="visi-misi-section">
-          <div className="container">
-            <div className="visi-misi-grid">
-              <div className="visi-card">
-                <h2>🎯 {t("visiTitle")}</h2>
-                <p>{t("visiDesc")}</p>
-              </div>
-              <div className="misi-card">
-                <h2>🚀 {t("misiTitle")}</h2>
-                <ul>
-                  <li>{t("misi1")}</li>
-                  <li>{t("misi2")}</li>
-                  <li>{t("misi3")}</li>
-                  <li>{t("misi4")}</li>
-                  <li>{t("misi5")}</li>
-                </ul>
+                <div className="misi-card">
+                  <h2>🚀 {t("misiTitle")}</h2>
+                  <ul>
+                    <li>{t("misi1")}</li>
+                    <li>{t("misi2")}</li>
+                    <li>{t("misi3")}</li>
+                    <li>{t("misi4")}</li>
+                    <li>{t("misi5")}</li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Tokoh Masyarakat */}
-        <section className="tokoh-section">
-          <div className="container">
-            <h2>{t("tokohTitle")}</h2>
-            <div className="tokoh-grid">
-              {tokohMasyarakat.map((tokoh, index) => (
-                <div
-                  key={index}
-                  className="tokoh-card"
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    height: "100%",
-                  }}
-                >
-                  <div className="tokoh-foto">
-                    <Image
-                      publicId={tokoh.publicId}
-                      width="240"
-                      height="240"
-                      crop="fill"
-                      alt={tokoh.nama}
-                      style={{
-                        borderRadius: "50%",
-                        objectFit: "cover",
-                        border: "4px solid #daa520",
-                        minHeight: "240px",
-                        maxHeight: "240px",
-                      }}
-                      onError={(e) => {
-                        e.target.src = getPlaceholderImage(tokoh.nama);
-                      }}
-                    />
-                  </div>
+          {/* Tokoh Masyarakat */}
+          <section className="tokoh-section">
+            <div className="container">
+              <h2>{t("tokohTitle")}</h2>
+              <div className="tokoh-grid">
+                {tokohMasyarakat.map((tokoh, index) => (
                   <div
-                    className="tokoh-info"
+                    key={index}
+                    className="tokoh-card"
                     style={{
                       display: "flex",
                       flexDirection: "column",
-                      flex: "1",
-                      justifyContent: "space-between",
-                      padding: "20px 0",
+                      height: "100%",
                     }}
                   >
-                    <div>
-                      <h3>{tokoh.nama}</h3>
-                      <p className="tokoh-jabatan">{tokoh.jabatan}</p>
+                    <div className="tokoh-foto">
+                      <Image
+                        publicId={tokoh.publicId}
+                        width="240"
+                        height="240"
+                        crop="fill"
+                        alt={tokoh.nama}
+                        style={{
+                          borderRadius: "50%",
+                          objectFit: "cover",
+                          border: "4px solid #daa520",
+                          minHeight: "240px",
+                          maxHeight: "240px",
+                        }}
+                        onError={(e) => {
+                          e.target.src = getPlaceholderImage(tokoh.nama);
+                        }}
+                      />
                     </div>
-                    <p
-                      className="tokoh-deskripsi"
+                    <div
+                      className="tokoh-info"
                       style={{
+                        display: "flex",
+                        flexDirection: "column",
                         flex: "1",
-                        marginTop: "10px",
+                        justifyContent: "space-between",
+                        padding: "20px 0",
                       }}
                     >
-                      {tokoh.deskripsi}
-                    </p>
+                      <div>
+                        <h3>{tokoh.nama}</h3>
+                        <p className="tokoh-jabatan">{tokoh.jabatan}</p>
+                      </div>
+                      <p
+                        className="tokoh-deskripsi"
+                        style={{
+                          flex: "1",
+                          marginTop: "10px",
+                        }}
+                      >
+                        {tokoh.deskripsi}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* CTA */}
-        <section className="cta-section">
-          <div className="container">
-            <h2>{t("ctaTitle")}</h2>
-            <p>{t("ctaDesc")}</p>
-            <div className="cta-buttons">
-              <a href="/#kontak" className="btn btn-primary">
-                {t("ctaContact")}
-              </a>
-              <a href="/kebudayaan" className="btn btn-outline">
-                {t("ctaCulture")}
-              </a>
+          {/* CTA */}
+          <section className="cta-section">
+            <div className="container">
+              <h2>{t("ctaTitle")}</h2>
+              <p>{t("ctaDesc")}</p>
+              <div className="cta-buttons">
+                <a href="/#kontak" className="btn btn-primary">
+                  {t("ctaContact")}
+                </a>
+                <a href="/kebudayaan" className="btn btn-outline">
+                  {t("ctaCulture")}
+                </a>
+              </div>
             </div>
-          </div>
-        </section>
-      </div>
-    </CloudinaryContext>
+          </section>
+        </div>
+      </CloudinaryContext>
+    </>
   );
 };
 

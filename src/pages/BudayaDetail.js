@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "./BudayaDetail.css";
+import SEOHead from "../components/SEOHead";
 
 const BudayaDetail = () => {
   const { id } = useParams();
@@ -776,6 +777,34 @@ const BudayaDetail = () => {
     );
   }
 
+  // Dynamic SEO Data
+  const seoData = {
+    title: `${budaya.title} - Detail Kebudayaan Pujokusuman`,
+    description: `Pelajari lebih dalam tentang ${
+      budaya.title
+    } di Kampung Pujokusuman. ${
+      budaya.sejarah[0] || budaya.deskripsi[0] || budaya.deskripsi
+    }`.substring(0, 160),
+    keywords: `${budaya.title.toLowerCase()}, kebudayaan pujokusuman, seni tradisional, budaya yogyakarta, ${id}`,
+    url: `https://djelajahpujoku.netlify.app/kebudayaan/${id}`,
+    image: budaya.heroImage,
+  };
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    name: budaya.title,
+    description: seoData.description,
+    url: seoData.url,
+    image: budaya.heroImage,
+    creator: {
+      "@type": "Organization",
+      name: "Kampung Kebudayaan Pujokusuman",
+    },
+    dateCreated: "2025-01-27",
+    inLanguage: "id",
+  };
+
   const nextImage = () => {
     setCurrentImageIndex((prev) =>
       prev === budaya.gallery.length - 1 ? 0 : prev + 1
@@ -809,437 +838,451 @@ const BudayaDetail = () => {
   };
 
   return (
-    <div className="budaya-detail-page">
-      {/* Hero Section */}
-      <section className="hero-section">
-        <div className="hero-image">
-          <img
-            src={budaya.heroImage}
-            alt={budaya.title}
-            onError={(e) => {
-              e.target.src = getPlaceholderImage(budaya.title);
-            }}
-          />
-          <div className="hero-overlay">
-            <div className="container">
-              <h1>{budaya.title}</h1>
+    <>
+      <SEOHead
+        title={seoData.title}
+        description={seoData.description}
+        keywords={seoData.keywords}
+        url={seoData.url}
+        image={seoData.image}
+        structuredData={structuredData}
+      />
+      <div className="budaya-detail-page">
+        {/* Hero Section */}
+        <section className="hero-section">
+          <div className="hero-image">
+            <img
+              src={budaya.heroImage}
+              alt={budaya.title}
+              onError={(e) => {
+                e.target.src = getPlaceholderImage(budaya.title);
+              }}
+            />
+            <div className="hero-overlay">
+              <div className="container">
+                <h1>{budaya.title}</h1>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Navigation Breadcrumb */}
-      <section className="breadcrumb-section">
-        <div className="container">
-          <nav className="breadcrumb">
-            <Link to="/">Beranda</Link>
-            <span>/</span>
-            <Link to="/kebudayaan">Kebudayaan</Link>
-            <span>/</span>
-            <span>{budaya.title}</span>
-          </nav>
-        </div>
-      </section>
+        {/* Navigation Breadcrumb */}
+        <section className="breadcrumb-section">
+          <div className="container">
+            <nav className="breadcrumb">
+              <Link to="/">Beranda</Link>
+              <span>/</span>
+              <Link to="/kebudayaan">Kebudayaan</Link>
+              <span>/</span>
+              <span>{budaya.title}</span>
+            </nav>
+          </div>
+        </section>
 
-      {/* Main Content */}
-      <section className="main-content">
-        <div className="container">
-          <div className="content-grid">
-            {/* Left Column - Text Content */}
-            <div className="content-text">
-              {/* Sejarah Section */}
-              <div className="content-section">
-                <h2>📜 {t("labelSejarah", "Sejarah")}</h2>
-                {id === "jemparingan" ? (
-                  <>
-                    <p>{t("budaya2Sejarah1")}</p>
-                    <p>{t("budaya2Sejarah2")}</p>
-                    <b>Sejarah Jemparingan</b>
-                    <div style={{ marginTop: 4 }}>{t("budaya2Sejarah3")}</div>
-                    <b>Perkembangan Gaya Jemparingan</b>
-                    <ol type="1" style={{ marginTop: 4 }}>
-                      <li>
-                        <b>Gagrag Mataram Ngayogyakarta</b>
-                        <div>{t("budaya2Sejarah4")}</div>
-                      </li>
-                      <li>
-                        <b>Gaya Bidikan (1953)</b>
-                        <div>{t("budaya2Sejarah5")}</div>
-                      </li>
-                    </ol>
-                  </>
-                ) : id === "pujokusuman-creative-lab" ? (
-                  <>
-                    <div style={{ marginBottom: 20 }}>
-                      <h3 style={{ color: "#8B4513", marginBottom: 10 }}>
-                        Latar Belakang
-                      </h3>
-                      <p>{t("budaya6Sejarah1")}</p>
-                      <p>{t("budaya6Sejarah2")}</p>
-                    </div>
-
-                    <div style={{ marginBottom: 20 }}>
-                      <h3 style={{ color: "#8B4513", marginBottom: 10 }}>
-                        Pembentukan dan Tujuan
-                      </h3>
-                      <p>{t("budaya6Sejarah3")}</p>
-                      <p>{t("budaya6Sejarah4")}</p>
-                    </div>
-
-                    <div style={{ marginBottom: 20 }}>
-                      <h3 style={{ color: "#8B4513", marginBottom: 10 }}>
-                        Aktivitas Utama
-                      </h3>
-                      <p>{t("budaya6Sejarah5")}</p>
-                      <p>{t("budaya6Sejarah6")}</p>
-                    </div>
-
-                    <div style={{ marginBottom: 20 }}>
-                      <h3 style={{ color: "#8B4513", marginBottom: 10 }}>
-                        Kontribusi untuk Kampung
-                      </h3>
-                      <p>{t("budaya6Sejarah7")}</p>
-                      <p>{t("budaya6Sejarah8")}</p>
-                    </div>
-                  </>
-                ) : (
-                  budaya.sejarah.map((paragraph, index) => (
-                    <p key={index}>{paragraph}</p>
-                  ))
-                )}
-              </div>
-
-              {/* Deskripsi Section */}
-              <div className="content-section">
-                <h2>📝 {t("labelDeskripsi", "Deskripsi")}</h2>
-                {id === "jemparingan" ? (
-                  <>
-                    <p>{t("budaya2Deskripsi")}</p>
-                    <b>Tata Cara Bermain</b>
-                    <ol type="1" style={{ marginTop: 4 }}>
-                      <li>
-                        <b>Posisi Duduk Bersila Miring ke Kiri</b>
-                        <div>{t("budaya2Sejarah7")}</div>
-                      </li>
-                      <li>
-                        <b>Pegangan Busur dan Tarik Anak Panah</b>
-                        <div>{t("budaya2Sejarah8")}</div>
-                      </li>
-                      <li>
-                        <b>Jarak Sasaran: 10–20 Meter</b>
-                        <div>{t("budaya2Sejarah9")}</div>
-                      </li>
-                      <li>
-                        <b>Sistem Nilai: Lonceng Tanda Sasaran</b>
-                        <div>{t("budaya2Sejarah10")}</div>
-                      </li>
-                    </ol>
-                    <b>Nilai Kemataraman dalam Jemparingan</b>
-                    <div style={{ marginTop: 4 }}>{t("budaya2Sejarah11")}</div>
-                    <ul style={{ marginTop: 4 }}>
-                      <li>
-                        <b>Untuk Laki-laki:</b>
-                        <div>
-                          {t("budaya2Sejarah11").split("Untuk Laki-laki:")[1]}
-                        </div>
-                      </li>
-                      <li>
-                        <b>Untuk Perempuan:</b>
-                        <div>
-                          {t("budaya2Sejarah12").split("Untuk Perempuan:")[1]}
-                        </div>
-                      </li>
-                    </ul>
-                    <b>Manfaat dan Keutamaan Berlatih Jemparingan</b>
-                    <ol type="1" style={{ marginTop: 4 }}>
-                      {t("budaya2Sejarah13")
-                        .split("\n")
-                        .slice(1, 7)
-                        .map((item, idx) => (
-                          <li key={idx}>{item}</li>
-                        ))}
-                    </ol>
-                    <b>Pendidikan Karakter dalam Jemparingan</b>
-                    <div style={{ marginTop: 4 }}>
-                      Jiwa Ksatria Mataram sebagaimana diajarkan oleh Pangeran
-                      Mangkubumi (Sri Sultan Hamengku Buwono I):
-                    </div>
-                    <ol type="1" style={{ marginTop: 4 }}>
-                      {t("budaya2Sejarah14")
-                        .split("\n")
-                        .slice(1, 5)
-                        .map((item, idx) => (
-                          <li key={idx}>{item}</li>
-                        ))}
-                    </ol>
-                  </>
-                ) : id === "pasar-pujokusuman" ? (
-                  // Tampilkan deskripsi dengan format paragraf dan list jika ada, tanpa <li>
-                  <div>
-                    {budaya.deskripsi.split("\n").map((line, idx) => {
-                      // List item: tampilkan sebagai <div> dengan indentasi, tanpa <li>
-                      if (line.startsWith("- ")) {
-                        return (
-                          <div
-                            key={idx}
-                            style={{ marginLeft: 20, marginBottom: 4 }}
-                          >
-                            • {line.replace("- ", "")}
-                          </div>
-                        );
-                      }
-                      // Heading
-                      if (
-                        line.endsWith(":") &&
-                        !line.startsWith("-") &&
-                        line.trim().length > 1
-                      ) {
-                        return (
-                          <b
-                            key={idx}
-                            style={{ display: "block", marginTop: 12 }}
-                          >
-                            {line.replace(":", "")}
-                          </b>
-                        );
-                      }
-                      // Empty line
-                      if (line.trim() === "") {
-                        return <br key={idx} />;
-                      }
-                      // Normal paragraph
-                      return (
-                        <p key={idx} style={{ marginBottom: 8 }}>
-                          {line}
-                        </p>
-                      );
-                    })}
-                  </div>
-                ) : Array.isArray(budaya.deskripsi) ? (
-                  budaya.deskripsi.map((desc, idx) => <p key={idx}>{desc}</p>)
-                ) : (
-                  <p>{budaya.deskripsi}</p>
-                )}
-              </div>
-
-              {/* Kegiatan Section */}
-              {budaya.kegiatan && budaya.kegiatan.length > 0 && (
+        {/* Main Content */}
+        <section className="main-content">
+          <div className="container">
+            <div className="content-grid">
+              {/* Left Column - Text Content */}
+              <div className="content-text">
+                {/* Sejarah Section */}
                 <div className="content-section">
-                  <h2>🎯 {t("labelKegiatan", "Kegiatan")}</h2>
-                  <ul>
-                    {budaya.kegiatan.map((kegiatan, index) => (
-                      <li key={index}>{kegiatan}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-
-              {/* Jadwal Section */}
-              {budaya.jadwal && (
-                <div className="content-section">
-                  <h2>⏰ {t("labelJadwal", "Jadwal")}</h2>
-                  <p className="jadwal-text">{budaya.jadwal}</p>
-                </div>
-              )}
-
-              {/* Prestasi Section */}
-              {budaya.prestasi && budaya.prestasi.length > 0 && (
-                <div className="content-section">
-                  <h2>🏆 {t("prestasiPencapaian", "Prestasi & Pencapaian")}</h2>
-                  <ul>
-                    {budaya.prestasi.map((prestasi, index) => (
-                      <li key={index}>{prestasi}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-
-              {/* Tokoh Section */}
-              {budaya.tokoh && budaya.tokoh.length > 0 && (
-                <div className="content-section">
-                  <h2>👥 {t("tokohUtama", "Tokoh Utama")}</h2>
-                  <div className="tokoh-grid">
-                    {budaya.tokoh.map((tokoh, index) => (
-                      <div key={index} className="tokoh-card">
-                        <div className="tokoh-image">
-                          <img
-                            src={tokoh.foto}
-                            alt={tokoh.nama}
-                            onError={(e) => {
-                              e.target.src = getPlaceholderImage(tokoh.nama);
-                            }}
-                          />
-                        </div>
-                        <div className="tokoh-info">
-                          <h3>{tokoh.nama}</h3>
-                          <p className="tokoh-jabatan">{tokoh.jabatan}</p>
-                          <p className="tokoh-deskripsi">{tokoh.deskripsi}</p>
-                        </div>
+                  <h2>📜 {t("labelSejarah", "Sejarah")}</h2>
+                  {id === "jemparingan" ? (
+                    <>
+                      <p>{t("budaya2Sejarah1")}</p>
+                      <p>{t("budaya2Sejarah2")}</p>
+                      <b>Sejarah Jemparingan</b>
+                      <div style={{ marginTop: 4 }}>{t("budaya2Sejarah3")}</div>
+                      <b>Perkembangan Gaya Jemparingan</b>
+                      <ol type="1" style={{ marginTop: 4 }}>
+                        <li>
+                          <b>Gagrag Mataram Ngayogyakarta</b>
+                          <div>{t("budaya2Sejarah4")}</div>
+                        </li>
+                        <li>
+                          <b>Gaya Bidikan (1953)</b>
+                          <div>{t("budaya2Sejarah5")}</div>
+                        </li>
+                      </ol>
+                    </>
+                  ) : id === "pujokusuman-creative-lab" ? (
+                    <>
+                      <div style={{ marginBottom: 20 }}>
+                        <h3 style={{ color: "#8B4513", marginBottom: 10 }}>
+                          Latar Belakang
+                        </h3>
+                        <p>{t("budaya6Sejarah1")}</p>
+                        <p>{t("budaya6Sejarah2")}</p>
                       </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
 
-            {/* Right Column - Gallery */}
-            <div className="content-gallery">
-              <h2>📸 {t("galeriFoto", "Galeri Foto")}</h2>
-              <div className="gallery-container">
-                <div className="main-image">
-                  {budaya.gallery[currentImageIndex].type === "image" ? (
-                    <img
-                      src={budaya.gallery[currentImageIndex].url}
-                      alt={`${budaya.title} - Foto ${currentImageIndex + 1}`}
-                      onError={(e) => {
-                        e.target.src = getPlaceholderImage(
-                          `Foto ${currentImageIndex + 1}`
-                        );
-                      }}
-                      style={{ cursor: "zoom-in" }}
-                      onClick={() => setIsModalOpen(true)}
-                    />
+                      <div style={{ marginBottom: 20 }}>
+                        <h3 style={{ color: "#8B4513", marginBottom: 10 }}>
+                          Pembentukan dan Tujuan
+                        </h3>
+                        <p>{t("budaya6Sejarah3")}</p>
+                        <p>{t("budaya6Sejarah4")}</p>
+                      </div>
+
+                      <div style={{ marginBottom: 20 }}>
+                        <h3 style={{ color: "#8B4513", marginBottom: 10 }}>
+                          Aktivitas Utama
+                        </h3>
+                        <p>{t("budaya6Sejarah5")}</p>
+                        <p>{t("budaya6Sejarah6")}</p>
+                      </div>
+
+                      <div style={{ marginBottom: 20 }}>
+                        <h3 style={{ color: "#8B4513", marginBottom: 10 }}>
+                          Kontribusi untuk Kampung
+                        </h3>
+                        <p>{t("budaya6Sejarah7")}</p>
+                        <p>{t("budaya6Sejarah8")}</p>
+                      </div>
+                    </>
                   ) : (
-                    <video
-                      src={budaya.gallery[currentImageIndex].url}
-                      controls
-                      onError={(e) => {
-                        e.target.src = getPlaceholderImage(
-                          `Video ${currentImageIndex + 1}`
-                        );
-                      }}
-                      style={{ cursor: "zoom-in" }}
-                      onClick={() => setIsModalOpen(true)}
-                    />
+                    budaya.sejarah.map((paragraph, index) => (
+                      <p key={index}>{paragraph}</p>
+                    ))
                   )}
-                  <button className="gallery-nav prev" onClick={prevImage}>
-                    ‹
-                  </button>
-                  <button className="gallery-nav next" onClick={nextImage}>
-                    ›
-                  </button>
                 </div>
-                <div className="thumbnail-grid">
-                  {budaya.gallery.map((item, index) => (
-                    <div
-                      key={index}
-                      className={`thumbnail-item ${
-                        index === currentImageIndex ? "active" : ""
-                      }`}
-                      data-type={item.type}
-                      onClick={() => setCurrentImageIndex(index)}
-                    >
-                      <img
-                        src={item.thumbnail}
-                        alt={`${budaya.title} - Thumbnail ${index + 1}`}
-                        onError={(e) => {
-                          e.target.src = getPlaceholderImage(
-                            `Thumbnail ${index + 1}`
+
+                {/* Deskripsi Section */}
+                <div className="content-section">
+                  <h2>📝 {t("labelDeskripsi", "Deskripsi")}</h2>
+                  {id === "jemparingan" ? (
+                    <>
+                      <p>{t("budaya2Deskripsi")}</p>
+                      <b>Tata Cara Bermain</b>
+                      <ol type="1" style={{ marginTop: 4 }}>
+                        <li>
+                          <b>Posisi Duduk Bersila Miring ke Kiri</b>
+                          <div>{t("budaya2Sejarah7")}</div>
+                        </li>
+                        <li>
+                          <b>Pegangan Busur dan Tarik Anak Panah</b>
+                          <div>{t("budaya2Sejarah8")}</div>
+                        </li>
+                        <li>
+                          <b>Jarak Sasaran: 10–20 Meter</b>
+                          <div>{t("budaya2Sejarah9")}</div>
+                        </li>
+                        <li>
+                          <b>Sistem Nilai: Lonceng Tanda Sasaran</b>
+                          <div>{t("budaya2Sejarah10")}</div>
+                        </li>
+                      </ol>
+                      <b>Nilai Kemataraman dalam Jemparingan</b>
+                      <div style={{ marginTop: 4 }}>
+                        {t("budaya2Sejarah11")}
+                      </div>
+                      <ul style={{ marginTop: 4 }}>
+                        <li>
+                          <b>Untuk Laki-laki:</b>
+                          <div>
+                            {t("budaya2Sejarah11").split("Untuk Laki-laki:")[1]}
+                          </div>
+                        </li>
+                        <li>
+                          <b>Untuk Perempuan:</b>
+                          <div>
+                            {t("budaya2Sejarah12").split("Untuk Perempuan:")[1]}
+                          </div>
+                        </li>
+                      </ul>
+                      <b>Manfaat dan Keutamaan Berlatih Jemparingan</b>
+                      <ol type="1" style={{ marginTop: 4 }}>
+                        {t("budaya2Sejarah13")
+                          .split("\n")
+                          .slice(1, 7)
+                          .map((item, idx) => (
+                            <li key={idx}>{item}</li>
+                          ))}
+                      </ol>
+                      <b>Pendidikan Karakter dalam Jemparingan</b>
+                      <div style={{ marginTop: 4 }}>
+                        Jiwa Ksatria Mataram sebagaimana diajarkan oleh Pangeran
+                        Mangkubumi (Sri Sultan Hamengku Buwono I):
+                      </div>
+                      <ol type="1" style={{ marginTop: 4 }}>
+                        {t("budaya2Sejarah14")
+                          .split("\n")
+                          .slice(1, 5)
+                          .map((item, idx) => (
+                            <li key={idx}>{item}</li>
+                          ))}
+                      </ol>
+                    </>
+                  ) : id === "pasar-pujokusuman" ? (
+                    // Tampilkan deskripsi dengan format paragraf dan list jika ada, tanpa <li>
+                    <div>
+                      {budaya.deskripsi.split("\n").map((line, idx) => {
+                        // List item: tampilkan sebagai <div> dengan indentasi, tanpa <li>
+                        if (line.startsWith("- ")) {
+                          return (
+                            <div
+                              key={idx}
+                              style={{ marginLeft: 20, marginBottom: 4 }}
+                            >
+                              • {line.replace("- ", "")}
+                            </div>
                           );
-                        }}
-                      />
+                        }
+                        // Heading
+                        if (
+                          line.endsWith(":") &&
+                          !line.startsWith("-") &&
+                          line.trim().length > 1
+                        ) {
+                          return (
+                            <b
+                              key={idx}
+                              style={{ display: "block", marginTop: 12 }}
+                            >
+                              {line.replace(":", "")}
+                            </b>
+                          );
+                        }
+                        // Empty line
+                        if (line.trim() === "") {
+                          return <br key={idx} />;
+                        }
+                        // Normal paragraph
+                        return (
+                          <p key={idx} style={{ marginBottom: 8 }}>
+                            {line}
+                          </p>
+                        );
+                      })}
                     </div>
-                  ))}
+                  ) : Array.isArray(budaya.deskripsi) ? (
+                    budaya.deskripsi.map((desc, idx) => <p key={idx}>{desc}</p>)
+                  ) : (
+                    <p>{budaya.deskripsi}</p>
+                  )}
                 </div>
-                {/* Modal for fullscreen image */}
-                {isModalOpen && (
-                  <div
-                    style={{
-                      position: "fixed",
-                      top: 0,
-                      left: 0,
-                      width: "100vw",
-                      height: "100vh",
-                      background: "rgba(0,0,0,0.8)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      zIndex: 2000,
-                    }}
-                    onClick={() => setIsModalOpen(false)}
-                  >
+
+                {/* Kegiatan Section */}
+                {budaya.kegiatan && budaya.kegiatan.length > 0 && (
+                  <div className="content-section">
+                    <h2>🎯 {t("labelKegiatan", "Kegiatan")}</h2>
+                    <ul>
+                      {budaya.kegiatan.map((kegiatan, index) => (
+                        <li key={index}>{kegiatan}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* Jadwal Section */}
+                {budaya.jadwal && (
+                  <div className="content-section">
+                    <h2>⏰ {t("labelJadwal", "Jadwal")}</h2>
+                    <p className="jadwal-text">{budaya.jadwal}</p>
+                  </div>
+                )}
+
+                {/* Prestasi Section */}
+                {budaya.prestasi && budaya.prestasi.length > 0 && (
+                  <div className="content-section">
+                    <h2>
+                      🏆 {t("prestasiPencapaian", "Prestasi & Pencapaian")}
+                    </h2>
+                    <ul>
+                      {budaya.prestasi.map((prestasi, index) => (
+                        <li key={index}>{prestasi}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* Tokoh Section */}
+                {budaya.tokoh && budaya.tokoh.length > 0 && (
+                  <div className="content-section">
+                    <h2>👥 {t("tokohUtama", "Tokoh Utama")}</h2>
+                    <div className="tokoh-grid">
+                      {budaya.tokoh.map((tokoh, index) => (
+                        <div key={index} className="tokoh-card">
+                          <div className="tokoh-image">
+                            <img
+                              src={tokoh.foto}
+                              alt={tokoh.nama}
+                              onError={(e) => {
+                                e.target.src = getPlaceholderImage(tokoh.nama);
+                              }}
+                            />
+                          </div>
+                          <div className="tokoh-info">
+                            <h3>{tokoh.nama}</h3>
+                            <p className="tokoh-jabatan">{tokoh.jabatan}</p>
+                            <p className="tokoh-deskripsi">{tokoh.deskripsi}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Right Column - Gallery */}
+              <div className="content-gallery">
+                <h2>📸 {t("galeriFoto", "Galeri Foto")}</h2>
+                <div className="gallery-container">
+                  <div className="main-image">
                     {budaya.gallery[currentImageIndex].type === "image" ? (
                       <img
                         src={budaya.gallery[currentImageIndex].url}
-                        alt="Fullsize"
-                        style={{
-                          maxWidth: "90vw",
-                          maxHeight: "90vh",
-                          width: "auto",
-                          height: "auto",
-                          objectFit: "contain",
-                          borderRadius: "12px",
-                          boxShadow: "0 8px 32px rgba(0,0,0,0.5)",
-                          background: "#fff",
+                        alt={`${budaya.title} - Foto ${currentImageIndex + 1}`}
+                        onError={(e) => {
+                          e.target.src = getPlaceholderImage(
+                            `Foto ${currentImageIndex + 1}`
+                          );
                         }}
-                        onClick={(e) => e.stopPropagation()}
+                        style={{ cursor: "zoom-in" }}
+                        onClick={() => setIsModalOpen(true)}
                       />
                     ) : (
                       <video
                         src={budaya.gallery[currentImageIndex].url}
                         controls
-                        style={{
-                          maxWidth: "90vw",
-                          maxHeight: "90vh",
-                          width: "auto",
-                          height: "auto",
-                          objectFit: "contain",
-                          borderRadius: "12px",
-                          boxShadow: "0 8px 32px rgba(0,0,0,0.5)",
-                          background: "#fff",
+                        onError={(e) => {
+                          e.target.src = getPlaceholderImage(
+                            `Video ${currentImageIndex + 1}`
+                          );
                         }}
-                        onClick={(e) => e.stopPropagation()}
+                        style={{ cursor: "zoom-in" }}
+                        onClick={() => setIsModalOpen(true)}
                       />
                     )}
-                    <button
-                      onClick={() => setIsModalOpen(false)}
-                      style={{
-                        position: "fixed",
-                        top: 32,
-                        right: 32,
-                        background: "rgba(0,0,0,0.7)",
-                        color: "#fff",
-                        border: "none",
-                        borderRadius: "50%",
-                        width: 40,
-                        height: 40,
-                        fontSize: 24,
-                        cursor: "pointer",
-                        zIndex: 2100,
-                      }}
-                      aria-label="Tutup"
-                    >
-                      ×
+                    <button className="gallery-nav prev" onClick={prevImage}>
+                      ‹
+                    </button>
+                    <button className="gallery-nav next" onClick={nextImage}>
+                      ›
                     </button>
                   </div>
-                )}
+                  <div className="thumbnail-grid">
+                    {budaya.gallery.map((item, index) => (
+                      <div
+                        key={index}
+                        className={`thumbnail-item ${
+                          index === currentImageIndex ? "active" : ""
+                        }`}
+                        data-type={item.type}
+                        onClick={() => setCurrentImageIndex(index)}
+                      >
+                        <img
+                          src={item.thumbnail}
+                          alt={`${budaya.title} - Thumbnail ${index + 1}`}
+                          onError={(e) => {
+                            e.target.src = getPlaceholderImage(
+                              `Thumbnail ${index + 1}`
+                            );
+                          }}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                  {/* Modal for fullscreen image */}
+                  {isModalOpen && (
+                    <div
+                      style={{
+                        position: "fixed",
+                        top: 0,
+                        left: 0,
+                        width: "100vw",
+                        height: "100vh",
+                        background: "rgba(0,0,0,0.8)",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        zIndex: 2000,
+                      }}
+                      onClick={() => setIsModalOpen(false)}
+                    >
+                      {budaya.gallery[currentImageIndex].type === "image" ? (
+                        <img
+                          src={budaya.gallery[currentImageIndex].url}
+                          alt="Fullsize"
+                          style={{
+                            maxWidth: "90vw",
+                            maxHeight: "90vh",
+                            width: "auto",
+                            height: "auto",
+                            objectFit: "contain",
+                            borderRadius: "12px",
+                            boxShadow: "0 8px 32px rgba(0,0,0,0.5)",
+                            background: "#fff",
+                          }}
+                          onClick={(e) => e.stopPropagation()}
+                        />
+                      ) : (
+                        <video
+                          src={budaya.gallery[currentImageIndex].url}
+                          controls
+                          style={{
+                            maxWidth: "90vw",
+                            maxHeight: "90vh",
+                            width: "auto",
+                            height: "auto",
+                            objectFit: "contain",
+                            borderRadius: "12px",
+                            boxShadow: "0 8px 32px rgba(0,0,0,0.5)",
+                            background: "#fff",
+                          }}
+                          onClick={(e) => e.stopPropagation()}
+                        />
+                      )}
+                      <button
+                        onClick={() => setIsModalOpen(false)}
+                        style={{
+                          position: "fixed",
+                          top: 32,
+                          right: 32,
+                          background: "rgba(0,0,0,0.7)",
+                          color: "#fff",
+                          border: "none",
+                          borderRadius: "50%",
+                          width: 40,
+                          height: 40,
+                          fontSize: 24,
+                          cursor: "pointer",
+                          zIndex: 2100,
+                        }}
+                        aria-label="Tutup"
+                      >
+                        ×
+                      </button>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Call to Action */}
-      <section className="cta-section">
-        <div className="container">
-          <h2>{t("ctaTitleKebudayaan", "Tertarik Bergabung?")}</h2>
-          <p>
-            {t(
-              "ctaDescKebudayaan",
-              "Ayo lestarikan budaya bersama kami! Hubungi kontak di bawah untuk informasi lebih lanjut."
-            )}
-          </p>
-          <div className="cta-buttons">
-            <a href="#kontak" className="btn btn-primary">
-              {t("ctaContactKebudayaan", "Hubungi Kami")}
-            </a>
-            <Link to="/kebudayaan" className="btn btn-outline">
-              {t("kembaliKeKebudayaan", "Kembali ke Kebudayaan")}
-            </Link>
+        {/* Call to Action */}
+        <section className="cta-section">
+          <div className="container">
+            <h2>{t("ctaTitleKebudayaan", "Tertarik Bergabung?")}</h2>
+            <p>
+              {t(
+                "ctaDescKebudayaan",
+                "Ayo lestarikan budaya bersama kami! Hubungi kontak di bawah untuk informasi lebih lanjut."
+              )}
+            </p>
+            <div className="cta-buttons">
+              <a href="#kontak" className="btn btn-primary">
+                {t("ctaContactKebudayaan", "Hubungi Kami")}
+              </a>
+              <Link to="/kebudayaan" className="btn btn-outline">
+                {t("kembaliKeKebudayaan", "Kembali ke Kebudayaan")}
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 };
 

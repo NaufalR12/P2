@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import "../Galeri.css";
 import "./Galeri.css";
+import SEOHead from "../components/SEOHead";
 
 const Galeri = () => {
   const { t } = useTranslation();
@@ -18,8 +19,7 @@ const Galeri = () => {
       category: "sanggar-tari",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/DSC07541_gcmnuy",
-      description:
-        "Sesi latihan tari di ndalem pujokusuman.",
+      description: "Sesi latihan tari di ndalem pujokusuman.",
     },
     {
       id: 2,
@@ -27,8 +27,7 @@ const Galeri = () => {
       category: "sanggar-tari",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/DSC07503_ysmria",
-      description:
-        "Sesi latihan tari di ndalem pujokusuman.",
+      description: "Sesi latihan tari di ndalem pujokusuman.",
     },
     {
       id: 3,
@@ -52,8 +51,7 @@ const Galeri = () => {
       category: "sanggar-tari",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG-20250723-WA0111_hzrbnj",
-      description:
-        "Para penari sedang berpose menari.",
+      description: "Para penari sedang berpose menari.",
     },
     {
       id: 105,
@@ -77,7 +75,8 @@ const Galeri = () => {
       category: "sanggar-tari",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG-20250723-WA0005_mr2sbn",
-      description: "Pertunjukan tari saat peringatan hari ulang tahun paguyuban pecinta batik indonesia sekar jagad.",
+      description:
+        "Pertunjukan tari saat peringatan hari ulang tahun paguyuban pecinta batik indonesia sekar jagad.",
     },
     {
       id: 108,
@@ -158,7 +157,8 @@ const Galeri = () => {
       category: "jemparingan",
       image:
         "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_600,h_400,c_fill/IMG-20200115-WA0037_ryo6sf",
-      description: "Foto bersama para tamu dari luar negeri setelah berlatih jemparingan.",
+      description:
+        "Foto bersama para tamu dari luar negeri setelah berlatih jemparingan.",
     },
     {
       id: 101,
@@ -535,237 +535,274 @@ const Galeri = () => {
     return canvas.toDataURL();
   };
 
+  // SEO Data
+  const seoData = {
+    title: "Galeri Kegiatan Pujokusuman - Dokumentasi Budaya dan Tradisi",
+    description:
+      "Lihat dokumentasi visual kegiatan budaya, seni tradisional, dan kehidupan sehari-hari di Kampung Pujokusuman. Galeri foto sanggar tari, jemparingan, dan berbagai acara budaya.",
+    keywords:
+      "galeri pujokusuman, foto kegiatan, dokumentasi budaya, sanggar tari foto, jemparingan dokumentasi, galeri budaya yogyakarta",
+    url: "https://djelajahpujoku.netlify.app/galeri",
+    image:
+      "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_1200,h_630,c_fill/DSC07541_gcmnuy",
+  };
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    name: "Galeri Kegiatan Kampung Pujokusuman",
+    description: seoData.description,
+    url: seoData.url,
+    image: seoData.image,
+    publisher: {
+      "@type": "Organization",
+      name: "Kampung Kebudayaan Pujokusuman",
+    },
+  };
+
   return (
-    <div className="galeri-page">
-      {/* Header */}
-      <section className="galeri-header">
-        <div className="container">
-          <h1>{t("galeriHeader", "Galeri Kegiatan")}</h1>
-          <p>
-            {t(
-              "galeriSubheader",
-              "Dokumentasi visual kegiatan budaya dan kehidupan sehari-hari di Kampung Pujokusuman"
-            )}
-          </p>
-        </div>
-      </section>
-
-      {/* Filter Categories */}
-      <section className="filter-section">
-        <div className="container">
-          <div className="filter-tabs">
-            {categories.map((category) => (
-              <button
-                key={category.key}
-                className={`filter-btn ${
-                  selectedCategory === category.key ? "active" : ""
-                }`}
-                onClick={() => setSelectedCategory(category.key)}
-              >
-                {category.label}
-              </button>
-            ))}
+    <>
+      <SEOHead
+        title={seoData.title}
+        description={seoData.description}
+        keywords={seoData.keywords}
+        url={seoData.url}
+        image={seoData.image}
+        structuredData={structuredData}
+      />
+      <div className="galeri-page">
+        {/* Header */}
+        <section className="galeri-header">
+          <div className="container">
+            <h1>{t("galeriHeader", "Galeri Kegiatan")}</h1>
+            <p>
+              {t(
+                "galeriSubheader",
+                "Dokumentasi visual kegiatan budaya dan kehidupan sehari-hari di Kampung Pujokusuman"
+              )}
+            </p>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Gallery Grid */}
-      <section className="galeri-content">
-        <div className="container">
-          <div className="galeri-grid">
-            {filteredItems.map((item) => (
-              <div
-                key={item.id}
-                className="galeri-item"
-                onClick={() => setSelectedImage(item)}
-              >
-                <div className="galeri-image">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    onError={(e) => {
-                      e.target.src = getPlaceholderImage(item.title);
-                    }}
-                  />
-                  <div className="galeri-overlay">
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                    <span className="view-icon">
-                      👁️ {t("galeriLihat", "Lihat")}
-                    </span>
+        {/* Filter Categories */}
+        <section className="filter-section">
+          <div className="container">
+            <div className="filter-tabs">
+              {categories.map((category) => (
+                <button
+                  key={category.key}
+                  className={`filter-btn ${
+                    selectedCategory === category.key ? "active" : ""
+                  }`}
+                  onClick={() => setSelectedCategory(category.key)}
+                >
+                  {category.label}
+                </button>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Gallery Grid */}
+        <section className="galeri-content">
+          <div className="container">
+            <div className="galeri-grid">
+              {filteredItems.map((item) => (
+                <div
+                  key={item.id}
+                  className="galeri-item"
+                  onClick={() => setSelectedImage(item)}
+                >
+                  <div className="galeri-image">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      onError={(e) => {
+                        e.target.src = getPlaceholderImage(item.title);
+                      }}
+                    />
+                    <div className="galeri-overlay">
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                      <span className="view-icon">
+                        👁️ {t("galeriLihat", "Lihat")}
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Modal */}
-      {selectedImage && (
-        <div className="modal-overlay" onClick={() => setSelectedImage(null)}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button
-              className="modal-close"
-              onClick={() => setSelectedImage(null)}
-              aria-label="Tutup"
-            >
-              ×
-            </button>
-
-            {/* Zoom Controls */}
-            <div
-              className="zoom-controls"
-              style={{
-                position: "absolute",
-                top: "20px",
-                left: "20px",
-                display: "flex",
-                gap: "10px",
-                zIndex: 1001,
-                background: "rgba(0,0,0,0.7)",
-                borderRadius: "8px",
-                padding: "8px",
-              }}
-            >
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setZoomLevel((prev) => Math.max(0.5, prev - 0.25));
-                }}
-                style={{
-                  background: "#fff",
-                  border: "none",
-                  borderRadius: "4px",
-                  padding: "8px 12px",
-                  cursor: "pointer",
-                  fontSize: "16px",
-                }}
-                aria-label="Zoom Out"
-              >
-                -
-              </button>
-              <span style={{ color: "#fff", padding: "8px", fontSize: "14px" }}>
-                {Math.round(zoomLevel * 100)}%
-              </span>
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setZoomLevel((prev) => Math.min(3, prev + 0.25));
-                }}
-                style={{
-                  background: "#fff",
-                  border: "none",
-                  borderRadius: "4px",
-                  padding: "8px 12px",
-                  cursor: "pointer",
-                  fontSize: "16px",
-                }}
-                aria-label="Zoom In"
-              >
-                +
-              </button>
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setZoomLevel(1);
-                }}
-                style={{
-                  background: "#fff",
-                  border: "none",
-                  borderRadius: "4px",
-                  padding: "6px 10px",
-                  cursor: "pointer",
-                  fontSize: "12px",
-                }}
-                aria-label="Reset Zoom"
-              >
-                Reset
-              </button>
+              ))}
             </div>
+          </div>
+        </section>
 
-            <div
-              className="modal-image-container"
-              style={{
-                overflow: "auto",
-                maxHeight: "70vh",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "flex-start",
-                padding: "20px",
-              }}
-            >
-              <img
-                src={selectedImage.image.replace(
-                  "/q_auto,f_auto,w_600,h_400,c_fill/",
-                  "/q_auto,f_auto/"
-                )}
-                alt={selectedImage.title}
-                onError={(e) => {
-                  e.target.src = getPlaceholderImage(selectedImage.title);
-                }}
+        {/* Modal */}
+        {selectedImage && (
+          <div className="modal-overlay" onClick={() => setSelectedImage(null)}>
+            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+              <button
+                className="modal-close"
+                onClick={() => setSelectedImage(null)}
+                aria-label="Tutup"
+              >
+                ×
+              </button>
+
+              {/* Zoom Controls */}
+              <div
+                className="zoom-controls"
                 style={{
-                  transform: `scale(${zoomLevel})`,
-                  transformOrigin: "center",
-                  transition: "transform 0.2s ease",
-                  display: "block",
-                  cursor: zoomLevel < 3 ? "zoom-in" : "zoom-out",
+                  position: "absolute",
+                  top: "20px",
+                  left: "20px",
+                  display: "flex",
+                  gap: "10px",
+                  zIndex: 1001,
+                  background: "rgba(0,0,0,0.7)",
+                  borderRadius: "8px",
+                  padding: "8px",
                 }}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  if (zoomLevel < 3) {
+              >
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setZoomLevel((prev) => Math.max(0.5, prev - 0.25));
+                  }}
+                  style={{
+                    background: "#fff",
+                    border: "none",
+                    borderRadius: "4px",
+                    padding: "8px 12px",
+                    cursor: "pointer",
+                    fontSize: "16px",
+                  }}
+                  aria-label="Zoom Out"
+                >
+                  -
+                </button>
+                <span
+                  style={{ color: "#fff", padding: "8px", fontSize: "14px" }}
+                >
+                  {Math.round(zoomLevel * 100)}%
+                </span>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
                     setZoomLevel((prev) => Math.min(3, prev + 0.25));
-                  } else {
+                  }}
+                  style={{
+                    background: "#fff",
+                    border: "none",
+                    borderRadius: "4px",
+                    padding: "8px 12px",
+                    cursor: "pointer",
+                    fontSize: "16px",
+                  }}
+                  aria-label="Zoom In"
+                >
+                  +
+                </button>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
                     setZoomLevel(1);
-                  }
+                  }}
+                  style={{
+                    background: "#fff",
+                    border: "none",
+                    borderRadius: "4px",
+                    padding: "6px 10px",
+                    cursor: "pointer",
+                    fontSize: "12px",
+                  }}
+                  aria-label="Reset Zoom"
+                >
+                  Reset
+                </button>
+              </div>
+
+              <div
+                className="modal-image-container"
+                style={{
+                  overflow: "auto",
+                  maxHeight: "70vh",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "flex-start",
+                  padding: "20px",
                 }}
-              />
-            </div>
+              >
+                <img
+                  src={selectedImage.image.replace(
+                    "/q_auto,f_auto,w_600,h_400,c_fill/",
+                    "/q_auto,f_auto/"
+                  )}
+                  alt={selectedImage.title}
+                  onError={(e) => {
+                    e.target.src = getPlaceholderImage(selectedImage.title);
+                  }}
+                  style={{
+                    transform: `scale(${zoomLevel})`,
+                    transformOrigin: "center",
+                    transition: "transform 0.2s ease",
+                    display: "block",
+                    cursor: zoomLevel < 3 ? "zoom-in" : "zoom-out",
+                  }}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    if (zoomLevel < 3) {
+                      setZoomLevel((prev) => Math.min(3, prev + 0.25));
+                    } else {
+                      setZoomLevel(1);
+                    }
+                  }}
+                />
+              </div>
 
-            <div
-              className="modal-info"
-              style={{
-                maxHeight: "25vh",
-                overflowY: "auto",
-                padding: "20px",
-                background: "#f9f9f9",
-                borderTop: "1px solid #ddd",
-              }}
-            >
-              <h2 style={{ marginBottom: "10px" }}>{selectedImage.title}</h2>
-              <p style={{ marginBottom: "10px", lineHeight: "1.5" }}>
-                {selectedImage.description}
-              </p>
-              <small style={{ color: "#666", fontStyle: "italic" }}>
-                Gunakan tombol zoom atau klik gambar untuk
-                memperbesar/memperkecil
-              </small>
+              <div
+                className="modal-info"
+                style={{
+                  maxHeight: "25vh",
+                  overflowY: "auto",
+                  padding: "20px",
+                  background: "#f9f9f9",
+                  borderTop: "1px solid #ddd",
+                }}
+              >
+                <h2 style={{ marginBottom: "10px" }}>{selectedImage.title}</h2>
+                <p style={{ marginBottom: "10px", lineHeight: "1.5" }}>
+                  {selectedImage.description}
+                </p>
+                <small style={{ color: "#666", fontStyle: "italic" }}>
+                  Gunakan tombol zoom atau klik gambar untuk
+                  memperbesar/memperkecil
+                </small>
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
 
-      {/* CTA */}
-      <section className="cta-section">
-        <div className="container">
-          <h2>{t("galeriCtaTitle", "Ingin Berpartisipasi?")}</h2>
-          <p>
-            {t(
-              "galeriCtaDesc",
-              "Bergabunglah dengan kegiatan-kegiatan menarik di kampung kami!"
-            )}
-          </p>
-          <div className="cta-buttons">
-            <a href="/#kontak" className="btn btn-primary">
-              {t("galeriCtaContact", "Hubungi Kami")}
-            </a>
-            <a href="/" className="btn btn-outline">
-              {t("galeriCtaBackHome", "Kembali ke Beranda")}
-            </a>
+        {/* CTA */}
+        <section className="cta-section">
+          <div className="container">
+            <h2>{t("galeriCtaTitle", "Ingin Berpartisipasi?")}</h2>
+            <p>
+              {t(
+                "galeriCtaDesc",
+                "Bergabunglah dengan kegiatan-kegiatan menarik di kampung kami!"
+              )}
+            </p>
+            <div className="cta-buttons">
+              <a href="/#kontak" className="btn btn-primary">
+                {t("galeriCtaContact", "Hubungi Kami")}
+              </a>
+              <a href="/" className="btn btn-outline">
+                {t("galeriCtaBackHome", "Kembali ke Beranda")}
+              </a>
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 };
 

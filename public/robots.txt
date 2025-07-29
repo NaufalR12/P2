@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://namasitus.netlify.app/sitemap.xml

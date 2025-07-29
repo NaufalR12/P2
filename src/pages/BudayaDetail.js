@@ -93,6 +93,36 @@ const BudayaDetail = () => {
           thumbnail:
             "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG-20250723-WA0108_jxgfv0",
         },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_9508_npw1jd",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_9508_npw1jd",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_9429_oyquex",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_9429_oyquex",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_9540_widjpi",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_9540_widjpi",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_9599_jy20kg",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_9599_jy20kg",
+        },
+        {
+          type: "image",
+          url: "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_800,h_600,c_fill/IMG_9580_mntdif",
+          thumbnail:
+            "https://res.cloudinary.com/ddfcjabrm/image/upload/q_auto,f_auto,w_200,h_150,c_fill/IMG_9580_mntdif",
+        },
       ],
       sejarah: [
         t("budaya1Sejarah1"),

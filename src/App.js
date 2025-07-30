@@ -104,7 +104,7 @@ function App() {
                     width="300"
                     height="300"
                     style={{
-                      borderRadius: "50%",
+                      
                       objectFit: "cover",
                     }}
                     alt="Logo Kampung Kebudayaan Pujokusuman"

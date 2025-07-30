@@ -29,7 +29,7 @@ const MediaSlider = () => {
     },
     {
       type: "youtube",
-      videoId: "VclwyI3bcFI",
+      videoId: "zkfSHJ71SVs",
       title: t("mediaSlider2Title"),
       description: t("mediaSlider2Description"),
     },

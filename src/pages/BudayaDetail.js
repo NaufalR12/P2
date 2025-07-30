@@ -579,20 +579,6 @@ const BudayaDetail = () => {
         },
       ],
       sejarah: [t("budaya8Sejarah"), t("budaya8Sejarah1")],
-      deskripsi: t("budaya8Deskripsi"),
-      kegiatan: [
-        t("budaya8Kegiatan1"),
-        t("budaya8Kegiatan2"),
-        t("budaya8Kegiatan3"),
-        t("budaya8Kegiatan4"),
-      ],
-      jadwal: t("budaya8Jadwal"),
-      prestasi: [
-        "Penggerak Komunitas Sosial Pujokusuman 2023",
-        "Kolaborasi dengan berbagai komunitas lokal",
-        "Pelatihan dan Workshop untuk warga",
-        "Aksi sosial dan lingkungan berkelanjutan",
-      ],
       tokoh: [
         {
           nama: t("tokoh4Nama"),
@@ -933,119 +919,131 @@ const BudayaDetail = () => {
                 </div>
 
                 {/* Deskripsi Section */}
-                <div className="content-section">
-                  <h2>📝 {t("labelDeskripsi", "Deskripsi")}</h2>
-                  {id === "jemparingan" ? (
-                    <>
-                      <p>{t("budaya2Deskripsi")}</p>
-                      <b>Tata Cara Bermain</b>
-                      <ol type="1" style={{ marginTop: 4 }}>
-                        <li>
-                          <b>Posisi Duduk Bersila Miring ke Kiri</b>
-                          <div>{t("budaya2Sejarah7")}</div>
-                        </li>
-                        <li>
-                          <b>Pegangan Busur dan Tarik Anak Panah</b>
-                          <div>{t("budaya2Sejarah8")}</div>
-                        </li>
-                        <li>
-                          <b>Jarak Sasaran: 10–20 Meter</b>
-                          <div>{t("budaya2Sejarah9")}</div>
-                        </li>
-                        <li>
-                          <b>Sistem Nilai: Lonceng Tanda Sasaran</b>
-                          <div>{t("budaya2Sejarah10")}</div>
-                        </li>
-                      </ol>
-                      <b>Nilai Kemataraman dalam Jemparingan</b>
-                      <div style={{ marginTop: 4 }}>
-                        {t("budaya2Sejarah11")}
-                      </div>
-                      <ul style={{ marginTop: 4 }}>
-                        <li>
-                          <b>Untuk Laki-laki:</b>
-                          <div>
-                            {t("budaya2Sejarah11").split("Untuk Laki-laki:")[1]}
-                          </div>
-                        </li>
-                        <li>
-                          <b>Untuk Perempuan:</b>
-                          <div>
-                            {t("budaya2Sejarah12").split("Untuk Perempuan:")[1]}
-                          </div>
-                        </li>
-                      </ul>
-                      <b>Manfaat dan Keutamaan Berlatih Jemparingan</b>
-                      <ol type="1" style={{ marginTop: 4 }}>
-                        {t("budaya2Sejarah13")
-                          .split("\n")
-                          .slice(1, 7)
-                          .map((item, idx) => (
-                            <li key={idx}>{item}</li>
-                          ))}
-                      </ol>
-                      <b>Pendidikan Karakter dalam Jemparingan</b>
-                      <div style={{ marginTop: 4 }}>
-                        Jiwa Ksatria Mataram sebagaimana diajarkan oleh Pangeran
-                        Mangkubumi (Sri Sultan Hamengku Buwono I):
-                      </div>
-                      <ol type="1" style={{ marginTop: 4 }}>
-                        {t("budaya2Sejarah14")
-                          .split("\n")
-                          .slice(1, 5)
-                          .map((item, idx) => (
-                            <li key={idx}>{item}</li>
-                          ))}
-                      </ol>
-                    </>
-                  ) : id === "pasar-pujokusuman" ? (
-                    // Tampilkan deskripsi dengan format paragraf dan list jika ada, tanpa <li>
-                    <div>
-                      {budaya.deskripsi.split("\n").map((line, idx) => {
-                        // List item: tampilkan sebagai <div> dengan indentasi, tanpa <li>
-                        if (line.startsWith("- ")) {
-                          return (
-                            <div
-                              key={idx}
-                              style={{ marginLeft: 20, marginBottom: 4 }}
-                            >
-                              • {line.replace("- ", "")}
+                {budaya.deskripsi && (
+                  <div className="content-section">
+                    <h2>📝 {t("labelDeskripsi", "Deskripsi")}</h2>
+                    {id === "jemparingan" ? (
+                      <>
+                        <p>{t("budaya2Deskripsi")}</p>
+                        <b>Tata Cara Bermain</b>
+                        <ol type="1" style={{ marginTop: 4 }}>
+                          <li>
+                            <b>Posisi Duduk Bersila Miring ke Kiri</b>
+                            <div>{t("budaya2Sejarah7")}</div>
+                          </li>
+                          <li>
+                            <b>Pegangan Busur dan Tarik Anak Panah</b>
+                            <div>{t("budaya2Sejarah8")}</div>
+                          </li>
+                          <li>
+                            <b>Jarak Sasaran: 10–20 Meter</b>
+                            <div>{t("budaya2Sejarah9")}</div>
+                          </li>
+                          <li>
+                            <b>Sistem Nilai: Lonceng Tanda Sasaran</b>
+                            <div>{t("budaya2Sejarah10")}</div>
+                          </li>
+                        </ol>
+                        <b>Nilai Kemataraman dalam Jemparingan</b>
+                        <div style={{ marginTop: 4 }}>
+                          {t("budaya2Sejarah11")}
+                        </div>
+                        <ul style={{ marginTop: 4 }}>
+                          <li>
+                            <b>Untuk Laki-laki:</b>
+                            <div>
+                              {
+                                t("budaya2Sejarah11").split(
+                                  "Untuk Laki-laki:"
+                                )[1]
+                              }
                             </div>
-                          );
-                        }
-                        // Heading
-                        if (
-                          line.endsWith(":") &&
-                          !line.startsWith("-") &&
-                          line.trim().length > 1
-                        ) {
+                          </li>
+                          <li>
+                            <b>Untuk Perempuan:</b>
+                            <div>
+                              {
+                                t("budaya2Sejarah12").split(
+                                  "Untuk Perempuan:"
+                                )[1]
+                              }
+                            </div>
+                          </li>
+                        </ul>
+                        <b>Manfaat dan Keutamaan Berlatih Jemparingan</b>
+                        <ol type="1" style={{ marginTop: 4 }}>
+                          {t("budaya2Sejarah13")
+                            .split("\n")
+                            .slice(1, 7)
+                            .map((item, idx) => (
+                              <li key={idx}>{item}</li>
+                            ))}
+                        </ol>
+                        <b>Pendidikan Karakter dalam Jemparingan</b>
+                        <div style={{ marginTop: 4 }}>
+                          Jiwa Ksatria Mataram sebagaimana diajarkan oleh
+                          Pangeran Mangkubumi (Sri Sultan Hamengku Buwono I):
+                        </div>
+                        <ol type="1" style={{ marginTop: 4 }}>
+                          {t("budaya2Sejarah14")
+                            .split("\n")
+                            .slice(1, 5)
+                            .map((item, idx) => (
+                              <li key={idx}>{item}</li>
+                            ))}
+                        </ol>
+                      </>
+                    ) : id === "pasar-pujokusuman" ? (
+                      // Tampilkan deskripsi dengan format paragraf dan list jika ada, tanpa <li>
+                      <div>
+                        {budaya.deskripsi.split("\n").map((line, idx) => {
+                          // List item: tampilkan sebagai <div> dengan indentasi, tanpa <li>
+                          if (line.startsWith("- ")) {
+                            return (
+                              <div
+                                key={idx}
+                                style={{ marginLeft: 20, marginBottom: 4 }}
+                              >
+                                • {line.replace("- ", "")}
+                              </div>
+                            );
+                          }
+                          // Heading
+                          if (
+                            line.endsWith(":") &&
+                            !line.startsWith("-") &&
+                            line.trim().length > 1
+                          ) {
+                            return (
+                              <b
+                                key={idx}
+                                style={{ display: "block", marginTop: 12 }}
+                              >
+                                {line.replace(":", "")}
+                              </b>
+                            );
+                          }
+                          // Empty line
+                          if (line.trim() === "") {
+                            return <br key={idx} />;
+                          }
+                          // Normal paragraph
                           return (
-                            <b
-                              key={idx}
-                              style={{ display: "block", marginTop: 12 }}
-                            >
-                              {line.replace(":", "")}
-                            </b>
+                            <p key={idx} style={{ marginBottom: 8 }}>
+                              {line}
+                            </p>
                           );
-                        }
-                        // Empty line
-                        if (line.trim() === "") {
-                          return <br key={idx} />;
-                        }
-                        // Normal paragraph
-                        return (
-                          <p key={idx} style={{ marginBottom: 8 }}>
-                            {line}
-                          </p>
-                        );
-                      })}
-                    </div>
-                  ) : Array.isArray(budaya.deskripsi) ? (
-                    budaya.deskripsi.map((desc, idx) => <p key={idx}>{desc}</p>)
-                  ) : (
-                    <p>{budaya.deskripsi}</p>
-                  )}
-                </div>
+                        })}
+                      </div>
+                    ) : Array.isArray(budaya.deskripsi) ? (
+                      budaya.deskripsi.map((desc, idx) => (
+                        <p key={idx}>{desc}</p>
+                      ))
+                    ) : (
+                      <p>{budaya.deskripsi}</p>
+                    )}
+                  </div>
+                )}
 
                 {/* Kegiatan Section */}
                 {budaya.kegiatan && budaya.kegiatan.length > 0 && (

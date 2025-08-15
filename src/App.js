@@ -53,6 +53,25 @@ function App() {
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    // Tambahkan waktu pengiriman ke form
+    const currentTime = new Date().toLocaleString("id-ID", {
+      timeZone: "Asia/Jakarta",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    });
+
+    // Buat input hidden untuk waktu
+    const timeInput = document.createElement("input");
+    timeInput.type = "hidden";
+    timeInput.name = "time";
+    timeInput.value = currentTime;
+    formRef.current.appendChild(timeInput);
+
     emailjs
       .sendForm(
         "service_i9sm5dp", // Service ID
@@ -73,7 +92,13 @@ function App() {
           });
           setTimeout(() => setNotif({ ...notif, message: "" }), 5000);
         }
-      );
+      )
+      .finally(() => {
+        // Hapus input waktu setelah pengiriman
+        if (timeInput.parentNode) {
+          timeInput.parentNode.removeChild(timeInput);
+        }
+      });
   };
 
   const HomePage = () => {
@@ -104,7 +129,6 @@ function App() {
                     width="300"
                     height="300"
                     style={{
-                      
                       objectFit: "cover",
                     }}
                     alt="Logo Kampung Kebudayaan Pujokusuman"
